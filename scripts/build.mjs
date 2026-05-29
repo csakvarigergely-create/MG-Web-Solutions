@@ -4,7 +4,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
-const required = ["index.html", "src/styles.css", "src/main.js", "assets/mg-hero-dark.png"];
+const required = ["index.html", "src/styles.css", "src/main.js"];
 
 for (const file of required) {
   if (!existsSync(path.join(root, file))) {
