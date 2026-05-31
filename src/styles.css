@@ -684,16 +684,22 @@ p {
     var(--white);
 }
 
+.mini-sheet strong {
+  min-width: 0;
+  border-radius: 4px;
+  padding: 3px 4px;
+  background: var(--teal-soft);
+  color: #0f766e;
+  font-size: 0.58rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+}
+
 .mini-sheet span {
   height: 12px;
   border-radius: 4px;
   background: #eef2f7;
-}
-
-.mini-sheet span:nth-child(1),
-.mini-sheet span:nth-child(2),
-.mini-sheet span:nth-child(3) {
-  background: var(--teal-soft);
 }
 
 .mini-sheet span:nth-child(4) {
@@ -745,7 +751,9 @@ p {
 .chat-preview {
   align-content: center;
   justify-content: stretch;
-  gap: 4px;
+  gap: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .chat-bubble {
