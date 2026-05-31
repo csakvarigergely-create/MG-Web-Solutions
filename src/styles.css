@@ -503,7 +503,7 @@ p {
   background:
     radial-gradient(circle at 12% 8%, rgba(109, 93, 246, 0.1), transparent 26%),
     linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
-  padding: 62px 0 64px;
+  padding: 52px 0 50px;
 }
 
 .automation-section::before {
@@ -524,7 +524,7 @@ p {
 
 .automation-heading {
   max-width: 840px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .automation-heading h2 {
@@ -550,7 +550,7 @@ p {
   flex-direction: column;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 18px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: var(--shadow-soft);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
@@ -563,34 +563,34 @@ p {
 }
 
 .automation-card h3 {
-  margin-top: 18px;
-  margin-bottom: 7px;
-  font-size: 1.16rem;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 1.12rem;
 }
 
 .automation-card p {
-  font-size: 0.95rem;
-  line-height: 1.58;
-  margin-bottom: 18px;
+  font-size: 0.92rem;
+  line-height: 1.52;
+  margin-bottom: 14px;
 }
 
 .automation-benefit {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
   color: var(--heading);
   font-family: var(--font-heading);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   line-height: 1.25;
 }
 
 .automation-visual {
   position: relative;
   display: grid;
-  min-height: 156px;
+  min-height: 126px;
   align-items: center;
   border: 1px solid rgba(229, 231, 235, 0.9);
   border-radius: 16px;
-  padding: 15px;
+  padding: 12px;
   background:
     radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.16), transparent 32%),
     linear-gradient(135deg, #ffffff, #f8fafc);
@@ -614,12 +614,12 @@ p {
 
 .mini-form {
   display: grid;
-  gap: 9px;
-  padding: 14px;
+  gap: 7px;
+  padding: 11px;
 }
 
 .mini-form span {
-  height: 9px;
+  height: 8px;
   border-radius: 999px;
   background: var(--muted-light);
 }
@@ -636,7 +636,7 @@ p {
   display: inline-flex;
   width: fit-content;
   border-radius: 999px;
-  padding: 6px 9px;
+  padding: 5px 8px;
   background: #ffedd5;
   color: #c2410c;
   font-size: 0.75rem;
@@ -667,12 +667,12 @@ p {
 .mini-sheet {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  padding: 14px;
+  gap: 5px;
+  padding: 11px;
 }
 
 .mini-sheet span {
-  height: 18px;
+  height: 15px;
   border-radius: 5px;
   background: #eef2f7;
 }
@@ -690,8 +690,8 @@ p {
 
 .mail-icon {
   position: relative;
-  width: 44px;
-  height: 34px;
+  width: 38px;
+  height: 30px;
   place-self: center;
   border: 2px solid var(--violet);
   border-radius: 8px;
@@ -701,8 +701,8 @@ p {
 .mail-icon::before,
 .mail-icon::after {
   position: absolute;
-  top: 8px;
-  width: 24px;
+  top: 7px;
+  width: 21px;
   height: 2px;
   background: var(--violet);
   content: "";
@@ -720,8 +720,8 @@ p {
 
 .email-preview {
   display: grid;
-  gap: 6px;
-  padding: 14px;
+  gap: 5px;
+  padding: 11px;
 }
 
 .email-preview span {
@@ -737,12 +737,12 @@ p {
 
 .chat-preview {
   align-content: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .chat-bubble {
   max-width: 86%;
-  padding: 11px 13px;
+  padding: 9px 11px;
   color: var(--heading);
   font-size: 0.9rem;
   font-weight: 700;
@@ -759,8 +759,8 @@ p {
 }
 
 .chat-input {
-  margin-top: 6px;
-  padding: 10px 12px;
+  margin-top: 4px;
+  padding: 8px 10px;
   color: #0f766e;
   font-size: 0.82rem;
   font-weight: 800;
@@ -768,7 +768,7 @@ p {
 
 .benefit-list {
   display: grid;
-  gap: 8px;
+  gap: 7px;
   margin: auto 0 0;
   padding: 0;
   list-style: none;
@@ -778,7 +778,7 @@ p {
   position: relative;
   padding-left: 24px;
   color: #344055;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
 }
 
@@ -802,10 +802,10 @@ p {
 }
 
 .automation-summary {
-  margin-top: 18px;
+  margin-top: 12px;
   border: 1px solid rgba(20, 184, 166, 0.22);
   border-radius: var(--radius-lg);
-  padding: 15px 20px;
+  padding: 13px 18px;
   background: linear-gradient(135deg, #ffffff, var(--teal-soft));
   box-shadow: var(--shadow-soft);
   text-align: center;
@@ -1235,7 +1235,7 @@ address,
   }
 
   .automation-section {
-    padding: 58px 0 60px;
+    padding: 48px 0 50px;
   }
 
   .hero-mockup {
@@ -1321,11 +1321,11 @@ address,
   }
 
   .automation-section {
-    padding: 48px 0 50px;
+    padding: 42px 0 44px;
   }
 
   .automation-heading {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .automation-heading h2 {
@@ -1350,13 +1350,17 @@ address,
     padding: 22px;
   }
 
+  .automation-card {
+    padding: 20px;
+  }
+
   .automation-visual {
-    min-height: 140px;
-    padding: 13px;
+    min-height: 118px;
+    padding: 12px;
   }
 
   .automation-card p {
-    font-size: 0.94rem;
+    font-size: 0.92rem;
   }
 
   .form-to-sheet,
