@@ -503,7 +503,7 @@ p {
   background:
     radial-gradient(circle at 12% 8%, rgba(109, 93, 246, 0.1), transparent 26%),
     linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
-  padding-top: 76px;
+  padding: 62px 0 64px;
 }
 
 .automation-section::before {
@@ -524,6 +524,18 @@ p {
 
 .automation-heading {
   max-width: 840px;
+  margin-bottom: 28px;
+}
+
+.automation-heading h2 {
+  max-width: 760px;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.12;
+}
+
+.automation-heading p {
+  max-width: 760px;
+  font-size: 1rem;
 }
 
 .automation-grid {
@@ -538,7 +550,7 @@ p {
   flex-direction: column;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 24px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: var(--shadow-soft);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
@@ -551,34 +563,34 @@ p {
 }
 
 .automation-card h3 {
-  margin-top: 22px;
-  margin-bottom: 8px;
-  font-size: 1.24rem;
+  margin-top: 18px;
+  margin-bottom: 7px;
+  font-size: 1.16rem;
 }
 
 .automation-card p {
-  font-size: 1rem;
-  line-height: 1.62;
-  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.58;
+  margin-bottom: 18px;
 }
 
 .automation-benefit {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   color: var(--heading);
   font-family: var(--font-heading);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   line-height: 1.25;
 }
 
 .automation-visual {
   position: relative;
   display: grid;
-  min-height: 190px;
+  min-height: 156px;
   align-items: center;
   border: 1px solid rgba(229, 231, 235, 0.9);
   border-radius: 16px;
-  padding: 18px;
+  padding: 15px;
   background:
     radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.16), transparent 32%),
     linear-gradient(135deg, #ffffff, #f8fafc);
@@ -756,7 +768,7 @@ p {
 
 .benefit-list {
   display: grid;
-  gap: 10px;
+  gap: 8px;
   margin: auto 0 0;
   padding: 0;
   list-style: none;
@@ -766,7 +778,7 @@ p {
   position: relative;
   padding-left: 24px;
   color: #344055;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -790,10 +802,10 @@ p {
 }
 
 .automation-summary {
-  margin-top: 20px;
+  margin-top: 18px;
   border: 1px solid rgba(20, 184, 166, 0.22);
   border-radius: var(--radius-lg);
-  padding: 18px 22px;
+  padding: 15px 20px;
   background: linear-gradient(135deg, #ffffff, var(--teal-soft));
   box-shadow: var(--shadow-soft);
   text-align: center;
@@ -802,7 +814,7 @@ p {
 .automation-summary strong {
   color: var(--heading);
   font-family: var(--font-heading);
-  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
   line-height: 1.25;
 }
 
@@ -1222,6 +1234,10 @@ address,
     gap: 34px;
   }
 
+  .automation-section {
+    padding: 58px 0 60px;
+  }
+
   .hero-mockup {
     transform: none;
     transform-origin: center;
@@ -1304,6 +1320,18 @@ address,
     text-align: left;
   }
 
+  .automation-section {
+    padding: 48px 0 50px;
+  }
+
+  .automation-heading {
+    margin-bottom: 24px;
+  }
+
+  .automation-heading h2 {
+    font-size: 1.85rem;
+  }
+
   .three,
   .automation-grid,
   .feature-grid,
@@ -1323,12 +1351,12 @@ address,
   }
 
   .automation-visual {
-    min-height: 170px;
-    padding: 14px;
+    min-height: 140px;
+    padding: 13px;
   }
 
   .automation-card p {
-    font-size: 0.98rem;
+    font-size: 0.94rem;
   }
 
   .form-to-sheet,
