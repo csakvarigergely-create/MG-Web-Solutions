@@ -212,9 +212,9 @@ textarea {
   position: relative;
   overflow: hidden;
   display: grid;
-  min-height: 64vh;
+  min-height: 66vh;
   align-items: center;
-  padding: 30px 0 34px;
+  padding: 36px 0 40px;
   background:
     radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.18), transparent 30%),
     radial-gradient(circle at 58% 74%, rgba(109, 93, 246, 0.12), transparent 28%),
@@ -235,13 +235,13 @@ textarea {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(430px, 0.82fr);
+  grid-template-columns: minmax(0, 52fr) minmax(360px, 48fr);
   align-items: center;
-  gap: 26px;
+  gap: 38px;
 }
 
 .hero-copy {
-  max-width: 940px;
+  max-width: 760px;
 }
 
 .eyebrow {
@@ -269,11 +269,11 @@ h3 {
 }
 
 h1 {
-  max-width: 940px;
-  margin-bottom: 20px;
+  max-width: 760px;
+  margin-bottom: 18px;
   color: var(--heading);
-  font-size: clamp(2.85rem, 4.45vw, 4.85rem);
-  line-height: 1;
+  font-size: clamp(2.65rem, 3.75vw, 4.25rem);
+  line-height: 1.02;
 }
 
 .hero h1 span {
@@ -305,24 +305,24 @@ p {
 }
 
 .hero-lead {
-  max-width: 760px;
-  margin-bottom: 22px;
+  max-width: 700px;
+  margin-bottom: 18px;
   color: #4b5563;
-  font-size: 1.16rem;
+  font-size: 1.12rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .trust-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 760px;
+  max-width: 700px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -341,8 +341,9 @@ p {
 
 .hero-mockup {
   position: relative;
-  transform: scale(1.12);
-  transform-origin: center right;
+  width: min(100%, 520px);
+  justify-self: end;
+  transform: none;
 }
 
 .hero-mockup::before {
@@ -361,7 +362,7 @@ p {
   overflow: hidden;
   border: 1px solid rgba(213, 219, 229, 0.9);
   border-radius: 18px;
-  padding: 22px;
+  padding: 18px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: var(--shadow);
 }
@@ -1220,8 +1221,8 @@ address,
   }
 
   h1 {
-    font-size: clamp(2.85rem, 7vw, 4.6rem);
-    line-height: 1;
+    font-size: clamp(2.55rem, 6.2vw, 3.75rem);
+    line-height: 1.04;
   }
 
   .section-heading.compact {
@@ -1256,8 +1257,8 @@ address,
   }
 
   h1 {
-    font-size: clamp(2.28rem, 11vw, 2.85rem);
-    line-height: 1.03;
+    font-size: clamp(2.1rem, 9.6vw, 2.65rem);
+    line-height: 1.05;
   }
 
   h2 {
