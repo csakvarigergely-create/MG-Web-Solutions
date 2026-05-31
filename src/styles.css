@@ -605,6 +605,17 @@ p {
   gap: 8px;
 }
 
+.form-to-sheet .mini-form,
+.form-to-sheet .mini-sheet {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 14px 30px rgba(24, 35, 63, 0.12);
+}
+
+.form-to-sheet .flow-arrow {
+  z-index: 2;
+}
+
 .mini-form,
 .mini-sheet,
 .email-preview,
@@ -722,6 +733,18 @@ p {
   gap: 7px;
 }
 
+.form-to-email .mini-form,
+.form-to-email .mail-icon,
+.form-to-email .email-preview {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 14px 30px rgba(24, 35, 63, 0.12);
+}
+
+.form-to-email .flow-arrow {
+  z-index: 2;
+}
+
 .email-arrow {
   width: 100%;
 }
@@ -768,11 +791,14 @@ p {
 }
 
 .chat-bubble {
+  position: relative;
+  z-index: 1;
   max-width: 86%;
   padding: 6px 8px;
   color: var(--heading);
   font-size: 0.78rem;
   font-weight: 700;
+  box-shadow: 0 14px 30px rgba(24, 35, 63, 0.12);
 }
 
 .chat-bubble.question {
@@ -817,31 +843,35 @@ p {
 
 @media (min-width: 761px) {
   .form-to-sheet .mini-form {
-    transform: translate(-4px, -3px);
+    transform: translate(-8px, -5px);
   }
 
   .form-to-sheet .mini-sheet {
-    transform: translate(4px, 0);
+    transform: translate(8px, 5px);
   }
 
   .form-to-email .mini-form {
-    transform: translate(-4px, -2px);
+    transform: translate(-7px, -4px);
   }
 
   .form-to-email .email-preview {
-    transform: translate(4px, 2px);
+    transform: translate(7px, 4px);
+  }
+
+  .form-to-email .mail-icon {
+    transform: translateY(-1px);
   }
 
   .chat-bubble.question {
-    transform: translate(-4px, -2px);
+    transform: translate(-8px, -5px);
   }
 
   .chat-bubble.customer {
-    transform: translate(4px, 0);
+    transform: translate(8px, 0);
   }
 
   .chat-bubble.answer {
-    transform: translate(4px, 2px);
+    transform: translate(8px, 5px);
   }
 }
 
