@@ -212,9 +212,9 @@ textarea {
   position: relative;
   overflow: hidden;
   display: grid;
-  min-height: 72vh;
+  min-height: 68vh;
   align-items: center;
-  padding: 48px 0 58px;
+  padding: 34px 0 46px;
   background:
     radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.18), transparent 30%),
     radial-gradient(circle at 58% 74%, rgba(109, 93, 246, 0.12), transparent 28%),
@@ -235,9 +235,9 @@ textarea {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.16fr) minmax(400px, 0.84fr);
+  grid-template-columns: minmax(0, 1.12fr) minmax(440px, 0.88fr);
   align-items: center;
-  gap: 44px;
+  gap: 30px;
 }
 
 .hero-copy {
@@ -331,6 +331,8 @@ p {
 
 .hero-mockup {
   position: relative;
+  transform: scale(1.12);
+  transform-origin: center right;
 }
 
 .hero-mockup::before {
@@ -349,7 +351,7 @@ p {
   overflow: hidden;
   border: 1px solid rgba(213, 219, 229, 0.9);
   border-radius: 18px;
-  padding: 20px;
+  padding: 22px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: var(--shadow);
 }
@@ -532,11 +534,23 @@ p {
 
 .automation-card h3 {
   margin-top: 22px;
+  margin-bottom: 8px;
   font-size: 1.24rem;
 }
 
 .automation-card p {
+  font-size: 1rem;
+  line-height: 1.62;
   margin-bottom: 20px;
+}
+
+.automation-benefit {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  line-height: 1.25;
 }
 
 .automation-visual {
@@ -980,19 +994,23 @@ p {
 
 .price-card.recommended {
   border-color: rgba(249, 115, 22, 0.46);
-  background: linear-gradient(180deg, #ffffff, #fff7ed);
-  box-shadow: 0 24px 58px rgba(249, 115, 22, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 247, 237, 0.72), rgba(255, 255, 255, 0.98) 42%),
+    #ffffff;
+  box-shadow: 0 28px 66px rgba(249, 115, 22, 0.16);
+  transform: translateY(-8px);
 }
 
 .badge {
   display: inline-flex;
   margin-bottom: 16px;
   border-radius: 999px;
-  padding: 6px 10px;
+  padding: 8px 12px;
   background: #ffedd5;
   color: #c2410c;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .price {
@@ -1127,7 +1145,8 @@ p {
 }
 
 .site-footer p,
-.site-footer a {
+.site-footer a,
+.site-footer span {
   color: rgba(255, 255, 255, 0.76);
 }
 
@@ -1149,7 +1168,7 @@ address,
 
   .hero {
     min-height: auto;
-    padding: 46px 0 62px;
+    padding: 36px 0 54px;
   }
 
   .nav-toggle {
@@ -1185,6 +1204,11 @@ address,
     gap: 34px;
   }
 
+  .hero-mockup {
+    transform: none;
+    transform-origin: center;
+  }
+
   h1 {
     font-size: clamp(2.85rem, 7vw, 4.6rem);
     line-height: 1;
@@ -1201,6 +1225,10 @@ address,
   .demo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .price-card.recommended {
+    transform: none;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1214,7 +1242,7 @@ address,
 
   .hero {
     min-height: auto;
-    padding: 42px 0 50px;
+    padding: 34px 0 46px;
   }
 
   h1 {
@@ -1279,6 +1307,10 @@ address,
   .automation-visual {
     min-height: 170px;
     padding: 14px;
+  }
+
+  .automation-card p {
+    font-size: 0.98rem;
   }
 
   .form-to-sheet,
