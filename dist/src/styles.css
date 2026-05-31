@@ -591,7 +591,7 @@ p {
   max-height: 116px;
   align-items: center;
   align-content: center;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(229, 231, 235, 0.9);
   border-radius: 16px;
   padding: 10px;
@@ -672,13 +672,15 @@ p {
 
 .mini-sheet {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  padding: 10px;
+  grid-template-columns: 0.92fr 1.05fr 1.14fr;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding: 9px;
   align-self: stretch;
   align-content: center;
   background:
-    linear-gradient(var(--line), var(--line)) 0 50% / 100% 1px no-repeat,
+    linear-gradient(var(--line), var(--line)) 0 33.333% / 100% 1px no-repeat,
+    linear-gradient(var(--line), var(--line)) 0 66.666% / 100% 1px no-repeat,
     linear-gradient(90deg, var(--line), var(--line)) 33.333% 0 / 1px 100% no-repeat,
     linear-gradient(90deg, var(--line), var(--line)) 66.666% 0 / 1px 100% no-repeat,
     var(--white);
@@ -690,14 +692,15 @@ p {
   padding: 3px 4px;
   background: var(--teal-soft);
   color: #0f766e;
-  font-size: 0.58rem;
+  font-size: 0.56rem;
   font-weight: 800;
   line-height: 1.1;
   text-align: center;
+  white-space: nowrap;
 }
 
 .mini-sheet span {
-  height: 12px;
+  min-height: 10px;
   border-radius: 4px;
   background: #eef2f7;
 }
@@ -802,6 +805,36 @@ p {
   color: #0f766e;
   font-size: 0.7rem;
   font-weight: 800;
+}
+
+@media (min-width: 761px) {
+  .form-to-sheet .mini-form {
+    transform: translate(-4px, -3px);
+  }
+
+  .form-to-sheet .mini-sheet {
+    transform: translate(4px, 3px);
+  }
+
+  .form-to-email .mini-form {
+    transform: translate(-4px, -2px);
+  }
+
+  .form-to-email .email-preview {
+    transform: translate(4px, 2px);
+  }
+
+  .chat-bubble.question {
+    transform: translate(-4px, -2px);
+  }
+
+  .chat-bubble.customer {
+    transform: translate(4px, 0);
+  }
+
+  .chat-bubble.answer {
+    transform: translate(4px, 2px);
+  }
 }
 
 .benefit-list {
