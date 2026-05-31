@@ -212,9 +212,9 @@ textarea {
   position: relative;
   overflow: hidden;
   display: grid;
-  min-height: 68vh;
+  min-height: 64vh;
   align-items: center;
-  padding: 34px 0 46px;
+  padding: 30px 0 34px;
   background:
     radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.18), transparent 30%),
     radial-gradient(circle at 58% 74%, rgba(109, 93, 246, 0.12), transparent 28%),
@@ -235,13 +235,13 @@ textarea {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(440px, 0.88fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(430px, 0.82fr);
   align-items: center;
-  gap: 30px;
+  gap: 26px;
 }
 
 .hero-copy {
-  max-width: 900px;
+  max-width: 940px;
 }
 
 .eyebrow {
@@ -269,11 +269,21 @@ h3 {
 }
 
 h1 {
-  max-width: 900px;
-  margin-bottom: 24px;
+  max-width: 940px;
+  margin-bottom: 20px;
   color: var(--heading);
-  font-size: clamp(3rem, 5vw, 5.35rem);
-  line-height: 0.99;
+  font-size: clamp(2.85rem, 4.45vw, 4.85rem);
+  line-height: 1;
+}
+
+.hero h1 span {
+  display: inline;
+}
+
+@media (min-width: 981px) {
+  .hero h1 span {
+    display: block;
+  }
 }
 
 h2 {
@@ -296,7 +306,7 @@ p {
 
 .hero-lead {
   max-width: 760px;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   color: #4b5563;
   font-size: 1.16rem;
 }
@@ -305,7 +315,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .trust-list {
