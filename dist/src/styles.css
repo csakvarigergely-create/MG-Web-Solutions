@@ -597,8 +597,8 @@ p {
 }
 
 .form-to-sheet {
-  grid-template-columns: 0.9fr 34px 1.1fr;
-  gap: 10px;
+  grid-template-columns: minmax(0, 0.92fr) 36px minmax(0, 1.08fr);
+  gap: 8px;
 }
 
 .mini-form,
@@ -609,7 +609,7 @@ p {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--white);
-  box-shadow: 0 10px 24px rgba(24, 35, 63, 0.07);
+  box-shadow: 0 10px 22px rgba(24, 35, 63, 0.06);
 }
 
 .mini-form {
@@ -648,18 +648,20 @@ p {
 
 .flow-arrow {
   position: relative;
-  height: 2px;
+  align-self: center;
+  height: 3px;
+  border-radius: 999px;
   background: linear-gradient(90deg, var(--violet), var(--teal));
 }
 
 .flow-arrow::after {
   position: absolute;
   top: 50%;
-  right: -1px;
-  width: 9px;
-  height: 9px;
-  border-top: 2px solid var(--teal);
-  border-right: 2px solid var(--teal);
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid var(--teal);
+  border-right: 3px solid var(--teal);
   content: "";
   transform: translateY(-50%) rotate(45deg);
 }
@@ -669,6 +671,8 @@ p {
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   padding: 10px;
+  align-self: stretch;
+  align-content: center;
 }
 
 .mini-sheet span {
@@ -683,9 +687,13 @@ p {
   background: var(--teal-soft);
 }
 
+.mini-sheet span:nth-child(4) {
+  background: rgba(109, 93, 246, 0.12);
+}
+
 .form-to-email {
-  grid-template-columns: 0.86fr 44px 1.12fr;
-  gap: 10px;
+  grid-template-columns: minmax(0, 0.82fr) 42px minmax(0, 1.18fr);
+  gap: 8px;
 }
 
 .mail-icon {
@@ -722,6 +730,7 @@ p {
   display: grid;
   gap: 5px;
   padding: 11px;
+  align-self: center;
 }
 
 .email-preview span {
@@ -729,40 +738,44 @@ p {
   font-family: var(--font-heading);
   font-weight: 800;
   line-height: 1.2;
+  font-size: 0.9rem;
 }
 
 .email-preview small {
   color: var(--muted);
+  font-size: 0.76rem;
 }
 
 .chat-preview {
   align-content: center;
-  gap: 8px;
+  gap: 7px;
 }
 
 .chat-bubble {
   max-width: 86%;
-  padding: 9px 11px;
+  padding: 8px 10px;
   color: var(--heading);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   font-weight: 700;
 }
 
 .chat-bubble.question {
   justify-self: start;
+  border-color: rgba(109, 93, 246, 0.18);
 }
 
 .chat-bubble.answer {
   justify-self: end;
+  max-width: 78%;
   border-color: rgba(20, 184, 166, 0.28);
   background: var(--teal-soft);
 }
 
 .chat-input {
-  margin-top: 4px;
-  padding: 8px 10px;
+  margin-top: 2px;
+  padding: 7px 10px;
   color: #0f766e;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 800;
 }
 
