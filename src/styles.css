@@ -212,9 +212,9 @@ textarea {
   position: relative;
   overflow: hidden;
   display: grid;
-  min-height: 66vh;
+  min-height: 62vh;
   align-items: center;
-  padding: 36px 0 40px;
+  padding: 28px 0 30px;
   background:
     radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.18), transparent 30%),
     radial-gradient(circle at 58% 74%, rgba(109, 93, 246, 0.12), transparent 28%),
@@ -235,13 +235,13 @@ textarea {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 52fr) minmax(360px, 48fr);
+  grid-template-columns: minmax(0, 54fr) minmax(360px, 46fr);
   align-items: center;
   gap: 38px;
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: 800px;
 }
 
 .eyebrow {
@@ -269,11 +269,11 @@ h3 {
 }
 
 h1 {
-  max-width: 760px;
-  margin-bottom: 18px;
+  max-width: 800px;
+  margin-bottom: 16px;
   color: var(--heading);
-  font-size: clamp(2.65rem, 3.75vw, 4.25rem);
-  line-height: 1.02;
+  font-size: clamp(2.45rem, 3.35vw, 3.95rem);
+  line-height: 1.03;
 }
 
 .hero h1 span {
@@ -283,6 +283,13 @@ h1 {
 @media (min-width: 981px) {
   .hero h1 span {
     display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero h1 span:nth-child(3),
+  .hero h1 span:nth-child(4) {
+    display: inline;
   }
 }
 
@@ -306,7 +313,7 @@ p {
 
 .hero-lead {
   max-width: 700px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   color: #4b5563;
   font-size: 1.12rem;
 }
@@ -315,7 +322,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .trust-list {
