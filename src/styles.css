@@ -586,9 +586,12 @@ p {
 .automation-visual {
   position: relative;
   display: grid;
-  height: 124px;
-  min-height: 124px;
+  height: 116px;
+  min-height: 116px;
+  max-height: 116px;
   align-items: center;
+  align-content: center;
+  overflow: hidden;
   border: 1px solid rgba(229, 231, 235, 0.9);
   border-radius: 16px;
   padding: 10px;
@@ -741,6 +744,7 @@ p {
 
 .chat-preview {
   align-content: center;
+  justify-content: stretch;
   gap: 4px;
 }
 
@@ -1381,8 +1385,9 @@ address,
   }
 
   .automation-visual {
-    height: 124px;
-    min-height: 124px;
+    height: 116px;
+    min-height: 116px;
+    max-height: 116px;
     padding: 10px;
   }
 
