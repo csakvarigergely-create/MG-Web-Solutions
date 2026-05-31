@@ -586,7 +586,8 @@ p {
 .automation-visual {
   position: relative;
   display: grid;
-  min-height: 108px;
+  height: 124px;
+  min-height: 124px;
   align-items: center;
   border: 1px solid rgba(229, 231, 235, 0.9);
   border-radius: 16px;
@@ -713,26 +714,28 @@ p {
   border: 2px solid var(--violet);
   border-radius: 8px;
   background: var(--violet-soft);
-}
-
-.mail-icon::before,
-.mail-icon::after {
-  position: absolute;
-  top: 7px;
-  width: 21px;
-  height: 2px;
-  background: var(--violet);
-  content: "";
+  overflow: hidden;
 }
 
 .mail-icon::before {
-  left: 3px;
-  transform: rotate(32deg);
+  position: absolute;
+  inset: 6px 5px auto;
+  height: 14px;
+  border-right: 2px solid var(--violet);
+  border-bottom: 2px solid var(--violet);
+  content: "";
+  transform: rotate(45deg);
 }
 
 .mail-icon::after {
-  right: 3px;
-  transform: rotate(-32deg);
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--violet);
+  content: "";
 }
 
 .email-preview {
@@ -757,20 +760,27 @@ p {
 
 .chat-preview {
   align-content: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .chat-bubble {
   max-width: 86%;
-  padding: 7px 9px;
+  padding: 6px 8px;
   color: var(--heading);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
 .chat-bubble.question {
   justify-self: start;
   border-color: rgba(109, 93, 246, 0.18);
+}
+
+.chat-bubble.customer {
+  justify-self: end;
+  max-width: 82%;
+  border-color: rgba(249, 115, 22, 0.22);
+  background: #fff7ed;
 }
 
 .chat-bubble.answer {
@@ -784,10 +794,10 @@ p {
   justify-self: end;
   border: 1px solid rgba(249, 115, 22, 0.26);
   border-radius: 999px;
-  padding: 6px 9px;
+  padding: 5px 8px;
   background: #ffedd5;
   color: #c2410c;
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   font-weight: 800;
   box-shadow: 0 8px 18px rgba(249, 115, 22, 0.12);
 }
@@ -795,9 +805,9 @@ p {
 .chat-input {
   justify-self: start;
   margin-top: 0;
-  padding: 5px 8px;
+  padding: 4px 7px;
   color: #0f766e;
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   font-weight: 800;
 }
 
@@ -1390,7 +1400,8 @@ address,
   }
 
   .automation-visual {
-    min-height: 104px;
+    height: 124px;
+    min-height: 124px;
     padding: 10px;
   }
 
