@@ -707,35 +707,16 @@ p {
 }
 
 .mail-icon {
-  position: relative;
   width: 34px;
   height: 28px;
   place-self: center;
-  border: 2px solid var(--violet);
   border-radius: 8px;
   background: var(--violet-soft);
-  overflow: hidden;
-}
-
-.mail-icon::before {
-  position: absolute;
-  inset: 6px 5px auto;
-  height: 14px;
-  border-right: 2px solid var(--violet);
-  border-bottom: 2px solid var(--violet);
-  content: "";
-  transform: rotate(45deg);
-}
-
-.mail-icon::after {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--violet);
-  content: "";
+  fill: none;
+  stroke: var(--violet);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
 }
 
 .email-preview {
