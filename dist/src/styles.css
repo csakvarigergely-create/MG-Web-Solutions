@@ -214,7 +214,7 @@ textarea {
   display: grid;
   min-height: 62vh;
   align-items: center;
-  padding: 28px 0 30px;
+  padding: 28px 0 34px;
   background:
     radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.18), transparent 30%),
     radial-gradient(circle at 58% 74%, rgba(109, 93, 246, 0.12), transparent 28%),
@@ -272,7 +272,7 @@ h1 {
   max-width: 800px;
   margin-bottom: 16px;
   color: var(--heading);
-  font-size: clamp(2.45rem, 3.35vw, 3.95rem);
+  font-size: clamp(2.32rem, 3.15vw, 3.72rem);
   line-height: 1.03;
 }
 
@@ -1228,7 +1228,7 @@ address,
   }
 
   h1 {
-    font-size: clamp(2.55rem, 6.2vw, 3.75rem);
+    font-size: clamp(2.42rem, 5.9vw, 3.55rem);
     line-height: 1.04;
   }
 
@@ -1264,7 +1264,7 @@ address,
   }
 
   h1 {
-    font-size: clamp(2.1rem, 9.6vw, 2.65rem);
+    font-size: clamp(2rem, 9.1vw, 2.52rem);
     line-height: 1.05;
   }
 
