@@ -1744,3 +1744,126 @@ h2 {
     min-height: 150px;
   }
 }
+
+
+/* Distinct visual markers instead of repeated numbering */
+.problem-visual {
+  position: relative;
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(109, 93, 246, 0.18);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #ffffff, var(--violet-soft));
+  box-shadow: 0 10px 22px rgba(24, 35, 63, 0.08);
+}
+
+.problem-focus::before {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--violet);
+  border-radius: 50%;
+  content: "";
+}
+
+.problem-focus span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.problem-leads {
+  align-items: flex-end;
+  padding-bottom: 13px;
+}
+
+.problem-leads span {
+  width: 6px;
+  border-radius: 99px 99px 3px 3px;
+  background: var(--teal);
+}
+
+.problem-leads span:first-child {
+  height: 12px;
+  opacity: 0.58;
+}
+
+.problem-leads span:nth-child(2) {
+  height: 20px;
+  opacity: 0.78;
+}
+
+.problem-leads span:last-child {
+  height: 28px;
+}
+
+.problem-followup::before {
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--violet), var(--teal));
+  content: "";
+}
+
+.problem-followup span {
+  position: absolute;
+  z-index: 1;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--violet);
+  box-shadow: 0 0 0 1px rgba(109, 93, 246, 0.28);
+}
+
+.problem-followup span:first-child {
+  left: 11px;
+}
+
+.problem-followup span:nth-child(2) {
+  background: var(--orange);
+}
+
+.problem-followup span:last-child {
+  right: 11px;
+  background: var(--teal);
+}
+
+.card-label {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 24px;
+  border: 1px solid rgba(109, 93, 246, 0.16);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: var(--violet-soft);
+  color: #5547d7;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.why-grid .mini-card:nth-child(2) .card-label {
+  border-color: rgba(20, 184, 166, 0.2);
+  background: var(--teal-soft);
+  color: #0f766e;
+}
+
+.why-grid .mini-card:nth-child(3) .card-label {
+  border-color: rgba(249, 115, 22, 0.2);
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.why-grid .mini-card:nth-child(4) .card-label {
+  border-color: rgba(59, 130, 246, 0.18);
+  background: #eff6ff;
+  color: #1d4ed8;
+}
