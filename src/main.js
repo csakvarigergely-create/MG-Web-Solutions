@@ -26,3 +26,18 @@ form?.addEventListener("submit", (event) => {
     button.disabled = false;
   }, 2600);
 });
+
+
+const mobileCta = document.querySelector(".mobile-cta");
+const contactSection = document.querySelector("#kapcsolat");
+
+if (mobileCta && contactSection && "IntersectionObserver" in window) {
+  const contactObserver = new IntersectionObserver(
+    ([entry]) => {
+      mobileCta.classList.toggle("is-hidden", entry.isIntersecting);
+    },
+    { threshold: 0.12 }
+  );
+
+  contactObserver.observe(contactSection);
+}

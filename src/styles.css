@@ -1679,3 +1679,68 @@ h2 {
     max-width: 100%;
   }
 }
+
+
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  body {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .nav {
+    min-height: 68px;
+  }
+
+  .nav-links {
+    top: 68px;
+  }
+
+  .button,
+  .nav-toggle,
+  .mobile-cta {
+    min-height: 48px;
+  }
+
+  .mobile-cta {
+    position: fixed;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: 12px;
+    z-index: 30;
+    display: flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--orange);
+    border-radius: 12px;
+    padding: 13px 18px;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 800;
+    box-shadow: 0 18px 44px rgba(24, 35, 63, 0.24), 0 10px 26px rgba(249, 115, 22, 0.3);
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .mobile-cta span:last-child {
+    font-size: 1.25rem;
+  }
+
+  .mobile-cta.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .contact-form textarea {
+    min-height: 150px;
+  }
+}
