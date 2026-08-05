@@ -401,7 +401,7 @@ p {
   padding: 14px;
   background: #fff;
   box-shadow: 0 12px 28px rgba(24, 35, 63, .07);
-  animation: leadArrive 7.2s ease-in-out infinite;
+  animation: leadArrive 8.4s ease-in-out infinite;
 }
 
 .lead-avatar { display: grid; width: 40px; height: 40px; flex: 0 0 40px; place-items: center; border-radius: 12px; background: var(--violet-soft); color: var(--violet); font-size: .7rem; font-weight: 900; }
@@ -412,7 +412,7 @@ p {
 
 .system-route { display: grid; grid-template-columns: 1fr 22px 1fr 22px 1fr; align-items: center; gap: 4px; margin: 18px 0; }
 .system-route > i { position: relative; height: 2px; overflow: hidden; background: #e4e7ee; }
-.system-route > i::after { position: absolute; inset: 0; background: linear-gradient(90deg, var(--violet), var(--teal)); content: ""; transform: translateX(-100%); animation: routeLine 7.2s ease-in-out infinite; }
+.system-route > i::after { position: absolute; inset: 0; background: linear-gradient(90deg, var(--violet), var(--teal)); content: ""; transform: translateX(-100%); animation: routeLine 8.4s ease-in-out infinite; }
 .system-route > i:nth-of-type(2)::after { animation-delay: .55s; }
 .route-step { display: grid; min-width: 0; gap: 2px; border: 1px solid #e7e9ef; border-radius: 13px; padding: 12px 8px; background: #fff; text-align: center; transition: border-color .2s ease, box-shadow .2s ease; }
 .route-step .route-icon { display: grid; width: 31px; height: 31px; margin: 0 auto 6px; place-items: center; border: 1px solid rgba(109, 93, 246, .14); border-radius: 9px; background: linear-gradient(145deg, #fff, #f1efff); color: var(--violet); box-shadow: 0 6px 14px rgba(24, 35, 63, .07); }
@@ -421,11 +421,11 @@ p {
 .route-step.route-email .route-icon { border-color: rgba(20, 184, 166, .17); background: linear-gradient(145deg, #fff, #e9fbf8); color: var(--teal); }
 .route-step strong { color: var(--heading); font-size: .72rem; }
 .route-step small { color: #8a94a6; font-size: .57rem; }
-.route-form { animation: routeStepOne 7.2s ease-in-out infinite; }
-.route-lead { animation: routeStepTwo 7.2s ease-in-out infinite; }
-.route-email { animation: routeStepThree 7.2s ease-in-out infinite; }
+.route-form { animation: routeStepOne 8.4s ease-in-out infinite; }
+.route-lead { animation: routeStepTwo 8.4s ease-in-out infinite; }
+.route-email { animation: routeStepThree 8.4s ease-in-out infinite; }
 
-.system-success { gap: 11px; border-radius: 14px; padding: 13px 14px; background: linear-gradient(135deg, rgba(20,184,166,.1), rgba(109,93,246,.08)); opacity: 0; animation: successReveal 7.2s ease-in-out infinite; }
+.system-success { gap: 11px; border-radius: 14px; padding: 13px 14px; background: linear-gradient(135deg, rgba(20,184,166,.1), rgba(109,93,246,.08)); opacity: 0; animation: successReveal 8.4s ease-in-out infinite; }
 .system-success > span { display: grid; width: 31px; height: 31px; place-items: center; border-radius: 50%; background: var(--teal); color: #fff; font-weight: 900; }
 .system-success div { display: grid; gap: 1px; }
 .system-success strong { color: #174b46; font-size: .75rem; }
