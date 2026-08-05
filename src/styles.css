@@ -415,7 +415,10 @@ p {
 .system-route > i::after { position: absolute; inset: 0; background: linear-gradient(90deg, var(--violet), var(--teal)); content: ""; transform: translateX(-100%); animation: routeLine 7.2s ease-in-out infinite; }
 .system-route > i:nth-of-type(2)::after { animation-delay: .55s; }
 .route-step { display: grid; min-width: 0; gap: 2px; border: 1px solid #e7e9ef; border-radius: 13px; padding: 12px 8px; background: #fff; text-align: center; transition: border-color .2s ease, box-shadow .2s ease; }
-.route-step span { display: grid; width: 25px; height: 25px; margin: 0 auto 5px; place-items: center; border-radius: 8px; background: #f1f3f7; color: #8992a3; font-size: .58rem; font-weight: 900; }
+.route-step .route-icon { display: grid; width: 31px; height: 31px; margin: 0 auto 6px; place-items: center; border: 1px solid rgba(109, 93, 246, .14); border-radius: 9px; background: linear-gradient(145deg, #fff, #f1efff); color: var(--violet); box-shadow: 0 6px 14px rgba(24, 35, 63, .07); }
+.route-step .route-icon svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.route-step.route-lead .route-icon { border-color: rgba(249, 115, 22, .16); background: linear-gradient(145deg, #fff, #fff3e8); color: var(--orange); }
+.route-step.route-email .route-icon { border-color: rgba(20, 184, 166, .17); background: linear-gradient(145deg, #fff, #e9fbf8); color: var(--teal); }
 .route-step strong { color: var(--heading); font-size: .72rem; }
 .route-step small { color: #8a94a6; font-size: .57rem; }
 .route-form { animation: routeStepOne 7.2s ease-in-out infinite; }
@@ -2276,7 +2279,6 @@ h2 {
 .solution-demo-kicker span { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(20,184,166,.1); }
 .solution-demo-note { margin: 10px 4px 0; color: #7b8495; font-size: .68rem; text-align: center; }
 .solution-demo-wrap .chat-demo { box-shadow: 0 28px 70px rgba(24,35,63,.16); }
-.solution-features { grid-column: 1 / -1; margin-top: 4px; }
 
 .solution-intro {
   position: sticky;
