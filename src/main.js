@@ -41,3 +41,105 @@ if (mobileCta && contactSection && "IntersectionObserver" in window) {
 
   contactObserver.observe(contactSection);
 }
+
+const chatDemo = document.querySelector("[data-chat-demo]");
+const chatStage = document.querySelector("[data-chat-stage]");
+const chatProgress = document.querySelector("[data-chat-progress]");
+
+if (chatDemo && chatStage && chatProgress) {
+  const scenes = [
+    {
+      duration: 1700,
+      html: `<div class="chat-scene">
+        <div class="chat-bubble-ai">Szia! Megmutassam, hogyan hoz érdeklődőket egy modern landing oldal?</div>
+        <div class="quick-replies"><span class="is-selected">Igen, mutasd</span><span>Hogyan működik?</span><span>Érdekel</span></div>
+      </div>`
+    },
+    {
+      duration: 2600,
+      html: `<div class="chat-scene form-scene">
+        <div class="chat-bubble-ai compact">Először a látogató kitölti az ajánlatkérő űrlapot.</div>
+        <div class="demo-form">
+          <div><span>Név</span><strong class="type-value" style="--delay:.12s">Kiss Péter</strong></div>
+          <div><span>E-mail</span><strong class="type-value" style="--delay:.34s">peter@ceg.hu</strong></div>
+          <div><span>Telefon</span><strong class="type-value" style="--delay:.56s">+36 30 123 4567</strong></div>
+          <div><span>Szolgáltatás</span><strong class="type-value" style="--delay:.78s">Klímaszerelés</strong></div>
+          <button type="button" tabindex="-1">Küldés <span>→</span></button>
+        </div>
+      </div>`
+    },
+    {
+      duration: 1800,
+      html: `<div class="chat-scene">
+        <div class="chat-bubble-ai compact">Az adat azonnal bekerül a rendszerbe.</div>
+        <div class="automation-checks">
+          <div style="--delay:.1s"><span>✓</span><strong>Űrlap elküldve</strong></div>
+          <div style="--delay:.36s"><span>✓</span><strong>Lead mentve</strong></div>
+          <div style="--delay:.62s"><span>✓</span><strong>Értesítés elküldve</strong></div>
+        </div>
+      </div>`
+    },
+    {
+      duration: 1800,
+      html: `<div class="chat-scene">
+        <div class="chat-bubble-ai compact">Automatikus visszaigazoló e-mail megy az érdeklődőnek.</div>
+        <div class="email-demo-card">
+          <div><span class="email-icon">✉</span><div><small>Automatikus e-mail</small><strong>Köszönjük az érdeklődést</strong></div><i>Elküldve</i></div>
+          <p>Hamarosan felvesszük Önnel a kapcsolatot.</p>
+          <small>MG Web Solutions</small>
+        </div>
+      </div>`
+    },
+    {
+      duration: 2100,
+      html: `<div class="chat-scene qa-scene">
+        <div class="chat-bubble-ai compact">Közben a chatbot azonnal válaszol a gyakori kérdésekre is.</div>
+        <div class="chat-bubble-user">Mennyi idő alatt készül el?</div>
+        <div class="chat-bubble-ai reply">Akár 3–5 munkanap alatt.</div>
+        <div class="chat-bubble-user second">Van automatizáció is?</div>
+        <div class="chat-bubble-ai reply second">Igen — űrlap, e-mail és AI chatbot egyben.</div>
+      </div>`
+    },
+    {
+      duration: 1900,
+      html: `<div class="chat-scene cta-scene">
+        <span class="result-pill">Landing oldal + automatizáció + AI</span>
+        <div class="chat-bubble-ai">Szeretnél egy ilyen rendszert a vállalkozásodnak?</div>
+        <div class="chat-demo-actions"><a href="#kapcsolat">Ajánlatot kérek</a><a href="#demok">Megnézem a demókat</a></div>
+      </div>`
+    }
+  ];
+
+  let sceneIndex = 0;
+  let timer;
+
+  const showScene = () => {
+    const scene = scenes[sceneIndex];
+    chatStage.classList.remove("is-visible");
+    window.setTimeout(() => {
+      chatStage.innerHTML = scene.html;
+      chatStage.classList.add("is-visible");
+      chatProgress.style.animation = "none";
+      void chatProgress.offsetWidth;
+      chatProgress.style.animation = `chatProgress ${scene.duration}ms linear forwards`;
+      timer = window.setTimeout(() => {
+        sceneIndex = (sceneIndex + 1) % scenes.length;
+        showScene();
+      }, scene.duration);
+    }, 140);
+  };
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (reduceMotion.matches) {
+    sceneIndex = scenes.length - 1;
+    chatStage.innerHTML = scenes[sceneIndex].html;
+    chatStage.classList.add("is-visible");
+    chatProgress.style.width = "100%";
+  } else {
+    showScene();
+    document.addEventListener("visibilitychange", () => {
+      window.clearTimeout(timer);
+      if (!document.hidden) showScene();
+    });
+  }
+}
