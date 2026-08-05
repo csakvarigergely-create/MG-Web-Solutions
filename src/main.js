@@ -45,18 +45,19 @@ if (mobileCta && contactSection && "IntersectionObserver" in window) {
 const chatDemo = document.querySelector("[data-chat-demo]");
 const chatStage = document.querySelector("[data-chat-stage]");
 const chatProgress = document.querySelector("[data-chat-progress]");
+const chatControl = document.querySelector("[data-chat-control]");
 
 if (chatDemo && chatStage && chatProgress) {
   const scenes = [
     {
-      duration: 1700,
+      duration: 3200,
       html: `<div class="chat-scene">
         <div class="chat-bubble-ai">Szia! Megmutassam, hogyan hoz érdeklődőket egy modern landing oldal?</div>
         <div class="quick-replies"><span class="is-selected">Igen, mutasd</span><span>Hogyan működik?</span><span>Érdekel</span></div>
       </div>`
     },
     {
-      duration: 2600,
+      duration: 5000,
       html: `<div class="chat-scene form-scene">
         <div class="chat-bubble-ai compact">Először a látogató kitölti az ajánlatkérő űrlapot.</div>
         <div class="demo-form">
@@ -69,7 +70,7 @@ if (chatDemo && chatStage && chatProgress) {
       </div>`
     },
     {
-      duration: 1800,
+      duration: 3600,
       html: `<div class="chat-scene">
         <div class="chat-bubble-ai compact">Az adat azonnal bekerül a rendszerbe.</div>
         <div class="automation-checks">
@@ -80,7 +81,7 @@ if (chatDemo && chatStage && chatProgress) {
       </div>`
     },
     {
-      duration: 1800,
+      duration: 3600,
       html: `<div class="chat-scene">
         <div class="chat-bubble-ai compact">Automatikus visszaigazoló e-mail megy az érdeklődőnek.</div>
         <div class="email-demo-card">
@@ -91,7 +92,7 @@ if (chatDemo && chatStage && chatProgress) {
       </div>`
     },
     {
-      duration: 2100,
+      duration: 4200,
       html: `<div class="chat-scene qa-scene">
         <div class="chat-bubble-ai compact">Közben a chatbot azonnal válaszol a gyakori kérdésekre is.</div>
         <div class="chat-bubble-user">Mennyi idő alatt készül el?</div>
@@ -101,7 +102,7 @@ if (chatDemo && chatStage && chatProgress) {
       </div>`
     },
     {
-      duration: 1900,
+      duration: 3600,
       html: `<div class="chat-scene cta-scene">
         <span class="result-pill">Landing oldal + automatizáció + AI</span>
         <div class="chat-bubble-ai">Szeretnél egy ilyen rendszert a vállalkozásodnak?</div>
@@ -112,6 +113,41 @@ if (chatDemo && chatStage && chatProgress) {
 
   let sceneIndex = 0;
   let timer;
+  let sceneStartedAt = 0;
+  let remaining = scenes[0].duration;
+  let isPaused = false;
+
+  const setControlState = () => {
+    if (!chatControl) return;
+    chatControl.textContent = isPaused ? "Folytatás" : "Szünet";
+    chatControl.setAttribute("aria-label", isPaused ? "Animáció folytatása" : "Animáció megállítása");
+  };
+
+  const scheduleNext = (delay) => {
+    remaining = delay;
+    sceneStartedAt = Date.now();
+    timer = window.setTimeout(() => {
+      sceneIndex = (sceneIndex + 1) % scenes.length;
+      showScene();
+    }, delay);
+  };
+
+  const pauseDemo = () => {
+    if (isPaused) return;
+    isPaused = true;
+    window.clearTimeout(timer);
+    remaining = Math.max(250, remaining - (Date.now() - sceneStartedAt));
+    chatProgress.style.animationPlayState = "paused";
+    setControlState();
+  };
+
+  const resumeDemo = () => {
+    if (!isPaused) return;
+    isPaused = false;
+    chatProgress.style.animationPlayState = "running";
+    scheduleNext(remaining);
+    setControlState();
+  };
 
   const showScene = () => {
     const scene = scenes[sceneIndex];
@@ -122,10 +158,7 @@ if (chatDemo && chatStage && chatProgress) {
       chatProgress.style.animation = "none";
       void chatProgress.offsetWidth;
       chatProgress.style.animation = `chatProgress ${scene.duration}ms linear forwards`;
-      timer = window.setTimeout(() => {
-        sceneIndex = (sceneIndex + 1) % scenes.length;
-        showScene();
-      }, scene.duration);
+      scheduleNext(scene.duration);
     }, 140);
   };
 
@@ -137,9 +170,17 @@ if (chatDemo && chatStage && chatProgress) {
     chatProgress.style.width = "100%";
   } else {
     showScene();
+    chatDemo.addEventListener("mouseenter", pauseDemo);
+    chatDemo.addEventListener("mouseleave", resumeDemo);
+    if (chatControl) {
+      chatControl.addEventListener("click", () => {
+        if (isPaused) resumeDemo();
+        else pauseDemo();
+      });
+    }
     document.addEventListener("visibilitychange", () => {
       window.clearTimeout(timer);
-      if (!document.hidden) showScene();
+      if (!document.hidden && !isPaused) showScene();
     });
   }
 }
