@@ -1,0 +1,217 @@
+/* Responsive polish for the conversion-focused content added during the final design pass. */
+
+.demo-card,
+.price-card,
+.project-safety-strip > div {
+  min-width: 0;
+}
+
+.demo-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-view-cue {
+  margin-top: auto !important;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card .price-cta {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  white-space: normal;
+}
+
+.package-assurance {
+  margin-top: auto;
+}
+
+.project-safety-strip > div {
+  min-height: 132px;
+}
+
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links .button-small {
+    max-width: 170px;
+    padding-inline: 12px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .pricing-grid {
+    gap: 16px;
+  }
+
+  .price-card {
+    padding-inline: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding-block: 68px;
+  }
+
+  .demos-section .section-heading,
+  .pricing-section .section-heading,
+  .contact-copy {
+    max-width: 720px;
+  }
+
+  .demo-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-card,
+  .price-card {
+    max-width: 720px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .price-card.recommended {
+    transform: none;
+  }
+
+  .project-safety-strip > div {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .section {
+    padding-block: 56px;
+  }
+
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 42px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 52px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .trust-list {
+    gap: 8px 12px;
+  }
+
+  .demo-card,
+  .price-card {
+    border-radius: 18px;
+  }
+
+  .demo-copy,
+  .price-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .demo-chips {
+    gap: 7px;
+  }
+
+  .demo-chips span {
+    font-size: .7rem;
+  }
+
+  .demo-view-cue {
+    font-size: .8rem !important;
+  }
+
+  .project-safety-strip {
+    gap: 10px !important;
+    margin-top: 24px !important;
+  }
+
+  .project-safety-strip > div {
+    border-radius: 14px !important;
+  }
+
+  .price-card .badge {
+    max-width: calc(100% - 28px);
+    text-align: center;
+    white-space: normal;
+  }
+
+  .price-card .price {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  .price-card .price-cta,
+  .contact-form .button,
+  .founder-cta {
+    width: 100%;
+    min-height: 54px;
+    padding-inline: 14px;
+    font-size: .9rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .contact-grid {
+    gap: 28px;
+  }
+
+  .mobile-cta {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: auto;
+    min-height: 52px;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .mobile-cta span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding-block: 48px;
+  }
+
+  .hero-actions .button,
+  .price-card .price-cta,
+  .contact-form .button,
+  .founder-cta {
+    font-size: .84rem;
+  }
+
+  .project-safety-strip strong {
+    font-size: .85rem !important;
+  }
+
+  .project-safety-strip span,
+  .package-assurance li {
+    font-size: .75rem !important;
+  }
+}
