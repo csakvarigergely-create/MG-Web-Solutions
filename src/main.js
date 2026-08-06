@@ -34,6 +34,110 @@ processItems.forEach((item, index) => {
   if (processTexts[index]) item.textContent = processTexts[index];
 });
 
+// Stronger demo presentation: business goal, key functions and a viewing cue.
+const demosHeading = document.querySelector(".demos-section .section-heading");
+if (demosHeading) {
+  const title = demosHeading.querySelector("h2");
+  const text = demosHeading.querySelector("p:last-child");
+  if (title) title.textContent = "Két működő minta arra, hogyan lesz egy szolgáltatásból világos online ajánlat.";
+  if (text) text.textContent = "Nem sablonképeket mutatok: nyisd meg a teljes oldalakat, próbáld ki mobilon is, és nézd meg az ajánlatkérés útját.";
+}
+
+const demoCards = document.querySelectorAll(".demo-card");
+const demoContent = [
+  {
+    label: "Helyi szolgáltató · ajánlatkérés",
+    title: "Klímás landing oldal",
+    text: "Helyi klímás vállalkozásnak tervezett oldal, amely gyorsan bemutatja az ajánlatot, csökkenti a bizonytalanságot és ajánlatkéréshez vezeti a látogatót.",
+    chips: ["Mobilra optimalizált", "Rövid ajánlatkérés", "Automatizációra kész"],
+    cue: "Ezt figyeld: mennyire gyorsan eljutsz az ajánlatkérésig."
+  },
+  {
+    label: "Egészségügy · bizalom és időpontkérés",
+    title: "Fogászati landing oldal",
+    text: "Prémium fogászati oldal bizalomépítő tartalommal, jól elkülönített szolgáltatásokkal és egyértelmű időpontkérési útvonallal.",
+    chips: ["Bizalomépítő felépítés", "Időpontkérés", "Chatbotra kész"],
+    cue: "Ezt figyeld: hogyan épül fel a bizalom a kapcsolatfelvétel előtt."
+  }
+];
+
+demoCards.forEach((card, index) => {
+  const data = demoContent[index];
+  if (!data) return;
+  const label = card.querySelector(".demo-label");
+  const title = card.querySelector("h3");
+  const text = card.querySelector(".demo-copy p");
+  const chips = card.querySelector(".demo-chips");
+  if (label) label.textContent = data.label;
+  if (title) title.textContent = data.title;
+  if (text) text.textContent = data.text;
+  if (chips) chips.innerHTML = data.chips.map((chip) => `<span>${chip}</span>`).join("");
+  if (!card.querySelector(".demo-view-cue")) {
+    const cue = document.createElement("p");
+    cue.className = "demo-view-cue";
+    cue.textContent = data.cue;
+    card.querySelector(".demo-copy")?.append(cue);
+  }
+});
+
+// Pricing clarity and risk reduction.
+const pricingHeading = document.querySelector(".pricing-section .section-heading");
+if (pricingHeading) {
+  const title = pricingHeading.querySelector("h2");
+  const text = pricingHeading.querySelector("p:last-child");
+  if (title) title.textContent = "Válaszd ki, milyen rendszerre van szükséged — a pontos tartalmat egyeztetés után rögzítjük.";
+  if (text) text.textContent = "Az árak irányárak, nem rejtett belépőárak. A projekt kezdete előtt írásban rögzítjük a feladatokat, a projektárat és a következő lépéseket.";
+}
+
+const recommendedBadge = document.querySelector(".price-card.recommended .badge");
+if (recommendedBadge) recommendedBadge.textContent = "A legtöbb szolgáltatónak ezt ajánlom";
+
+const priceCards = document.querySelectorAll(".price-card");
+const packageNotes = [
+  ["1 egyeztetett módosítási kör", "Mobilos és asztali ellenőrzés", "Átadás előtti technikai teszt"],
+  ["2 egyeztetett módosítási kör", "Űrlapfolyamat és e-mailek tesztelése", "Rövid használati átadás"],
+  ["2 egyeztetett módosítási kör", "Chatbot-tartalom közös pontosítása", "Teljes folyamat átadás előtti tesztelése"]
+];
+
+priceCards.forEach((card, index) => {
+  const button = card.querySelector(".price-cta");
+  if (button) button.textContent = "Kérek egy ingyenes konzultációt";
+  if (!card.querySelector(".package-assurance")) {
+    const assurance = document.createElement("div");
+    assurance.className = "package-assurance";
+    assurance.innerHTML = `<strong>A kivitelezés része</strong><ul>${packageNotes[index].map((note) => `<li>${note}</li>`).join("")}</ul>`;
+    button?.before(assurance);
+  }
+});
+
+if (pricingHeading && !document.querySelector(".project-safety-strip")) {
+  const safetyStrip = document.createElement("div");
+  safetyStrip.className = "project-safety-strip";
+  safetyStrip.innerHTML = `
+    <div><strong>Előre egyeztetett projektár</strong><span>A munka indulása előtt pontosítjuk, mi kerül bele.</span></div>
+    <div><strong>Átlátható munkafolyamat</strong><span>Mindig tudod, mi készült el és mi következik.</span></div>
+    <div><strong>Átadás előtti tesztelés</strong><span>Mobilon és asztali nézetben is ellenőrzöm az oldalt.</span></div>
+    <div><strong>Érthető átadás</strong><span>Megmutatom, hogyan működik az elkészült rendszer.</span></div>`;
+  pricingHeading.insertAdjacentElement("afterend", safetyStrip);
+}
+
+// Keep calls-to-action consistent. Demo links remain action-specific.
+const primaryCtas = [
+  document.querySelector(".nav-links .button-small"),
+  document.querySelector(".hero-actions .button:not(.button-secondary)"),
+  document.querySelector(".founder-cta"),
+  document.querySelector(".mobile-cta span:first-child"),
+  document.querySelector(".contact-form button")
+];
+primaryCtas.forEach((cta) => {
+  if (cta) cta.textContent = "Kérek egy ingyenes konzultációt";
+});
+
+const contactTitle = document.querySelector(".contact-section h2");
+const contactLead = document.querySelector(".contact-copy > p:not(.eyebrow)");
+if (contactTitle) contactTitle.textContent = "Beszéljük át, milyen oldal segítené a vállalkozásodat";
+if (contactLead) contactLead.textContent = "Írd le röviden a szolgáltatásodat és a célodat. A végleges kapcsolatfelvételi rendszer az automatizációs fázisban kerül bekötésre.";
+
 const formFootnote = document.querySelector(".form-footnote");
 if (formFootnote) {
   formFootnote.textContent = "Az ajánlatkérő űrlap technikai bekötése az oldal végső élesítése előtt készül el.";
@@ -48,6 +152,27 @@ if (footerEmail) {
 const founderPortrait = document.querySelector(".founder-portrait");
 if (founderPortrait) {
   founderPortrait.setAttribute("aria-label", "Az MG Web Solutions alapítójának portréja a végső frissítésben kerül ide");
+}
+
+// Component-level styling for the new conversion content.
+if (!document.querySelector("#sales-content-styles")) {
+  const style = document.createElement("style");
+  style.id = "sales-content-styles";
+  style.textContent = `
+    .demo-view-cue { margin: 16px 0 0; border-left: 3px solid var(--violet); padding-left: 12px; color: var(--heading); font-size: .86rem; font-weight: 700; line-height: 1.5; }
+    .project-safety-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 30px 0 28px; }
+    .project-safety-strip > div { display: grid; gap: 6px; border: 1px solid var(--line); border-radius: 16px; padding: 18px; background: rgba(255,255,255,.78); box-shadow: 0 12px 30px rgba(24,35,63,.05); }
+    .project-safety-strip strong { color: var(--heading); font-size: .9rem; }
+    .project-safety-strip span { color: var(--muted); font-size: .78rem; line-height: 1.5; }
+    .package-assurance { margin: 20px 0; border-top: 1px solid var(--line); padding-top: 18px; }
+    .package-assurance strong { display: block; margin-bottom: 10px; color: var(--heading); font-size: .82rem; }
+    .package-assurance ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .package-assurance li { position: relative; padding-left: 20px; color: var(--muted); font-size: .78rem; line-height: 1.45; }
+    .package-assurance li::before { position: absolute; left: 0; color: var(--teal); content: "✓"; font-weight: 900; }
+    @media (max-width: 900px) { .project-safety-strip { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .project-safety-strip { grid-template-columns: 1fr; } .project-safety-strip > div { padding: 16px; } }
+  `;
+  document.head.append(style);
 }
 
 toggle?.addEventListener("click", () => {
@@ -70,7 +195,7 @@ form?.addEventListener("submit", (event) => {
   button.textContent = "Az űrlap bekötése hamarosan készül";
   button.disabled = true;
   window.setTimeout(() => {
-    button.textContent = "Ajánlatot kérek";
+    button.textContent = "Kérek egy ingyenes konzultációt";
     button.disabled = false;
   }, 2600);
 });
@@ -153,7 +278,7 @@ if (chatDemo && chatStage && chatProgress) {
       html: `<div class="chat-scene cta-scene">
         <span class="result-pill">Landing oldal + automatizáció + AI</span>
         <div class="chat-bubble-ai">Szeretnél egy ilyen rendszert a vállalkozásodnak?</div>
-        <div class="chat-demo-actions"><a href="#kapcsolat">Ajánlatot kérek</a><a href="#demok">Megnézem a demókat</a></div>
+        <div class="chat-demo-actions"><a href="#kapcsolat">Kérek egy ingyenes konzultációt</a><a href="#demok">Megnézem a demókat</a></div>
       </div>`
     }
   ];
