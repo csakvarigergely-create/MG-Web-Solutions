@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MG Web Solutions | Ügyfélszerző landing oldalak AI automatizációval</title>
-    <meta name="description" content="Ügyfélszerzésre épített, mobilbarát landing oldalak magyar szolgáltatóknak, ajánlatkérő rendszerrel és automatizált érdeklődőkezeléssel.">
-    <meta name="theme-color" content="#F8F7F3">
+    <title>MG Web Solutions | Ügyfélszerző landing oldalak automatizációval</title>
+    <meta name="description" content="Mobilbarát, ügyfélszerzésre épített landing oldalak magyar szolgáltatóknak, ajánlatkérő rendszerrel és automatizált érdeklődőkezeléssel.">
+    <meta name="theme-color" content="#f8f7f3">
     <meta property="og:title" content="MG Web Solutions">
-    <meta property="og:description" content="Landing oldalak, amelyek érdeklődőket hoznak és egyszerűbbé teszik az utánkövetést.">
+    <meta property="og:description" content="Landing oldalak, amelyek érthetően bemutatják az ajánlatodat és megkönnyítik az érdeklődők kezelését.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/content-sections.css">
+    <link rel="stylesheet" href="src/mobile-polish.css">
   </head>
   <body>
     <header class="site-header" id="top">
@@ -22,9 +24,7 @@
           <span>MG Web Solutions</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Menü megnyitása" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
         <div class="nav-links" data-nav-links>
           <a href="#szolgaltatas">Szolgáltatás</a>
@@ -32,56 +32,40 @@
           <a href="#folyamat">Folyamat</a>
           <a href="#arak">Árak</a>
           <a href="#kapcsolat">Kapcsolat</a>
-          <a class="button button-small" href="#kapcsolat">Ajánlatot kérek</a>
+          <a class="button button-small" href="#kapcsolat">Ingyenes konzultáció</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero section" aria-label="MG Web Solutions bemutatkozó hero">
+      <section class="hero section" aria-label="MG Web Solutions bemutatkozó szakasz">
         <div class="container hero-content">
           <div class="hero-copy">
             <p class="eyebrow">MG Web Solutions</p>
             <h1><span>Landing oldal, ami érdeklődőket hoz</span> <span>— nem csak jól néz ki.</span></h1>
-            <p class="hero-lead">Mobilbarát landing oldalakat készítünk magyar szolgáltatóknak, ajánlatkérő rendszerrel és automatizált érdeklődőkezeléssel — hogy több megkeresést kapj, kevesebb kézi munkával.</p>
+            <p class="hero-lead">Mobilbarát landing oldalakat készítek magyar szolgáltatóknak, ajánlatkérő rendszerrel és automatizált érdeklődőkezeléssel — hogy több megkeresést kapj, kevesebb kézi munkával.</p>
             <div class="hero-actions" aria-label="Fő műveletek">
-              <a class="button" href="#kapcsolat">Ajánlatot kérek</a>
+              <a class="button" href="#kapcsolat">Kérek egy ingyenes konzultációt</a>
               <a class="button button-secondary" href="#demok">Megnézem a demókat</a>
             </div>
-            <ul class="trust-list" aria-label="Bizalmi elemek">
+            <ul class="trust-list" aria-label="Fő előnyök">
               <li>Mobilbarát landing</li>
-              <li>AI automatizáció</li>
-              <li>Google Sheets mentés</li>
-              <li>E-mail értesítés</li>
-              <li>AI chatbot opció</li>
+              <li>Minden érdeklődő egy helyen</li>
+              <li>Automatikus visszajelzés</li>
+              <li>Átlátható utánkövetés</li>
+              <li>Chatbot opció</li>
             </ul>
           </div>
           <div class="hero-mockup" aria-label="Automatizált érdeklődőkezelés működés közben">
             <div class="live-system-panel">
-              <div class="live-system-header">
-                <div><span class="live-dot"></span><strong>Érdeklődőkezelés</strong></div>
-                <span>ÉLŐ RENDSZER</span>
-              </div>
-              <div class="incoming-lead">
-                <span class="lead-avatar">KP</span>
-                <div><small>Új érdeklődő</small><strong>„Ajánlatot szeretnék.”</strong></div>
-                <span class="lead-time">most</span>
-              </div>
+              <div class="live-system-header"><div><span class="live-dot"></span><strong>Érdeklődőkezelés</strong></div><span>ÉLŐ RENDSZER</span></div>
+              <div class="incoming-lead"><span class="lead-avatar">KP</span><div><small>Új érdeklődő</small><strong>„Ajánlatot szeretnék.”</strong></div><span class="lead-time">most</span></div>
               <div class="system-route" aria-hidden="true">
-                <div class="route-step route-form">
-                  <span class="route-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3.5h10a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2Z"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg></span>
-                  <strong>Űrlap</strong><small>Beérkezett</small>
-                </div>
+                <div class="route-step route-form"><span class="route-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3.5h10a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2Z"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg></span><strong>Űrlap</strong><small>Beérkezett</small></div>
                 <i></i>
-                <div class="route-step route-lead">
-                  <span class="route-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.4-4 2.7-6 6.5-6s6.1 2 6.5 6"/><path d="m16.5 12.5 1.6 1.6 3.1-3.1"/></svg></span>
-                  <strong>Lead</strong><small>Mentve</small>
-                </div>
+                <div class="route-step route-lead"><span class="route-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.4-4 2.7-6 6.5-6s6.1 2 6.5 6"/><path d="m16.5 12.5 1.6 1.6 3.1-3.1"/></svg></span><strong>Lead</strong><small>Mentve</small></div>
                 <i></i>
-                <div class="route-step route-email">
-                  <span class="route-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m5 7 7 5 7-5"/><path d="m15.5 16 1.5 1.5 3-3"/></svg></span>
-                  <strong>E-mail</strong><small>Elküldve</small>
-                </div>
+                <div class="route-step route-email"><span class="route-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m5 7 7 5 7-5"/><path d="m15.5 16 1.5 1.5 3-3"/></svg></span><strong>E-mail</strong><small>Elküldve</small></div>
               </div>
               <div class="system-success"><span>✓</span><div><strong>Automatikusan feldolgozva</strong><small>Nincs kézi adatbevitel</small></div></div>
             </div>
@@ -98,146 +82,46 @@
           </div>
           <div class="automation-grid">
             <article class="automation-card">
-              <div class="automation-visual form-to-sheet" aria-hidden="true">
-                <div class="mini-form">
-                  <span></span>
-                  <span></span>
-                  <strong>Ajánlatkérés</strong>
-                </div>
-                <div class="flow-arrow"></div>
-                <div class="mini-sheet">
-                  <strong>Név</strong>
-                  <strong>E-mail</strong>
-                  <strong>Tel.</strong>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-              <h3>Érdeklődők egy helyen</h3>
-              <strong class="automation-benefit">Nem vesznek el az ajánlatkérések</strong>
-              <p>Az ajánlatkérések automatikusan táblázatba kerülnek, így nem vesznek el emailek vagy üzenetek között.</p>
-              <ul class="benefit-list">
-                <li>Minden érdeklődő egy helyen</li>
-                <li>Átlátható nyilvántartás</li>
-                <li>Könnyebb utánkövetés</li>
-              </ul>
+              <div class="automation-visual form-to-sheet" aria-hidden="true"><div class="mini-form"><span></span><span></span><strong>Ajánlatkérés</strong></div><div class="flow-arrow"></div><div class="mini-sheet"><strong>Név</strong><strong>E-mail</strong><strong>Tel.</strong><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+              <h3>Érdeklődők egy helyen</h3><strong class="automation-benefit">Nem vesznek el az ajánlatkérések</strong>
+              <p>Az ajánlatkérések automatikusan egy átlátható nyilvántartásba kerülnek, így nem vesznek el e-mailek vagy üzenetek között.</p>
+              <ul class="benefit-list"><li>Minden érdeklődő egy helyen</li><li>Átlátható nyilvántartás</li><li>Könnyebb utánkövetés</li></ul>
             </article>
             <article class="automation-card">
-              <div class="automation-visual form-to-email" aria-hidden="true">
-                <div class="mini-form compact">
-                  <span></span>
-                  <strong>Űrlap</strong>
-                </div>
-                <div class="flow-arrow email-arrow"></div>
-                <svg class="mail-icon" viewBox="0 0 48 36" role="img" aria-label="E-mail értesítés">
-                  <rect x="4" y="6" width="40" height="24" rx="6"></rect>
-                  <path d="M8 10l16 12L40 10"></path>
-                  <path d="M8 28l12-10"></path>
-                  <path d="M40 28L28 18"></path>
-                </svg>
-                <div class="email-preview">
-                  <span>Köszönjük</span>
-                  <small>Hamarosan jelentkezünk.</small>
-                </div>
-              </div>
-              <h3>Azonnali válasz az érdeklődőnek</h3>
-              <strong class="automation-benefit">Nem marad válasz nélkül a megkeresés</strong>
+              <div class="automation-visual form-to-email" aria-hidden="true"><div class="mini-form compact"><span></span><strong>Űrlap</strong></div><div class="flow-arrow email-arrow"></div><svg class="mail-icon" viewBox="0 0 48 36"><rect x="4" y="6" width="40" height="24" rx="6"></rect><path d="M8 10l16 12L40 10"></path><path d="M8 28l12-10"></path><path d="M40 28L28 18"></path></svg><div class="email-preview"><span>Köszönöm</span><small>Hamarosan jelentkezem.</small></div></div>
+              <h3>Azonnali válasz az érdeklődőnek</h3><strong class="automation-benefit">Nem marad válasz nélkül a megkeresés</strong>
               <p>A rendszer azonnali visszaigazolást küld az érdeklődőnek, így már az első pillanatban professzionális élményt kap.</p>
-              <ul class="benefit-list">
-                <li>Azonnali visszajelzés</li>
-                <li>Profibb benyomás</li>
-                <li>Kevesebb elveszett lead</li>
-              </ul>
+              <ul class="benefit-list"><li>Azonnali visszajelzés</li><li>Profibb benyomás</li><li>Kevesebb elveszett lead</li></ul>
             </article>
             <article class="automation-card">
-              <div class="automation-visual chat-preview" aria-hidden="true">
-                <div class="chat-bubble question">Miben tudok segíteni?</div>
-                <div class="chat-bubble customer">Hogyan kérhetek ajánlatot?</div>
-                <div class="chat-bubble answer">Segítek ajánlatot kérni.</div>
-              </div>
-              <h3>Segítség az érdeklődőnek</h3>
-              <strong class="automation-benefit">Könnyebben eljut az ajánlatkérésig</strong>
+              <div class="automation-visual chat-preview" aria-hidden="true"><div class="chat-bubble question">Miben tudok segíteni?</div><div class="chat-bubble customer">Hogyan kérhetek ajánlatot?</div><div class="chat-bubble answer">Segítek ajánlatot kérni.</div></div>
+              <h3>Segítség az érdeklődőnek</h3><strong class="automation-benefit">Könnyebben eljut az ajánlatkérésig</strong>
               <p>A chatbot válaszol a gyakori kérdésekre, segíti az érdeklődőt és csökkenti az ismétlődő kommunikációt.</p>
-              <ul class="benefit-list">
-                <li>Időt spórol</li>
-                <li>0–24-ben segít</li>
-                <li>Kevesebb ismétlődő kérdés</li>
-              </ul>
+              <ul class="benefit-list"><li>Időt spórol</li><li>0–24-ben segít</li><li>Kevesebb ismétlődő kérdés</li></ul>
             </article>
           </div>
-          <div class="automation-summary">
-            <strong>Neked kevesebb kézi munka, az érdeklődőnek gyorsabb élmény.</strong>
-          </div>
+          <div class="automation-summary"><strong>Neked kevesebb kézi munka, az érdeklődőnek gyorsabb élmény.</strong></div>
         </div>
       </section>
 
-      <section class="section problem-section" id="szolgaltatas">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">A probléma</p>
-            <h2>Sok weboldal szép, de nem dolgozik elég jól az érdeklődőkért.</h2>
-            <p>Egy vállalkozásnak ma nem elég, ha van egy online névjegye. A jó landing oldal egy konkrét ajánlat köré épül, végigvezeti a látogatót, majd egyszerűvé teszi a kapcsolatfelvételt.</p>
-          </div>
-          <div class="card-grid three">
-            <article class="card">
-              <span class="problem-visual problem-focus" aria-hidden="true"><span></span></span>
-              <h3>Túl általános weboldal</h3>
-              <p>A látogató nem látja gyorsan, mi az ajánlat, miért érdemes jelentkeznie, és mi legyen a következő lépés.</p>
-            </article>
-            <article class="card">
-              <span class="problem-visual problem-leads" aria-hidden="true"><span></span><span></span><span></span></span>
-              <h3>Kevés megkeresés</h3>
-              <p>Ha az oldal nem ügyfélszerzésre épül, sok érdeklődő egyszerűen továbbmegy ajánlatkérés vagy időpontfoglalás nélkül.</p>
-            </article>
-            <article class="card">
-              <span class="problem-visual problem-followup" aria-hidden="true"><span></span><span></span><span></span></span>
-              <h3>Nincs automatizált utánkövetés</h3>
-              <p>A megkeresések elveszhetnek emailek, üzenetek és jegyzetek között, pedig gyors válasz esetén nagyobb az esély a beszélgetésre.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section solution-section">
+      <section class="section solution-section" id="szolgaltatas">
         <div class="container solution-shell">
           <div class="solution-intro">
             <div class="section-heading compact">
-              <p class="eyebrow">A megoldás</p>
-              <h2>Egy rendszer, amely végigkíséri az érdeklődőt.</h2>
-              <p>Nem különálló elemeket kapsz. A landing oldal, az űrlap és az automatizáció együtt dolgozik azért, hogy a látogatóból valódi megkeresés legyen.</p>
+              <p class="eyebrow">Mit kapsz?</p>
+              <h2>Egy oldal, amely nemcsak bemutat, hanem megkereséshez vezet.</h2>
+              <p>A világos ajánlat, az egyszerű kapcsolatfelvétel és a később beköthető automatizáció egyetlen átlátható rendszerként készül el.</p>
             </div>
             <div class="solution-flow" aria-label="Az érdeklődő útja">
-              <div class="solution-step">
-                <span class="solution-dot violet"></span>
-                <div><small>Érkezés</small><strong>Megérti az ajánlatot</strong></div>
-              </div>
-              <span class="solution-arrow" aria-hidden="true">→</span>
-              <div class="solution-step">
-                <span class="solution-dot orange"></span>
-                <div><small>Döntés</small><strong>Ajánlatot kér</strong></div>
-              </div>
-              <span class="solution-arrow" aria-hidden="true">→</span>
-              <div class="solution-step">
-                <span class="solution-dot teal"></span>
-                <div><small>Automatizáció</small><strong>Az adatok célba érnek</strong></div>
-              </div>
+              <div class="solution-step"><span class="solution-dot violet"></span><div><small>Érkezés</small><strong>Megérti az ajánlatot</strong></div></div><span class="solution-arrow" aria-hidden="true">→</span>
+              <div class="solution-step"><span class="solution-dot orange"></span><div><small>Döntés</small><strong>Ajánlatot kér</strong></div></div><span class="solution-arrow" aria-hidden="true">→</span>
+              <div class="solution-step"><span class="solution-dot teal"></span><div><small>Automatizáció</small><strong>Az adatok célba érnek</strong></div></div>
             </div>
           </div>
           <div class="solution-demo-wrap">
             <div class="solution-demo-kicker"><span></span> Nézd meg működés közben</div>
             <div class="chat-demo" data-chat-demo>
-              <div class="chat-demo-header">
-                <div class="chat-brand-mark" aria-hidden="true">MG</div>
-                <div>
-                  <strong>MG Web Solutions AI</strong>
-                  <span><i></i> Online</span>
-                </div>
-                <button class="chat-demo-control" type="button" data-chat-control aria-label="Animáció megállítása">Szünet</button>
-              </div>
+              <div class="chat-demo-header"><div class="chat-brand-mark" aria-hidden="true">MG</div><div><strong>MG Web Solutions AI</strong><span><i></i> Online</span></div><button class="chat-demo-control" type="button" data-chat-control aria-label="Animáció megállítása">Szünet</button></div>
               <div class="chat-demo-body" data-chat-stage aria-live="polite"></div>
               <div class="chat-demo-progress" aria-hidden="true"><span data-chat-progress></span></div>
             </div>
@@ -250,48 +134,18 @@
         <div class="container">
           <div class="section-heading demos-heading">
             <p class="eyebrow">Demók</p>
-            <h2>Két különböző szolgáltatás, két teljes értékű megoldás.</h2>
-            <p>Nyisd meg a működő mintaprojekteket, és nézd meg, milyen élményt kaphat a saját ügyfeled.</p>
+            <h2>Két működő minta arra, hogyan lesz egy szolgáltatásból világos online ajánlat.</h2>
+            <p>Nem sablonképeket mutatok: nyisd meg a teljes oldalakat, próbáld ki mobilon is, és nézd meg az ajánlatkérés útját.</p>
           </div>
           <div class="demo-grid">
             <article class="demo-card climate">
-              <div class="demo-copy">
-                <span class="demo-label">Helyi szolgáltató</span>
-                <h3>Klímás landing oldal</h3>
-                <p>Gyors ajánlatkérésre épített oldal egy helyi klímaszerelő vállalkozás számára.</p>
-                <div class="demo-chips"><span>Mobilbarát</span><span>Ajánlatkérés</span><span>Automatizáció</span></div>
-              </div>
-              <div class="demo-browser climate-browser" aria-hidden="true">
-                <div class="browser-bar"><i></i><i></i><i></i><span>klima-minta.hu</span></div>
-                <div class="browser-page">
-                  <div class="browser-nav"></div>
-                  <div class="browser-hero">
-                    <div><b></b><b></b><small></small></div>
-                    <span class="browser-visual climate-visual"></span>
-                  </div>
-                  <div class="browser-cards"><i></i><i></i><i></i></div>
-                </div>
-              </div>
+              <div class="demo-copy"><span class="demo-label">Helyi szolgáltató · ajánlatkérés</span><h3>Klímás landing oldal</h3><p>Helyi klímás vállalkozásnak tervezett oldal, amely gyorsan bemutatja az ajánlatot, csökkenti a bizonytalanságot és ajánlatkéréshez vezeti a látogatót.</p><div class="demo-chips"><span>Mobilra optimalizált</span><span>Rövid ajánlatkérés</span><span>Automatizációra kész</span></div><p class="demo-view-cue">Ezt figyeld: mennyire gyorsan eljutsz az ajánlatkérésig.</p></div>
+              <div class="demo-browser climate-browser" aria-hidden="true"><div class="browser-bar"><i></i><i></i><i></i><span>klima-minta.hu</span></div><div class="browser-page"><div class="browser-nav"></div><div class="browser-hero"><div><b></b><b></b><small></small></div><span class="browser-visual climate-visual"></span></div><div class="browser-cards"><i></i><i></i><i></i></div></div></div>
               <a class="button demo-button" href="https://klima-minta.hu/demo/" target="_blank" rel="noopener">Klímás demo megnyitása <span aria-hidden="true">↗</span></a>
             </article>
             <article class="demo-card dental">
-              <div class="demo-copy">
-                <span class="demo-label">Egészségügyi szolgáltatás</span>
-                <h3>Fogászati landing oldal</h3>
-                <p>Prémium időpontkérő oldal bizalomépítő tartalommal és automatizált háttérfolyamattal.</p>
-                <div class="demo-chips"><span>Időpontkérés</span><span>E-mail</span><span>FAQ chatbot</span></div>
-              </div>
-              <div class="demo-browser dental-browser" aria-hidden="true">
-                <div class="browser-bar"><i></i><i></i><i></i><span>nova-dent.hu</span></div>
-                <div class="browser-page">
-                  <div class="browser-nav"></div>
-                  <div class="browser-hero">
-                    <div><b></b><b></b><small></small></div>
-                    <span class="browser-visual dental-visual"></span>
-                  </div>
-                  <div class="browser-cards"><i></i><i></i><i></i></div>
-                </div>
-              </div>
+              <div class="demo-copy"><span class="demo-label">Egészségügy · bizalom és időpontkérés</span><h3>Fogászati landing oldal</h3><p>Prémium fogászati oldal bizalomépítő tartalommal, jól elkülönített szolgáltatásokkal és egyértelmű időpontkérési útvonallal.</p><div class="demo-chips"><span>Bizalomépítő felépítés</span><span>Időpontkérés</span><span>Chatbotra kész</span></div><p class="demo-view-cue">Ezt figyeld: hogyan épül fel a bizalom a kapcsolatfelvétel előtt.</p></div>
+              <div class="demo-browser dental-browser" aria-hidden="true"><div class="browser-bar"><i></i><i></i><i></i><span>nova-dent.hu</span></div><div class="browser-page"><div class="browser-nav"></div><div class="browser-hero"><div><b></b><b></b><small></small></div><span class="browser-visual dental-visual"></span></div><div class="browser-cards"><i></i><i></i><i></i></div></div></div>
               <a class="button demo-button" href="https://nova-dent-eight.vercel.app/" target="_blank" rel="noopener">Fogászati demo megnyitása <span aria-hidden="true">↗</span></a>
             </article>
           </div>
@@ -299,152 +153,48 @@
       </section>
 
       <section class="section founder-section" aria-labelledby="founder-title">
-        <div class="container">
-          <div class="founder-card">
-            <div class="founder-visual">
-              <!-- A founder portrait can replace this branded placeholder later. -->
-              <div class="founder-portrait" role="img" aria-label="Az MG Web Solutions alapítójának portréja később kerül ide">
-                <span class="founder-monogram">MG</span>
-                <span class="founder-orbit orbit-one"></span>
-                <span class="founder-orbit orbit-two"></span>
-              </div>
-              <div class="founder-badge">
-                <span class="status-dot"></span>
-                <strong>Személyes kapcsolattartás</strong>
-              </div>
-            </div>
-            <div class="founder-content">
-              <p class="eyebrow">Miért az MG Web Solutions?</p>
-              <h2 id="founder-title">Személyes együttműködés, modern megoldások — egy kézben.</h2>
-              <p class="founder-lead"><strong>Gergő vagyok, az MG Web Solutions alapítója.</strong> Velem dolgozol közvetlenül az első egyeztetéstől az átadásig.</p>
-              <p>Magyar szolgáltatóknak készítek ügyfélszerzésre épített landing oldalakat és hasznos automatizációkat. A célom egy olyan átlátható rendszer, amely érthetően bemutatja az ajánlatodat és megkönnyíti az érdeklődők kezelését.</p>
-              <div class="founder-values">
-                <div><span aria-hidden="true"></span><strong>Személyes együttműködés</strong><small>Közvetlenül velem egyeztetsz, nincs felesleges kör vagy közvetítő.</small></div>
-                <div><span aria-hidden="true"></span><strong>Gyors, átlátható kivitelezés</strong><small>Mindig tudod, hol tart a projekt, és mi a következő lépés.</small></div>
-                <div><span aria-hidden="true"></span><strong>Weboldal és automatizáció egy kézben</strong><small>Az oldal és az érdeklődőkezelés összehangolt rendszerként készül el.</small></div>
-              </div>
-              <a class="button founder-cta" href="#kapcsolat">Beszéljük át az ötleted <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-        </div>
+        <div class="container"><div class="founder-card">
+          <div class="founder-visual"><div class="founder-portrait" role="img" aria-label="Az MG Web Solutions alapítójának portréja a végső frissítésben kerül ide"><span class="founder-monogram">MG</span><span class="founder-orbit orbit-one"></span><span class="founder-orbit orbit-two"></span></div><div class="founder-badge"><span class="status-dot"></span><strong>Személyes kapcsolattartás</strong></div></div>
+          <div class="founder-content"><p class="eyebrow">Miért az MG Web Solutions?</p><h2 id="founder-title">Személyes együttműködés, modern megoldások — egy kézben.</h2><p class="founder-lead"><strong>Gergő vagyok, az MG Web Solutions alapítója.</strong> Velem dolgozol közvetlenül az első egyeztetéstől az átadásig.</p><p>Magyar szolgáltatóknak készítek ügyfélszerzésre épített landing oldalakat és hasznos automatizációkat. A célom egy olyan átlátható rendszer, amely érthetően bemutatja az ajánlatodat és megkönnyíti az érdeklődők kezelését.</p><div class="founder-values"><div><span aria-hidden="true"></span><strong>Személyes együttműködés</strong><small>Közvetlenül velem egyeztetsz, nincs felesleges kör vagy közvetítő.</small></div><div><span aria-hidden="true"></span><strong>Gyors, átlátható kivitelezés</strong><small>Mindig tudod, hol tart a projekt, és mi a következő lépés.</small></div><div><span aria-hidden="true"></span><strong>Weboldal és automatizáció egy kézben</strong><small>Az oldal és az érdeklődőkezelés összehangolt rendszerként készül el.</small></div></div><a class="button founder-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></div>
+        </div></div>
       </section>
 
       <section class="section process-section" id="folyamat">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Folyamat</p>
-            <h2>Végigvezetünk a teljes folyamaton, az első egyeztetéstől az indulásig.</h2>
-          </div>
-          <ol class="process-list">
-            <li><span>1</span><h3>Rövid egyeztetés</h3><p>Megértjük a szolgáltatást, a célközönséget és azt, milyen megkereséseket szeretnél kapni.</p></li>
-            <li><span>2</span><h3>Szöveg és ajánlat pontosítása</h3><p>Letisztázzuk az ajánlatot, a fő üzeneteket és a bizalomépítő elemeket.</p></li>
-            <li><span>3</span><h3>Landing oldal elkészítése</h3><p>Felépítjük a mobilbarát, gyors és jól olvasható oldalt.</p></li>
-            <li><span>4</span><h3>Automatizációk bekötése és élesítés</h3><p>Bekötjük a szükséges űrlapfolyamatokat, majd élesítjük az oldalt.</p></li>
-          </ol>
+        <div class="container"><div class="section-heading"><p class="eyebrow">Folyamat</p><h2>Így készül el az oldal az első egyeztetéstől az indulásig.</h2></div>
+          <ol class="process-list"><li><span>1</span><h3>Rövid egyeztetés</h3><p>Megismerem a szolgáltatásodat, a célközönségedet és azt, milyen megkereséseket szeretnél kapni.</p></li><li><span>2</span><h3>Szöveg és ajánlat pontosítása</h3><p>Közösen pontosítjuk az ajánlatot, a fő üzeneteket és a szükséges bizalomépítő elemeket.</p></li><li><span>3</span><h3>Landing oldal elkészítése</h3><p>Elkészítem a gyors, mobilbarát és könnyen átlátható landing oldalt.</p></li><li><span>4</span><h3>Technikai bekötés és élesítés</h3><p>A kiválasztott funkciók elkészülnek, az automatizációk pedig a végső technikai fázisban kerülnek bekötésre.</p></li></ol>
         </div>
       </section>
 
       <section class="section pricing-section" id="arak">
         <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Csomagok</p>
-            <h2>Három átlátható csomag, különböző üzleti célokra.</h2>
-            <p>Az árak irányárak. A pontos ajánlat a cél, tartalom és funkciók alapján készül.</p>
-          </div>
+          <div class="section-heading"><p class="eyebrow">Csomagok</p><h2>Válaszd ki, milyen rendszerre van szükséged — a pontos tartalmat egyeztetés után rögzítjük.</h2><p>Az árak irányárak, nem rejtett belépőárak. A projekt kezdete előtt írásban rögzítjük a feladatokat, a projektárat és a következő lépéseket.</p></div>
+          <div class="project-safety-strip"><div><strong>Előre egyeztetett projektár</strong><span>A munka indulása előtt pontosítjuk, mi kerül bele.</span></div><div><strong>Átlátható munkafolyamat</strong><span>Mindig tudod, mi készült el és mi következik.</span></div><div><strong>Átadás előtti tesztelés</strong><span>Mobilon és asztali nézetben is ellenőrzöm az oldalt.</span></div><div><strong>Érthető átadás</strong><span>Megmutatom, hogyan működik az elkészült rendszer.</span></div></div>
           <div class="pricing-grid">
-            <article class="price-card">
-              <h3>Landing Start</h3>
-              <p class="price">149 000 Ft-tól</p>
-              <ul>
-                <li>egyoldalas landing oldal</li>
-                <li>mobilbarát design</li>
-                <li>alap kapcsolatfelvételi űrlap</li>
-                <li>éles, saját domainhez kapcsolható weboldal</li>
-              </ul>
-              <a class="button price-cta" href="#kapcsolat">A Start csomagot választom</a>
-            </article>
-            <article class="price-card recommended">
-              <span class="badge">Legjobb választás induláshoz</span>
-              <h3>Landing Automatizációval</h3>
-              <p class="price">249 000 Ft-tól</p>
-              <ul>
-                <li>minden a Start csomagból</li>
-                <li>Google Sheets mentés</li>
-                <li>e-mail-értesítés a vállalkozásnak</li>
-                <li>automatikus visszaigazoló e-mail</li>
-                <li>látogatottságmérésre előkészített oldal</li>
-              </ul>
-              <a class="button price-cta" href="#kapcsolat">Ezt a csomagot választom</a>
-            </article>
-            <article class="price-card">
-              <h3>Landing + Chatbot</h3>
-              <p class="price">299 000 Ft-tól</p>
-              <ul>
-                <li>minden az Automatizációs csomagból</li>
-                <li>egyszerű FAQ chatbot</li>
-                <li>időpontkéréshez / ajánlatkéréshez terelés</li>
-                <li>célzott GYIK és bizalomépítő blokkok</li>
-              </ul>
-              <a class="button price-cta" href="#kapcsolat">A Chatbot csomagot választom</a>
-            </article>
+            <article class="price-card"><h3>Landing Start</h3><p class="price">149 000 Ft-tól</p><ul><li>egyoldalas landing oldal</li><li>mobilbarát design</li><li>alap kapcsolatfelvételi űrlap</li><li>saját domainhez kapcsolható oldal</li></ul><div class="package-assurance"><strong>A kivitelezés része</strong><ul><li>1 egyeztetett módosítási kör</li><li>Mobilos és asztali ellenőrzés</li><li>Átadás előtti technikai teszt</li></ul></div><a class="button price-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></article>
+            <article class="price-card recommended"><span class="badge">A legtöbb szolgáltatónak ezt ajánlom</span><h3>Landing Automatizációval</h3><p class="price">249 000 Ft-tól</p><ul><li>minden a Start csomagból</li><li>érdeklődők automatikus mentése</li><li>e-mail-értesítés a vállalkozásnak</li><li>automatikus visszaigazoló e-mail</li><li>látogatottságmérésre előkészített oldal</li></ul><div class="package-assurance"><strong>A kivitelezés része</strong><ul><li>2 egyeztetett módosítási kör</li><li>Űrlapfolyamat és e-mailek tesztelése</li><li>Rövid használati átadás</li></ul></div><a class="button price-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></article>
+            <article class="price-card"><h3>Landing + Chatbot</h3><p class="price">299 000 Ft-tól</p><ul><li>minden az Automatizációs csomagból</li><li>egyszerű FAQ chatbot</li><li>ajánlatkéréshez terelés</li><li>célzott GYIK és bizalomépítő blokkok</li></ul><div class="package-assurance"><strong>A kivitelezés része</strong><ul><li>2 egyeztetett módosítási kör</li><li>Chatbot-tartalom közös pontosítása</li><li>Teljes folyamat tesztelése</li></ul></div><a class="button price-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></article>
           </div>
+          <div class="package-terms"><div><strong>Projektidő</strong><span>A legtöbb landing oldal 7–10 munkanap alatt készül el a szükséges anyagok beérkezésétől számítva. Összetettebb funkcióknál külön ütemezés készül.</span></div><div><strong>Szöveg és tartalom</strong><span>A meglévő anyagaidból közösen pontosítjuk a fő üzeneteket. Teljes szövegírás vagy nagyobb tartalomkészítés külön tétel lehet.</span></div><div><strong>Domain és tárhely</strong><span>A domain és a tárhely díja nem része az egyszeri projektárnak. A technikai beállításban és az élesítésben segítséget kapsz.</span></div><div><strong>Fizetés és többletmunka</strong><span>A fizetési ütemezést, a pontos feladatokat és az esetleges extra igények díját a munka kezdete előtt írásban rögzítjük.</span></div></div>
+          <div class="launch-offer"><div class="launch-offer-copy"><p class="eyebrow">Induló partnerprogram</p><h3>Az első 3 együttműködés kedvezményes bevezető feltételekkel indul.</h3><p>Ugyanazt a teljes kivitelezési folyamatot kapod: egyeztetés, egyedi felépítés, mobilos ellenőrzés, módosítási körök és átadás előtti tesztelés. Cserébe az elkészült projektet — előzetes jóváhagyásoddal — referenciaként bemutathatom.</p></div><a class="button button-secondary" href="#kapcsolat">Érdekel a partnerprogram</a></div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="gyik">
+        <div class="container faq-shell"><div class="section-heading compact"><p class="eyebrow">Gyakori kérdések</p><h2>A legfontosabb részletek az indulás előtt</h2><p>Az egyedi igényeket az első egyeztetésen pontosítjuk, de ezekre a kérdésekre már előre érdemes választ kapnod.</p></div>
+          <div class="faq-list"><details open><summary>Mennyi idő alatt készül el az oldal?</summary><p>Egy átlagos landing oldal általában 7–10 munkanap alatt készül el attól kezdve, hogy minden szükséges információ és anyag rendelkezésre áll. Összetettebb automatizáció vagy chatbot esetén külön ütemezést kapsz.</p></details><details><summary>Mi kell az induláshoz?</summary><p>A szolgáltatásod rövid leírása, a célközönséged, az ajánlatod, a kapcsolati folyamat és minden meglévő arculati vagy tartalmi anyag. Ami még nincs kész, azt az egyeztetésen közösen rendszerezzük.</p></details><details><summary>Ki írja az oldal szövegét?</summary><p>A meglévő szövegeidet átdolgozom és landing oldalhoz igazítom. Teljes körű szövegírás, hosszabb szakmai tartalom vagy rendszeres tartalomgyártás külön feladatként árazható.</p></details><details><summary>A domain és a tárhely benne van az árban?</summary><p>A domain és a tárhely folyamatos szolgáltatói díja nem része az egyszeri kivitelezési árnak. A megfelelő megoldás kiválasztásában, beállításában és az oldal élesítésében segítek.</p></details><details><summary>Hány módosítási kör jár?</summary><p>A Landing Start csomag egy, a magasabb csomagok két egyeztetett módosítási kört tartalmaznak. Új funkciók vagy az elfogadott irány jelentős átalakítása külön egyeztetést igényel.</p></details><details><summary>Mi történik az átadás után?</summary><p>Az oldal működését bemutatom, és az átadás előtt ellenőrzöm a fő nézeteket és funkciókat. Folyamatos karbantartás vagy későbbi fejlesztés külön megállapodással kérhető.</p></details></div>
         </div>
       </section>
 
       <section class="section contact-section" id="kapcsolat">
-        <div class="container contact-grid">
-          <div class="contact-copy">
-            <p class="eyebrow">Kapcsolat</p>
-            <h2>Kérj ajánlatot landing oldalra</h2>
-            <p>Írd meg, milyen vállalkozáshoz szeretnél landing oldalt, és röviden visszajelzünk a lehetőségekről.</p>
-            <div class="contact-note">
-              <strong>Mit érdemes elküldeni?</strong>
-              <span>A vállalkozás típusa, a fő szolgáltatás, a kívánt cél és hogy szükség van-e automatizációra.</span>
-            </div>
-          </div>
-          <form class="contact-form" aria-label="Ajánlatkérő űrlap">
-            <label for="name">Név</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-            <label for="phone">Telefonszám</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
-            <label for="business">Vállalkozás típusa</label>
-            <input id="business" name="business" type="text" placeholder="például fogászat, klímás cég, szalon">
-            <label for="message">Üzenet</label>
-            <textarea id="message" name="message" rows="5" placeholder="Röviden írd le, milyen landing oldalra lenne szükséged."></textarea>
-            <button class="button" type="submit">Ajánlatot kérek</button>
-            <p class="form-footnote">Az űrlap jelenleg frontend bemutató, backend bekötés nélkül.</p>
-          </form>
+        <div class="container contact-grid"><div class="contact-copy"><p class="eyebrow">Kapcsolat</p><h2>Beszéljük át, milyen oldal segítené a vállalkozásodat</h2><p>Írd le röviden a szolgáltatásodat és a célodat. A végleges kapcsolatfelvételi rendszer az automatizációs fázisban kerül bekötésre.</p><div class="contact-note"><strong>Mit érdemes elküldeni?</strong><span>A vállalkozás típusa, a fő szolgáltatás, a kívánt cél és hogy szükség van-e automatizációra.</span></div></div>
+          <form class="contact-form" aria-label="Ajánlatkérő űrlap"><label for="name">Név</label><input id="name" name="name" type="text" autocomplete="name" required><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required><label for="phone">Telefonszám</label><input id="phone" name="phone" type="tel" autocomplete="tel"><label for="business">Vállalkozás típusa</label><input id="business" name="business" type="text" placeholder="például fogászat, klímás cég, szalon"><label for="message">Üzenet</label><textarea id="message" name="message" rows="5" placeholder="Röviden írd le, milyen landing oldalra lenne szükséged."></textarea><button class="button" type="submit">Kérek egy ingyenes konzultációt</button><p class="form-footnote">Az ajánlatkérő űrlap technikai bekötése az oldal végső élesítése előtt készül el.</p></form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand footer-brand" href="#top">
-            <span class="brand-mark" aria-hidden="true">MG</span>
-            <span>MG Web Solutions</span>
-          </a>
-          <p>Landing oldalak és automatizációk magyar vállalkozásoknak</p>
-        </div>
-        <address>
-          <a href="mailto:hello@mgwebsolutions.hu">hello@mgwebsolutions.hu</a>
-          <span>Telefonos egyeztetés előzetes e-mailes kapcsolatfelvétel után.</span>
-        </address>
-        <div class="footer-links">
-          <a href="#">Adatkezelés</a>
-          <a href="#">Impresszum</a>
-        </div>
-      </div>
-    </footer>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">MG</span><span>MG Web Solutions</span></a><p>Landing oldalak és automatizációk magyar vállalkozásoknak</p></div><address><span>Kapcsolati adatok hamarosan</span><span>Telefonos egyeztetés előzetes kapcsolatfelvétel után.</span></address><div class="footer-links"><a href="#" aria-disabled="true" tabindex="-1">Adatkezelés</a><a href="#" aria-disabled="true" tabindex="-1">Impresszum</a></div><p class="legal-status-note">Az Impresszum és az Adatkezelési tájékoztató a végleges vállalkozói és kapcsolati adatokkal kerül feltöltésre az élesítés előtt.</p></div></footer>
 
-    <a class="mobile-cta" href="#kapcsolat" aria-label="Ugrás az ajánlatkérő űrlaphoz">
-      <span>Ajánlatot kérek</span>
-      <span aria-hidden="true">→</span>
-    </a>
-
+    <a class="mobile-cta" href="#kapcsolat" aria-label="Ugrás az ajánlatkérő űrlaphoz"><span>Ingyenes konzultáció</span><span aria-hidden="true">→</span></a>
     <script src="src/main.js" type="module"></script>
   </body>
 </html>
