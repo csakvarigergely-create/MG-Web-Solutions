@@ -2,6 +2,54 @@ const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector("[data-nav-links]");
 const form = document.querySelector(".contact-form");
 
+// Content refinements are applied here so the current visual system stays intact.
+const heroLead = document.querySelector(".hero-lead");
+if (heroLead) {
+  heroLead.textContent = "Mobilbarát landing oldalakat készítek magyar szolgáltatóknak, ajánlatkérő rendszerrel és automatizált érdeklődőkezeléssel — hogy több megkeresést kapj, kevesebb kézi munkával.";
+}
+
+const problemSection = document.querySelector(".problem-section");
+problemSection?.remove();
+
+const solutionEyebrow = document.querySelector(".solution-section .eyebrow");
+const solutionTitle = document.querySelector(".solution-section h2");
+const solutionIntro = document.querySelector(".solution-section .section-heading.compact > p:last-child");
+if (solutionEyebrow) solutionEyebrow.textContent = "Mit kapsz?";
+if (solutionTitle) solutionTitle.textContent = "Egy oldal, amely nemcsak bemutat, hanem megkereséshez vezet.";
+if (solutionIntro) {
+  solutionIntro.textContent = "A világos ajánlat, az egyszerű kapcsolatfelvétel és a később beköthető automatizáció egyetlen átlátható rendszerként készül el.";
+}
+
+const processTitle = document.querySelector(".process-section h2");
+if (processTitle) processTitle.textContent = "Így készül el az oldal az első egyeztetéstől az indulásig.";
+
+const processItems = document.querySelectorAll(".process-list li p");
+const processTexts = [
+  "Megismerem a szolgáltatásodat, a célközönségedet és azt, milyen megkereséseket szeretnél kapni.",
+  "Közösen pontosítjuk az ajánlatot, a fő üzeneteket és a szükséges bizalomépítő elemeket.",
+  "Elkészítem a gyors, mobilbarát és könnyen átlátható landing oldalt.",
+  "A kiválasztott funkciók elkészülnek, az automatizációk pedig a végső technikai fázisban kerülnek bekötésre."
+];
+processItems.forEach((item, index) => {
+  if (processTexts[index]) item.textContent = processTexts[index];
+});
+
+const formFootnote = document.querySelector(".form-footnote");
+if (formFootnote) {
+  formFootnote.textContent = "Az ajánlatkérő űrlap technikai bekötése az oldal végső élesítése előtt készül el.";
+}
+
+const footerEmail = document.querySelector(".site-footer a[href^='mailto:']");
+if (footerEmail) {
+  footerEmail.removeAttribute("href");
+  footerEmail.textContent = "Kapcsolati adatok hamarosan";
+}
+
+const founderPortrait = document.querySelector(".founder-portrait");
+if (founderPortrait) {
+  founderPortrait.setAttribute("aria-label", "Az MG Web Solutions alapítójának portréja a végső frissítésben kerül ide");
+}
+
 toggle?.addEventListener("click", () => {
   const isOpen = links?.classList.toggle("is-open") || false;
   toggle.setAttribute("aria-expanded", String(isOpen));
@@ -19,7 +67,7 @@ form?.addEventListener("submit", (event) => {
   const button = form.querySelector("button");
   if (!button) return;
 
-  button.textContent = "Köszönjük, az űrlap UI működik";
+  button.textContent = "Az űrlap bekötése hamarosan készül";
   button.disabled = true;
   window.setTimeout(() => {
     button.textContent = "Ajánlatot kérek";
