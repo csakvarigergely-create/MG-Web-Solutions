@@ -39,6 +39,21 @@
   line-height: 1.55;
 }
 
+.package-fit {
+  margin: 4px 0 18px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.package-content-label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--heading);
+  font-size: 0.82rem;
+}
+
+
 .package-assurance {
   margin: 20px 0;
   border-top: 1px solid var(--line);
