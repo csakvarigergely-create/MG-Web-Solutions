@@ -1,18 +1,41 @@
 const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector("[data-nav-links]");
+const header = document.querySelector("[data-site-header]");
 const form = document.querySelector(".contact-form");
+const mobileNavigation = window.matchMedia("(max-width: 980px)");
+
+const setMenuOpen = (isOpen) => {
+  links?.classList.toggle("is-open", isOpen);
+  toggle?.setAttribute("aria-expanded", String(isOpen));
+  toggle?.setAttribute("aria-label", isOpen ? "Menü bezárása" : "Menü megnyitása");
+  document.body.classList.toggle("nav-open", isOpen && mobileNavigation.matches);
+};
 
 toggle?.addEventListener("click", () => {
-  const isOpen = links?.classList.toggle("is-open") || false;
-  toggle.setAttribute("aria-expanded", String(isOpen));
+  setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
 });
 
 links?.addEventListener("click", (event) => {
-  if (event.target instanceof HTMLAnchorElement) {
-    links.classList.remove("is-open");
-    toggle?.setAttribute("aria-expanded", "false");
+  if (event.target instanceof Element && event.target.closest("a")) {
+    setMenuOpen(false);
   }
 });
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && toggle?.getAttribute("aria-expanded") === "true") {
+    setMenuOpen(false);
+    toggle.focus();
+  }
+});
+
+mobileNavigation.addEventListener("change", () => setMenuOpen(false));
+
+const updateHeaderState = () => {
+  header?.classList.toggle("is-scrolled", window.scrollY > 18);
+};
+
+updateHeaderState();
+window.addEventListener("scroll", updateHeaderState, { passive: true });
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();

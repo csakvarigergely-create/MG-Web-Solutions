@@ -495,13 +495,6 @@ h1 {
   }
 }
 
-@media (min-width: 1440px) {
-  .hero h1 span:nth-child(3),
-  .hero h1 span:nth-child(4) {
-    display: inline;
-  }
-}
-
 h2 {
   margin-bottom: 18px;
   color: var(--heading);
