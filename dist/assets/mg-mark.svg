@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 48" role="img" aria-labelledby="title">
+  <title id="title">MG</title>
+  <path fill="#171713" d="M2 41V7h9.2L21 20.1 30.8 7H40v34h-8.5V20.2L21 34 10.5 20.2V41H2Z"/>
+  <path fill="#171713" d="M59 6c6.5 0 11.6 2 15.5 5.9l-5.8 5.8A13.3 13.3 0 0 0 59 14c-7 0-11.8 5.2-11.8 10s4.8 10 11.8 10c2.8 0 5.1-.5 7-1.5v-4.2h-9.2v-7.2H74v15.6C69.7 40.2 64.7 42 59 42c-11.9 0-20.5-7.7-20.5-18S47.1 6 59 6Z"/>
+  <path fill="#f26419" d="M67 21.1h7v7.2h-7z"/>
+</svg>
