@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="src/round-three.css">
     <link rel="stylesheet" href="src/round-four.css">
     <link rel="stylesheet" href="src/round-five.css">
+    <link rel="stylesheet" href="src/round-six.css">
   </head>
   <body>
     <header class="site-header" id="top" data-site-header>
@@ -449,32 +450,78 @@
         </div>
       </section>
 
-      <section class="section faq-section" id="gyik">
+      <section class="section faq-section" id="gyik" aria-labelledby="faq-title">
         <div class="container faq-shell">
-          <div class="section-heading compact">
+          <div class="faq-intro" data-reveal>
             <p class="eyebrow">Gyakori kérdések</p>
-            <h2>Van még kérdésed, mielőtt belevágunk?</h2>
-            <p>Összegyűjtöttem néhány dolgot, ami általában felmerül egy landing oldal elkészítése előtt.</p>
+            <h2 id="faq-title">Amit érdemes tudni, mielőtt belevágunk.</h2>
+            <p>Összegyűjtöttem a leggyakoribb kérdéseket az elkészítésről, a költségekről és arról, mire lesz szükség a közös munkához.</p>
+            <a class="faq-contact-link" href="#kapcsolat">Más kérdésed van? Beszéljük át <span aria-hidden="true">↘</span></a>
           </div>
-          <div class="faq-list">
-            <details open><summary>Mi történik, ha az első verzión még változtatnék?</summary><p>Az elkészült oldalt először átnézed, majd az egyeztetett módosítási körökben finomítjuk, mielőtt élesbe kerül.</p></details>
-            <details><summary>Később is lehet bővíteni az oldalt?</summary><p>Igen. Ha később új szolgáltatásra, további automatizációra vagy más funkcióra van szükséged, az oldal tovább bővíthető.</p></details>
-            <details><summary>Van havi díja az oldalnak vagy az automatizációnak?</summary><p>Maga a kivitelezés egyszeri díj. A működéshez használt egyes szolgáltatásoknak — például a tárhelynek vagy az AI chatbotnak — lehet havi vagy éves díja. Ha ilyen költség felmerül, azt még a projekt indulása előtt pontosan egyeztetjük.</p></details>
-            <details><summary>Nekem kell majd kezelnem az automatizációkat?</summary><p>Nem kell technikai dolgokkal foglalkoznod. Átadáskor megmutatom, hogyan működik a rendszer, és mit kell tudnod a használatához.</p></details>
-            <details><summary>Mi történik az átadás után?</summary><p>Az oldal élesítésekor megkapod a szükséges hozzáféréseket és egy rövid átadást. Ha később módosításra vagy bővítésre van szükséged, azt külön is meg tudjuk beszélni.</p></details>
-            <details><summary>Mi van, ha még nem tudom pontosan, melyik csomagra van szükségem?</summary><p>Nem kell előre eldöntened. Az első egyeztetésen átbeszéljük, mire szeretnéd használni az oldalt, és ez alapján javaslok megfelelő megoldást.</p></details>
+          <div class="faq-list" data-reveal>
+            <details open><summary><span>01</span>Mennyi idő alatt készül el az oldal?</summary><div class="faq-answer"><p>Az átlagos kivitelezési idő 7–10 munkanap attól számítva, hogy minden szükséges anyag megérkezett. Összetettebb automatizációnál az ütemezést előre egyeztetjük.</p></div></details>
+            <details><summary><span>02</span>Mire lesz szükségem a közös munkához?</summary><div class="faq-answer"><p>A szolgáltatásaid alapadataira, képekre, logóra vagy meglévő arculati anyagokra. Ha chatbotot is kérsz, a gyakori kérdésekhez és válaszokhoz szükséges tudásanyagot is összegyűjtjük.</p></div></details>
+            <details><summary><span>03</span>Nekem kell megírnom az oldal teljes szövegét?</summary><div class="faq-answer"><p>Nem kell kész webszöveggel érkezned. Az egyeztetés és a bekért anyagok alapján közösen kialakítjuk a tartalmat. Ha teljes, nagyobb terjedelmű szövegírásra van szükség, azt külön egyeztetjük.</p></div></details>
+            <details><summary><span>04</span>Mi történik, ha az első verzión még változtatnék?</summary><div class="faq-answer"><p>Az elkészült oldalt közösen átnézzük. A Landing Start csomag egy, a másik két csomag két egyeztetett módosítási kört tartalmaz.</p></div></details>
+            <details><summary><span>05</span>A domain és a tárhely benne van az árban?</summary><div class="faq-answer"><p>A domain és a tárhely díja külön költség lehet. A szükséges technikai beállításokban és az oldal bekötésében segítek.</p></div></details>
+            <details><summary><span>06</span>Van havi díja az automatizációnak vagy az AI chatbotnak?</summary><div class="faq-answer"><p>A kivitelezés egyszeri díj. A működéshez használt egyes külső szolgáltatásoknak lehet havi vagy éves díja; minden ilyen költséget még a projekt indulása előtt egyeztetünk.</p></div></details>
+            <details><summary><span>07</span>Nekem kell majd kezelnem az automatizációkat?</summary><div class="faq-answer"><p>Nem kell technikai részletekkel foglalkoznod. Átadáskor megmutatom, hogyan működik a rendszer, és mit kell tudnod a mindennapi használatához.</p></div></details>
+            <details><summary><span>08</span>Mi történik az átadás után?</summary><div class="faq-answer"><p>Az élesítéskor megkapod a szükséges hozzáféréseket és egy rövid átadást. Ha később módosításra vagy bővítésre van szükséged, azt külön tudjuk egyeztetni.</p></div></details>
           </div>
         </div>
       </section>
 
-      <section class="section contact-section" id="kapcsolat">
-        <div class="container contact-grid"><div class="contact-copy"><p class="eyebrow">Kapcsolat</p><h2>Beszéljük át, mire lenne szüksége a vállalkozásodnak.</h2><p>Írd le röviden, mivel foglalkozol és mit szeretnél elérni az új oldallal. Nem kell kész elképzeléssel érkezned — az első egyeztetésen együtt átnézzük, milyen megoldás lenne neked a legjobb.</p><div class="contact-note"><strong>Mit érdemes elküldeni?</strong><span>Elég néhány alapinformáció a vállalkozásodról, a fő szolgáltatásodról és arról, mit szeretnél elérni az oldallal.</span></div></div>
-          <form class="contact-form" aria-label="Ajánlatkérő űrlap"><label for="name">Név</label><input id="name" name="name" type="text" autocomplete="name" required><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required><label for="phone">Telefonszám</label><input id="phone" name="phone" type="tel" autocomplete="tel"><label for="business">Vállalkozás típusa</label><input id="business" name="business" type="text" placeholder="például fogászat, klímás cég, szalon"><label for="message">Üzenet</label><textarea id="message" name="message" rows="5" placeholder="Írd le röviden, mivel foglalkozol és mit szeretnél elérni."></textarea><button class="button" type="submit">Kérek egy ingyenes konzultációt</button></form>
+      <section class="section contact-section" id="kapcsolat" aria-labelledby="contact-title">
+        <span class="contact-grid-lines" aria-hidden="true"></span>
+        <div class="container contact-grid">
+          <div class="contact-copy" data-reveal>
+            <p class="eyebrow">Kapcsolat</p>
+            <h2 id="contact-title">Beszéljük át, mire lenne szükséged.</h2>
+            <p>Írd le röviden, mivel foglalkozol és milyen oldalt vagy automatizációt szeretnél. Átnézem, és egyeztetünk arról, mi lenne a vállalkozásodhoz a legjobb megoldás.</p>
+            <div class="contact-practical" aria-label="Az első egyeztetés fő tudnivalói">
+              <div><span>01</span><strong>Rövid első egyeztetés</strong></div>
+              <div><span>02</span><strong>Nem kell kész specifikációval érkezned</strong></div>
+              <div><span>03</span><strong>Átbeszéljük, mire van valóban szükség</strong></div>
+            </div>
+          </div>
+
+          <form class="contact-form" aria-label="Ajánlatkérő űrlap" data-reveal>
+            <div class="form-heading"><span>MG / KAPCSOLAT</span><strong>Írj néhány mondatot a vállalkozásodról.</strong><small>A csillaggal jelölt mezők kitöltése szükséges.</small></div>
+            <div class="form-row">
+              <div class="form-field"><label for="name">Név <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-required="true"></div>
+              <div class="form-field"><label for="email">E-mail <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-required="true"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field"><label for="phone">Telefonszám</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="form-field"><label for="business">Vállalkozás típusa</label><input id="business" name="business" type="text" placeholder="például fogászat, klímás cég, szalon"></div>
+            </div>
+            <div class="form-field"><label for="message">Miben segíthetek?</label><textarea id="message" name="message" rows="6" placeholder="Írd le röviden, mivel foglalkozol és mit szeretnél elérni."></textarea></div>
+            <div class="form-actions"><button class="button" type="submit">Egyeztetést kérek <span aria-hidden="true">→</span></button><small>Az adataidat kizárólag a kapcsolatfelvételhez használom.</small></div>
+            <div class="form-status" data-form-status role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="closing-statement" aria-label="Az MG Web Solutions fő ígérete">
+        <div class="container closing-statement-inner" data-reveal>
+          <span class="closing-index" aria-hidden="true">MG / 06</span>
+          <p><span>Több ügyfél.</span><span>Kevesebb admin.</span><strong>Valódi növekedés.</strong></p>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#top" aria-label="MG Web Solutions főoldal"><span class="brand-mark" aria-hidden="true"><img src="assets/mg-mark-inverse.svg" alt=""></span><span class="brand-wordmark"><strong>WEB SOLUTIONS</strong><small>Modern web. Kevesebb admin.</small></span></a><p>Landing oldalak és automatizációk magyar vállalkozásoknak</p></div><address><span>Kapcsolati adatok hamarosan</span><span>Telefonos egyeztetés előzetes kapcsolatfelvétel után.</span></address><div class="footer-links"><a href="#" aria-disabled="true" tabindex="-1">Adatkezelés</a><a href="#" aria-disabled="true" tabindex="-1">Impresszum</a></div><p class="legal-status-note">Az Impresszum és az Adatkezelési tájékoztató a végleges vállalkozói és kapcsolati adatokkal kerül feltöltésre az élesítés előtt.</p></div></footer>
+    <footer class="site-footer">
+      <span class="footer-monogram" aria-hidden="true">MG</span>
+      <div class="container footer-shell">
+        <div class="footer-top">
+          <div class="footer-positioning"><a class="brand footer-brand" href="#top" aria-label="MG Web Solutions főoldal"><span class="brand-mark" aria-hidden="true"><img src="assets/mg-mark-inverse.svg" alt=""></span><span class="brand-wordmark"><strong>WEB SOLUTIONS</strong><small>Modern web. Kevesebb admin.</small></span></a><p>Landing oldalak és automatizációk magyar vállalkozásoknak.</p></div>
+          <nav class="footer-navigation" aria-label="Lábléc navigáció"><strong>Navigáció</strong><a href="#szolgaltatas">Szolgáltatás</a><a href="#demok">Mintaoldalak</a><a href="#folyamat">Folyamat</a><a href="#arak">Csomagok</a><a href="#gyik">GYIK</a><a href="#kapcsolat">Kapcsolat</a></nav>
+          <div class="footer-contact"><strong>Kapcsolat</strong><span>Kapcsolati adatok hamarosan</span><small>Telefonos egyeztetés előzetes kapcsolatfelvétel után.</small></div>
+          <div class="footer-legal"><strong>Jogi információk</strong><div class="footer-links"><a href="#" aria-disabled="true" tabindex="-1">Adatkezelés</a><a href="#" aria-disabled="true" tabindex="-1">Impresszum</a></div><small>A végleges vállalkozói adatokkal kerülnek feltöltésre.</small></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 MG Web Solutions</p><span>MG / 2026</span></div>
+      </div>
+    </footer>
 
     <a class="mobile-cta" href="#kapcsolat" aria-label="Ugrás az ajánlatkérő űrlaphoz"><span>Ingyenes konzultáció</span><span aria-hidden="true">→</span></a>
     <script src="src/main.js" type="module"></script>
