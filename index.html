@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="src/mobile-polish.css">
     <link rel="stylesheet" href="src/header-hero.css">
     <link rel="stylesheet" href="src/round-three.css">
+    <link rel="stylesheet" href="src/round-four.css">
   </head>
   <body>
     <header class="site-header" id="top" data-site-header>
@@ -185,22 +186,106 @@
 
       <section class="section demos-section" id="demok">
         <div class="container">
-          <div class="section-heading demos-heading">
-            <p class="eyebrow">Mintaoldalak</p>
-            <h2>Ne csak képeken nézd. Próbáld ki.</h2>
-            <p><strong>Nyisd meg a működő mintaoldalakat, kattints végig rajtuk, és nézd meg, hogyan vezetik a látogatót az érdeklődéstől az ajánlatkérésig.</strong></p>
+          <div class="case-studies-heading" data-reveal>
+            <div><p class="eyebrow">Kiemelt munkák</p><h2>Nem csak megtervezem. <em>Működésre is építem.</em></h2></div>
+            <p>Két eltérő vállalkozás, két külön vizuális világ. A közös bennük, hogy mindkettő egy konkrét üzleti cél köré épül: több megkeresés, egyszerűbb kapcsolatfelvétel és átláthatóbb ügyfélút.</p>
           </div>
-          <div class="demo-grid">
-            <article class="demo-card climate">
-              <div class="demo-copy"><span class="demo-label">Helyi szolgáltató · ajánlatkérés</span><h3>Klímás mintaoldal</h3><p>Egy klímás vállalkozásra szabott minta, ahol a látogató gyorsan átlátja az ajánlatot, megtalálja a számára fontos információkat, és egyszerűen eljut az ajánlatkérésig.</p><div class="demo-chips"><span>Mobilra optimalizált</span><span>Rövid ajánlatkérés</span><span>Automatizációra kész</span></div><p class="demo-view-cue"><strong>Ezt figyeld:</strong> hogyan vezeti végig az oldal a látogatót az első benyomástól az ajánlatkérésig.</p></div>
-              <div class="demo-browser climate-browser" aria-hidden="true"><div class="browser-bar"><i></i><i></i><i></i><span>klima-minta.hu</span></div><div class="browser-page"><div class="browser-nav"></div><div class="browser-hero"><div><b></b><b></b><small></small></div><span class="browser-visual climate-visual"></span></div><div class="browser-cards"><i></i><i></i><i></i></div></div></div>
-              <a class="button demo-button" href="https://landing-demo-omega.vercel.app/" target="_blank" rel="noopener">Klímás mintaoldal megnyitása <span aria-hidden="true">↗</span></a>
+
+          <div class="case-studies-list">
+            <article class="case-study case-study-novadent" data-reveal>
+              <div class="case-study-visual">
+                <div class="case-browser" aria-label="A NovaDent weboldal asztali előnézete">
+                  <div class="case-browser-bar"><span></span><span></span><span></span><small>nova-dent-eight.vercel.app</small></div>
+                  <div class="case-browser-screen nova-case-screen">
+                    <div class="nova-preview-nav"><strong><i>N</i> NovaDent</strong><span>Szolgáltatások&nbsp;&nbsp; Páciensélmény&nbsp;&nbsp; Árak&nbsp;&nbsp; Időpont</span><b>+36 1 234 5678</b></div>
+                    <div class="nova-preview-hero">
+                      <div class="nova-preview-copy"><small>MODERN FOGÁSZAT BUDAPESTEN</small><strong>Fogászati ellátás, ahol a szakértelem és az odafigyelés együtt számít.</strong><p>Tapasztalt fogorvosokkal, korszerű háttérrel és figyelmes ellátással várjuk.</p><span>Időpontot kérek</span></div>
+                      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Világos, modern fogászati rendelő kezelőszékkel">
+                      <div class="nova-preview-form"><small>IDŐPONTKÉRÉS</small><strong>Kérjen időpontot egyszerűen</strong><i></i><i></i><i></i><span>Időpontot kérek</span></div>
+                    </div>
+                    <div class="nova-preview-strip" aria-hidden="true"><span>Kíméletes kezelések</span><span>Modern diagnosztika</span><span>Egyszerű időpontkérés</span></div>
+                  </div>
+                </div>
+                <div class="case-mobile nova-mobile" aria-hidden="true"><span></span><div><strong>NovaDent</strong><small>Modern fogászat</small><b>Fogászati ellátás, ahol az odafigyelés számít.</b><i>Időpontot kérek</i></div></div>
+              </div>
+              <div class="case-study-copy">
+                <div class="case-study-meta"><span>01 / 02</span><small>Fogászat · Bizalom és időpontkérés</small></div>
+                <h3>NovaDent</h3>
+                <p>Bizalomépítő felépítés, kíméletes és szakmai kommunikáció, egyszerű időpontkérés.</p>
+                <ul><li>Mobilra optimalizált</li><li>Gyakori kérdések</li><li>Időpontkérés</li><li>Erős vizuális bizalomépítés</li></ul>
+                <a class="case-study-link" href="https://nova-dent-eight.vercel.app/" target="_blank" rel="noopener">Élő oldal megnyitása <span aria-hidden="true">↗</span></a>
+              </div>
             </article>
-            <article class="demo-card dental">
-              <div class="demo-copy"><span class="demo-label">Egészségügy · bizalom és időpontkérés</span><h3>Fogászati mintaoldal</h3><p>Egy fogászati rendelőre szabott minta, ahol a kezelések érthetően vannak bemutatva, a látogató már az oldalon választ kap a fontos kérdéseire, és pár lépésben időpontot kérhet.</p><div class="demo-chips"><span>Bizalomépítő felépítés</span><span>Egyszerű időpontkérés</span><span>Chatbotra kész</span></div><p class="demo-view-cue"><strong>Ezt figyeld:</strong> hogyan ad választ az oldal a fontos kérdésekre még azelőtt, hogy a látogató időpontot kérne.</p></div>
-              <div class="demo-browser dental-browser" aria-hidden="true"><div class="browser-bar"><i></i><i></i><i></i><span>nova-dent.hu</span></div><div class="browser-page"><div class="browser-nav"></div><div class="browser-hero"><div><b></b><b></b><small></small></div><span class="browser-visual dental-visual"></span></div><div class="browser-cards"><i></i><i></i><i></i></div></div></div>
-              <a class="button demo-button" href="https://nova-dent-eight.vercel.app/" target="_blank" rel="noopener">Fogászati mintaoldal megnyitása <span aria-hidden="true">↗</span></a>
+
+            <article class="case-study case-study-climate" data-reveal>
+              <div class="case-study-visual">
+                <div class="case-browser" aria-label="A KlímaPont Győr weboldal asztali előnézete">
+                  <div class="case-browser-bar"><span></span><span></span><span></span><small>landing-demo-omega.vercel.app</small></div>
+                  <div class="case-browser-screen climate-case-screen">
+                    <div class="climate-preview-nav"><strong><i>KP</i> KLÍMAPONT GYŐR</strong><span>Szolgáltatások&nbsp;&nbsp; Rólunk&nbsp;&nbsp; Árak&nbsp;&nbsp; Ajánlatkérés</span><b>Győr +30 km</b></div>
+                    <div class="climate-preview-hero">
+                      <div class="climate-preview-copy"><small>KLÍMAPONT GYŐR · 24 ÓRÁN BELÜLI KAPCSOLATFELVÉTEL</small><strong>Klímaszerelés Győrben, előre egyeztetett árral és garanciával.</strong><p>Telepítés, tisztítás és karbantartás Győrben és 30 km-es körzetében.</p><span>Ingyenes felmérést kérek</span></div>
+                      <img src="https://raw.githubusercontent.com/csakvarigergely-create/landing-demo/main/public/assets/klima-hero-real-hvac.png" alt="Klímaszerelők beltéri egységet szerelnek egy otthonban">
+                    </div>
+                    <div class="climate-preview-strip" aria-hidden="true"><span>Helyszíni felmérés</span><span>Garanciás telepítés</span><span>Tiszta munkavégzés</span></div>
+                  </div>
+                </div>
+                <div class="case-mobile climate-mobile" aria-hidden="true"><span></span><div><strong>KP&nbsp; KLÍMAPONT</strong><small>Klímaszerelés Győrben</small><b>Előre egyeztetett ár. Garanciás munka.</b><i>Felmérést kérek</i></div></div>
+              </div>
+              <div class="case-study-copy">
+                <div class="case-study-meta"><span>02 / 02</span><small>Helyi szolgáltató · Ajánlatkérés</small></div>
+                <h3>KlímaPont Győr</h3>
+                <p>Gyorsan átlátható szolgáltatások, egyértelmű árak és ajánlatkérésre optimalizált felépítés.</p>
+                <ul><li>Mobilra optimalizált</li><li>Helyi szolgáltatói kommunikáció</li><li>Ajánlatkérés</li><li>Automatizációra kész</li></ul>
+                <a class="case-study-link" href="https://landing-demo-omega.vercel.app/" target="_blank" rel="noopener">Élő oldal megnyitása <span aria-hidden="true">↗</span></a>
+              </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section automation-practice-section" aria-labelledby="automation-practice-title">
+        <span class="automation-practice-grid" aria-hidden="true"></span>
+        <span class="automation-practice-index" aria-hidden="true">MG / 04</span>
+        <div class="container automation-practice-layout">
+          <div class="automation-practice-copy" data-reveal>
+            <p class="eyebrow">Automatizáció a gyakorlatban</p>
+            <h2 id="automation-practice-title">Mi történik, amikor valaki ajánlatot kér?</h2>
+            <p class="automation-practice-lead">Az érdeklődő elküldi az űrlapot, a háttérben pedig automatikusan elindulnak a következő lépések. Kevesebb kézi másolás, gyorsabb visszajelzés, átláthatóbb folyamat.</p>
+            <ol class="automation-step-list">
+              <li><span>01</span><div><strong>Űrlap elküldve</strong><p>Az érdeklődő kitölti az ajánlatkérő vagy kapcsolatfelvételi űrlapot.</p></div></li>
+              <li><span>02</span><div><strong>Adatok mentése</strong><p>A megadott adatok automatikusan menthetők a megfelelő rendszerbe vagy táblázatba.</p></div></li>
+              <li><span>03</span><div><strong>Értesítés</strong><p>Te azonnal értesítést kaphatsz az új megkeresésről.</p></div></li>
+              <li><span>04</span><div><strong>Automatikus visszaigazolás</strong><p>Az érdeklődő rögtön kaphat egy automatikus visszaigazolást.</p></div></li>
+              <li><span>05</span><div><strong>További automatizáció</strong><p>Igény esetén a folyamat további lépésekkel bővíthető.</p></div></li>
+            </ol>
+            <a class="automation-practice-cta" href="#arak">Megnézem a csomagokat <span aria-hidden="true">↓</span></a>
+          </div>
+
+          <div class="automation-diagram" data-reveal aria-label="Az ajánlatkérő űrlap után automatikusan elinduló folyamat">
+            <div class="automation-map">
+              <div class="lead-capture-card">
+                <div class="lead-capture-head"><span class="lead-capture-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5z"></path><path d="M8 9h8M8 13h5"></path></svg></span><div><small>ŰRLAP</small><strong>Új ajánlatkérés</strong></div><i>Most</i></div>
+                <div class="lead-field"><span>Név</span><b>Megadva</b></div><div class="lead-field"><span>E-mail</span><b>Megadva</b></div><div class="lead-field"><span>Telefonszám</span><b>Megadva</b></div><div class="lead-field"><span>Szolgáltatás</span><b>Kiválasztva</b></div>
+                <div class="lead-submit-state"><span>✓</span> Űrlap sikeresen elküldve</div>
+              </div>
+
+              <div class="automation-rail" aria-hidden="true"><span></span><i></i><i></i><i></i></div>
+
+              <div class="automation-node automation-node-data"><span class="automation-node-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6c0-1.1 3.1-2 7-2s7 .9 7 2-3.1 2-7 2-7-.9-7-2Z"></path><path d="M5 6v6c0 1.1 3.1 2 7 2s7-.9 7-2V6M5 12v6c0 1.1 3.1 2 7 2s7-.9 7-2v-6"></path></svg></span><div><small>02 · ADATMENTÉS</small><strong>Adatok mentve</strong><p>Rendszer vagy táblázat</p></div><b>✓</b></div>
+              <div class="automation-node automation-node-alert"><span class="automation-node-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9Z"></path><path d="M10 20h4"></path></svg></span><div><small>03 · ÉRTESÍTÉS</small><strong>Értesítés elküldve</strong><p>Új megkeresés érkezett</p></div><b>✓</b></div>
+              <div class="automation-node automation-node-reply"><span class="automation-node-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"></rect><path d="m5 7 7 5 7-5"></path></svg></span><div><small>04 · VISSZAIGAZOLÁS</small><strong>Visszaigazolás elküldve</strong><p>Automatikus e-mail</p></div><b>✓</b></div>
+            </div>
+
+            <div class="automation-expansion">
+              <div class="automation-expansion-copy"><span>05</span><div><small>OPCIONÁLIS BŐVÍTÉS</small><strong>A folyamat tovább építhető</strong></div></div>
+              <div class="integration-list" aria-label="Lehetséges integrációk"><span>CRM</span><span>Google Sheets</span><span>E-mail</span><span>Make</span><span>Webhook</span></div>
+            </div>
+
+            <div class="chatbot-option">
+              <span class="chatbot-option-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14v10H9l-4 3z"></path><path d="M9 10h.01M12 10h.01M15 10h.01"></path></svg></span>
+              <div><small>AI CHATBOT OPCIÓ</small><strong>A gyakori kérdések egy részét a vállalkozásodra felkészített chatbot kezelheti.</strong></div>
+            </div>
           </div>
         </div>
       </section>
