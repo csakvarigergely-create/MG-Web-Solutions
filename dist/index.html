@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="src/header-hero.css">
     <link rel="stylesheet" href="src/round-three.css">
     <link rel="stylesheet" href="src/round-four.css">
+    <link rel="stylesheet" href="src/round-five.css">
   </head>
   <body>
     <header class="site-header" id="top" data-site-header>
@@ -297,32 +298,154 @@
         </div></div>
       </section>
 
-      <section class="section process-section" id="folyamat">
+      <section class="section process-section" id="folyamat" aria-labelledby="process-title">
         <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Folyamat</p>
-            <h2>Így jutunk el az első egyeztetéstől a kész oldalig.</h2>
-            <p><strong>Végig átlátható lesz a folyamat, így mindig tudni fogod, hol tart a projekt és mi következik.</strong></p>
+          <div class="round-five-heading process-heading">
+            <div>
+              <p class="eyebrow">Hogyan dolgozunk?</p>
+              <h2 id="process-title">Átlátható folyamat az első egyeztetéstől az indulásig.</h2>
+            </div>
+            <p>Nem kell technikai részletekkel bajlódnod. Lépésről lépésre végigvezetlek a folyamaton, és mindig tudni fogod, mi következik.</p>
           </div>
-          <ol class="process-list">
-            <li><span>1</span><h3>Megismerem a vállalkozásodat</h3><p>Az első egyeztetésen átbeszéljük, mivel foglalkozol, kik az ügyfeleid, hogyan érkeznek most a megkeresések, és mit szeretnél elérni az új oldallal.</p></li>
-            <li><span>2</span><h3>Összegyűjtjük, amire szükség lesz</h3><p>Bekérem a vállalkozásodhoz kapcsolódó szükséges anyagokat és információkat, majd ezek alapján összeállítjuk az oldal tartalmát és a fő üzeneteket. Ha chatbotot is kérsz, itt készítjük elő a számára szükséges tudásanyagot.</p></li>
-            <li><span>3</span><h3>Elkészítem az oldalt</h3><p>Megépítem a landing oldalt, mobilra optimalizálom, bekötöm a választott automatizációkat, majd végigtesztelem az ajánlatkéréstől az automatikus visszajelzésig.</p></li>
-            <li><span>4</span><h3>Átnézzük, finomítjuk, mehet élesbe</h3><p>Megmutatom az elkészült oldalt, átbeszéljük az esetleges módosításokat, elvégzem az egyeztetett finomításokat, majd az utolsó ellenőrzés után mehet élesbe.</p></li>
-          </ol>
+
+          <div class="project-journey" data-reveal>
+            <div class="journey-line" aria-hidden="true"></div>
+            <article class="journey-step journey-step-one">
+              <span class="journey-number">01</span>
+              <div class="journey-copy">
+                <small>Első egyeztetés</small>
+                <h3>Megismerem a vállalkozásodat</h3>
+                <p>Átbeszéljük, mivel foglalkozol, kik az ügyfeleid, hogyan érkeznek most a megkeresések, és mit szeretnél elérni az új oldallal.</p>
+              </div>
+            </article>
+
+            <aside class="commercial-gate" aria-label="Kereskedelmi egyeztetés és megrendelés">
+              <span class="gate-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"></path><path d="M14 3v4h4M9 12h6M9 16h4"></path></svg></span>
+              <small>Kereskedelmi kapu</small>
+              <strong>Egyeztetés és megrendelés</strong>
+              <p>Pontosítjuk a csomagot és a projekt kereteit. Az írásos megrendelés és az előleg után indul a részletes kivitelezés.</p>
+              <span class="gate-status"><i aria-hidden="true"></i> Projektindítás</span>
+            </aside>
+
+            <article class="journey-step journey-step-two">
+              <span class="journey-number">02</span>
+              <div class="journey-copy">
+                <small>Anyagbekérés</small>
+                <h3>Összegyűjtjük, amire szükség lesz</h3>
+                <p>Bekérem a szövegeket, képeket, arculati és szolgáltatási információkat, valamint szükség esetén a chatbot tudásanyagát.</p>
+              </div>
+            </article>
+
+            <article class="journey-step journey-step-three">
+              <span class="journey-number">03</span>
+              <div class="journey-copy">
+                <small>Kivitelezés</small>
+                <h3>Elkészítem az oldalt és a rendszert</h3>
+                <p>Megépítem a landing oldalt, mobilra optimalizálom, bekötöm az űrlapot, a választott automatizációkat és integrációkat, majd mindent letesztelek.</p>
+              </div>
+            </article>
+
+            <article class="journey-step journey-step-four">
+              <span class="journey-number">04</span>
+              <div class="journey-copy">
+                <small>Indulás</small>
+                <h3>Átnézzük, finomítjuk, mehet élesbe</h3>
+                <p>Közösen átnézzük, elvégzem a csomaghoz tartozó módosításokat, majd következik a technikai bekötés, az élesítés és az átadás.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section pricing-section" id="arak">
+      <section class="section pricing-section" id="arak" aria-labelledby="pricing-title">
         <div class="container">
-          <div class="section-heading"><p class="eyebrow">Csomagok</p><h2>Mennyibe kerül, és mit kapsz érte?</h2><p>Három kiinduló csomagból választhatsz attól függően, hogy egy jól felépített landing oldalra, automatizált érdeklődőkezelésre vagy chatbotra is szükséged van.</p><p><strong>Az egyeztetés után pontos árat kapsz, még a munka megkezdése előtt.</strong></p></div>
-          <div class="pricing-grid">
-            <article class="price-card"><span class="badge badge-placeholder" aria-hidden="true">Ajánlott csomag</span><h3>Landing Start</h3><p class="package-fit"><strong>Ha egy igényes, jól felépített landing oldalra van szükséged, automatizáció nélkül.</strong></p><p class="price">149 000 Ft-tól</p><strong class="package-content-label">Ezt kapod</strong><ul><li>Egyoldalas, egyedi landing oldal</li><li>Mobilra optimalizált megjelenés</li><li>Kapcsolatfelvételi űrlap</li><li>Saját domainhez kapcsolás</li></ul><div class="package-assurance"><strong>A kivitelezés része</strong><ul><li>1 módosítási kör</li><li>Mobilos és asztali ellenőrzés</li><li>Átadás előtti technikai teszt</li></ul></div><a class="button price-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></article>
-            <article class="price-card recommended"><span class="badge">Ajánlott csomag</span><h3>Landing Automatizációval</h3><p class="package-fit"><strong>Ha azt szeretnéd, hogy az ajánlatkérések automatikusan rögzüljenek, az érdeklődő visszaigazolást kapjon, te pedig rögtön értesülj az új megkeresésekről.</strong></p><p class="price">249 000 Ft-tól</p><strong class="package-content-label">Ezt kapod</strong><ul><li>Minden, ami a Landing Start csomagban benne van</li><li>Az érdeklődők adatainak automatikus mentése</li><li>E-mail értesítés az új ajánlatkérésekről</li><li>Automatikus visszaigazoló e-mail az érdeklődőnek</li></ul><div class="package-assurance"><strong>A kivitelezés része</strong><ul><li>2 módosítási kör</li><li>Az űrlapok és e-mailek teljes tesztelése</li><li>Rövid használati átadás</li></ul></div><a class="button price-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></article>
-            <article class="price-card"><span class="badge badge-placeholder" aria-hidden="true">Ajánlott csomag</span><h3>Landing + Automatizáció + AI Chatbot</h3><p class="package-fit"><strong>Ha azt szeretnéd, hogy az érdeklődők a kérdéseikre azonnal választ kapjanak, és könnyebben kérjenek ajánlatot.</strong></p><p class="price">299 000 Ft-tól</p><strong class="package-content-label">Ezt kapod</strong><ul><li>Minden, ami a Landing Automatizációval csomagban benne van</li><li>A vállalkozásodhoz igazított AI chatbot</li><li>Válaszok a gyakori ügyfélkérdésekre</li><li>Könnyebb ajánlatkérés a chatbot segítségével</li><li>A chatbothoz szükséges tudásanyag beállítása</li></ul><div class="package-assurance"><strong>A kivitelezés része</strong><ul><li>2 módosítási kör</li><li>A chatbot tartalmának közös finomítása</li><li>A chatbot és az ajánlatkérési folyamat teljes tesztelése</li></ul></div><a class="button price-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></article>
+          <div class="round-five-heading pricing-heading">
+            <div>
+              <p class="eyebrow">Csomagok</p>
+              <h2 id="pricing-title">Válaszd azt, amire most valóban szükséged van.</h2>
+            </div>
+            <p>A csomagok egymásra épülnek. Indulhatsz egy jól felépített landing oldallal, és kérhetsz hozzá automatizációt vagy AI chatbotot is.</p>
           </div>
-          <div class="package-terms"><div><strong>Projektidő</strong><span>A legtöbb landing oldal 7–10 munkanap alatt elkészül, miután minden szükséges anyag megérkezett. Ha összetettebb automatizációra vagy egyedi funkcióra van szükséged, az ütemezést előre egyeztetjük.</span></div><div><strong>Szöveg és tartalom</strong><span>Nem kell kész webszöveggel érkezned. Az első egyeztetés és a bekért anyagok alapján közösen kialakítjuk, mi kerüljön az oldalra és hogyan érdemes bemutatni az ajánlatodat. Ha nagyobb mennyiségű új tartalomra vagy teljes szövegírásra van szükség, azt külön egyeztetjük.</span></div><div><strong>Domain és tárhely</strong><span>A domain és a tárhely díja nem része az egyszeri projektárnak. A szükséges technikai beállításokat és az oldal bekötését viszont én intézem, így ezzel neked nem kell külön foglalkoznod.</span></div><div><strong>Fizetés és extra igények</strong><span>A munka kezdete előtt rögzítjük a végleges árat, a fizetés ütemezését és azt, mi tartozik a projektbe. Ha később új kérés merül fel, előre egyeztetjük, jár-e plusz költséggel.</span></div></div>
-          <div class="launch-offer"><div class="launch-offer-copy"><p class="eyebrow">Induló partnerprogram</p><h3>Az első 3 projekt kedvezményes áron készül.</h3><p>Most építem az MG Web Solutions első valódi referenciáit, ezért az első 3 ügyfél kedvezményes feltételekkel kérheti az oldalt. Ugyanazt a teljes kivitelezést kapod, cserébe azt kérem, hogy ha elégedett vagy az eredménnyel, az elkészült oldalt referenciaként bemutathassam.</p></div><a class="button button-secondary" href="#kapcsolat">Érdekel a partnerprogram</a></div>
+
+          <div class="pricing-grid pricing-panels" data-reveal>
+            <article class="price-card pricing-panel">
+              <div class="package-head">
+                <span class="package-index">01</span>
+                <small>Landing oldal</small>
+                <h3>Landing Start</h3>
+                <p class="price"><strong>149 000 Ft</strong><span>-tól</span></p>
+              </div>
+              <p class="package-fit">Ha egy igényes, jól felépített landing oldalra van szükséged automatizáció nélkül.</p>
+              <strong class="package-content-label">A csomag tartalma</strong>
+              <ul class="package-features">
+                <li>Egyoldalas landing oldal</li>
+                <li>Mobilra optimalizált megjelenés</li>
+                <li>Kapcsolatfelvételi vagy ajánlatkérő űrlap</li>
+                <li>Domain bekötésének előkészítése és támogatása</li>
+                <li>Alap technikai beállítások</li>
+                <li>1 módosítási kör</li>
+              </ul>
+              <a class="button button-secondary price-cta" href="#kapcsolat">Erről szeretnék egyeztetni <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="price-card pricing-panel recommended">
+              <div class="package-head">
+                <span class="package-index">02</span>
+                <span class="package-marker">Komplett megoldás</span>
+                <small>Landing + automatizáció</small>
+                <h3>Landing + Automatizáció</h3>
+                <p class="price"><strong>249 000 Ft</strong><span>-tól</span></p>
+              </div>
+              <p class="package-fit">Ha a landing oldal mellett az érdeklődők kezelésének első lépéseit is automatizálnád.</p>
+              <strong class="package-content-label">Minden a Start csomagból, valamint</strong>
+              <ul class="package-features">
+                <li>Űrlapadatok automatizált mentése</li>
+                <li>E-mail értesítés az új megkeresésről</li>
+                <li>Automatikus visszaigazolás az érdeklődőnek</li>
+                <li>Analitika</li>
+                <li>2 módosítási kör</li>
+              </ul>
+              <a class="button price-cta" href="#kapcsolat">Erről szeretnék egyeztetni <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="price-card pricing-panel">
+              <div class="package-head">
+                <span class="package-index">03</span>
+                <small>Landing + automatizáció + AI</small>
+                <h3>Landing + Automatizáció + AI Chatbot</h3>
+                <p class="price"><strong>299 000 Ft</strong><span>-tól</span></p>
+              </div>
+              <p class="package-fit">Ha az automatizált érdeklődőkezelést egy, a vállalkozásodra felkészített chatbottal egészítenéd ki.</p>
+              <strong class="package-content-label">Minden az Automatizáció csomagból, valamint</strong>
+              <ul class="package-features">
+                <li>Vállalkozásra felkészített AI chatbot</li>
+                <li>Chatbot integráció</li>
+                <li>2 módosítási kör</li>
+              </ul>
+              <a class="button button-secondary price-cta" href="#kapcsolat">Erről szeretnék egyeztetni <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+
+          <div class="pricing-notes" aria-label="A csomagokra vonatkozó fontos tudnivalók" data-reveal>
+            <div><span aria-hidden="true">↗</span><p><strong>Átlagos kivitelezési idő</strong>7–10 munkanap, miután minden szükséges anyag megérkezett.</p></div>
+            <div><span aria-hidden="true">+</span><p><strong>Domain és tárhely</strong>Külön költség lehet; a technikai bekötésben segítek.</p></div>
+            <div><span aria-hidden="true">✓</span><p><strong>Pontos ár indulás előtt</strong>A projekt tartalmát, árát és fizetési ütemezését előre rögzítjük.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section partner-section" aria-labelledby="partner-title">
+        <div class="container">
+          <div class="partner-panel" data-reveal>
+            <span class="partner-grid" aria-hidden="true"></span>
+            <div class="partner-number" aria-hidden="true"><small>ELSŐ</small><strong>03</strong><span>PROJEKT</span></div>
+            <div class="partner-copy">
+              <p class="eyebrow">Induló partnerprogram</p>
+              <h2 id="partner-title">Az első 3 projekt <span>kedvezményes áron</span> készül.</h2>
+              <p>Most építem az MG Web Solutions első valódi referenciáit, ezért az első 3 ügyfél kedvezményes feltételekkel kérheti az oldalt. Ugyanazt a teljes kivitelezést kapod, cserébe azt kérem, hogy ha elégedett vagy az eredménnyel, az elkészült oldalt referenciaként bemutathassam.</p>
+              <a class="button partner-cta" href="#kapcsolat">Érdekel a partnerprogram <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
         </div>
       </section>
 
