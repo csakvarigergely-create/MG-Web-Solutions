@@ -553,6 +553,10 @@
   color: rgba(255, 253, 248, 0.68);
 }
 
+.site-footer .footer-monogram {
+  color: rgba(255, 253, 248, 0.025);
+}
+
 .footer-navigation a,
 .footer-links a {
   font-size: 0.78rem;
