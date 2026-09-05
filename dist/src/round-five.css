@@ -384,6 +384,14 @@
   transform: rotate(45deg);
 }
 
+.pricing-panels .pricing-panel.recommended .package-content-label {
+  color: var(--color-white);
+}
+
+.pricing-panels .pricing-panel.recommended .package-features li {
+  color: rgba(255, 253, 248, 0.72);
+}
+
 .pricing-panels .price-cta {
   width: 100%;
   margin-top: auto;
