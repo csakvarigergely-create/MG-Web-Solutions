@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="src/content-sections.css">
     <link rel="stylesheet" href="src/mobile-polish.css">
     <link rel="stylesheet" href="src/header-hero.css">
+    <link rel="stylesheet" href="src/round-three.css">
   </head>
   <body>
     <header class="site-header" id="top" data-site-header>
@@ -100,59 +101,84 @@
         </div>
       </section>
 
-      <section class="section automation-section" aria-labelledby="automation-title">
+      <section class="section value-proposition-section" id="szolgaltatas" aria-labelledby="value-proposition-title">
+        <span class="value-proposition-index" aria-hidden="true">MG / 02</span>
         <div class="container">
-          <div class="section-heading automation-heading">
-            <p class="eyebrow">Automatizációk a gyakorlatban</p>
-            <h2 id="automation-title">Mi történik, amikor valaki ajánlatot kér?</h2>
-            <p>Az adatai automatikusan rögzülnek, kap egy visszaigazolást, és ha szükséges, a chatbot a gyakori kérdésekre is válaszol. Neked kevesebb adminisztráció marad.</p>
+          <div class="value-proposition-heading" data-reveal>
+            <div>
+              <p class="eyebrow">Több, mint weboldal</p>
+              <h2 id="value-proposition-title"><span>Nem csak egy szép oldalt kapsz.</span><span>Egy rendszert, ami <em>segít ügyfelet szerezni.</em></span></h2>
+            </div>
+            <p class="value-proposition-lead">Az oldal célja nem az, hogy csak jól nézzen ki. Segít eljuttatni a látogatót a kapcsolatfelvételig, az automatizációk pedig elvégzik azokat a lépéseket, amelyeket különben neked kellene kézzel intézned.</p>
           </div>
-          <div class="automation-grid">
-            <article class="automation-card">
-              <div class="automation-visual form-to-sheet" aria-hidden="true"><div class="mini-form"><span></span><span></span><strong>Ajánlatkérés</strong></div><div class="flow-arrow"></div><div class="mini-sheet"><strong>Név</strong><strong>E-mail</strong><strong>Tel.</strong><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
-              <h3>Minden ajánlatkérés egy helyen</h3><strong class="automation-benefit">Nem kell e-mailek és üzenetek között keresgélned.</strong>
-              <p>Az űrlapon érkező adatok automatikusan egy helyre kerülnek, így rögtön látod, ki keresett és mivel kapcsolatban.</p>
-              <ul class="benefit-list"><li>Név, e-mail és telefonszám egy helyen</li><li>Könnyebb visszahívás és utánkövetés</li><li>Kevesebb elveszett megkeresés</li></ul>
+
+          <div class="value-editorial-grid">
+            <article class="value-story value-story-featured" data-reveal>
+              <div class="value-story-meta"><span>01</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="m16 8 4-4M17 4h3v3"></path></svg></div>
+              <div class="value-system-visual" aria-hidden="true">
+                <div class="value-browser"><div><i></i><i></i><i></i></div><span></span><span></span><strong>AJÁNLATOT KÉREK&nbsp; →</strong></div>
+                <div class="value-route"><i></i><span>ÉRDEKLŐDŐ</span></div>
+                <div class="value-contact"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"></path><path d="M8 9h8M8 13h5"></path></svg><span>Kapcsolatfelvétel</span><strong>Új megkeresés</strong></div>
+              </div>
+              <div class="value-story-copy"><h3>Több megkeresés</h3><p>Az oldal felépítése a kapcsolatfelvétel felé vezeti a látogatót.</p></div>
             </article>
-            <article class="automation-card">
-              <div class="automation-visual form-to-email" aria-hidden="true"><div class="mini-form compact"><span></span><strong>Űrlap</strong></div><div class="flow-arrow email-arrow"></div><svg class="mail-icon" viewBox="0 0 48 36"><rect x="4" y="6" width="40" height="24" rx="6"></rect><path d="M8 10l16 12L40 10"></path><path d="M8 28l12-10"></path><path d="M40 28L28 18"></path></svg><div class="email-preview"><span>Köszönöm</span><small>Hamarosan jelentkezem.</small></div></div>
-              <h3>Automatikus visszaigazolás</h3><strong class="automation-benefit">Az érdeklődő rögtön tudja, hogy megérkezett az ajánlatkérése.</strong>
-              <p>A rendszer automatikusan elküldi a visszaigazoló e-mailt, így neked ezt nem kell minden érdeklődőnél külön megírnod.</p>
-              <ul class="benefit-list"><li>Automatikus visszaigazoló e-mail</li><li>Azonnali visszajelzés</li><li>Nem kell külön e-mailt küldened</li></ul>
+
+            <article class="value-story" data-reveal>
+              <div class="value-story-meta"><span>02</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h6v5H4zM14 13h6v5h-6z"></path><path d="M10 8.5h3a3 3 0 0 1 3 3V13M7 11v4a3 3 0 0 0 3 3h4"></path></svg></div>
+              <div class="value-story-copy"><h3>Kevesebb kézi adminisztráció</h3><p>Az érdeklődők adatai automatikusan a megfelelő helyre kerülhetnek.</p></div>
             </article>
-            <article class="automation-card">
-              <div class="automation-visual chat-preview" aria-hidden="true"><div class="chat-bubble question">Miben tudok segíteni?</div><div class="chat-bubble customer">Hogyan kérhetek ajánlatot?</div><div class="chat-bubble answer">Segítek ajánlatot kérni.</div></div>
-              <h3>Válasz a gyakori kérdésekre</h3><strong class="automation-benefit">Nem minden kérdéshez kell külön üzenetváltás.</strong>
-              <p>A chatbot megválaszolja az előre beállított gyakori kérdéseket, és segít eljuttatni az érdeklődőt az ajánlatkérésig.</p>
-              <ul class="benefit-list"><li>Gyakori kérdések automatikusan</li><li>Munkaidőn kívül is elérhető</li><li>Kevesebb ismétlődő üzenet</li></ul>
+
+            <article class="value-story" data-reveal>
+              <div class="value-story-meta"><span>03</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 3z"></path><path d="m8 10 2 2 5-5"></path></svg></div>
+              <div class="value-story-copy"><h3>Gyorsabb reakció</h3><p>Az érdeklődő azonnali visszaigazolást kaphat, te pedig értesítést az új megkeresésről.</p></div>
+            </article>
+
+            <article class="value-story" data-reveal>
+              <div class="value-story-meta"><span>04</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v10H9l-4 3z"></path><path d="M9 10h.01M12 10h.01M15 10h.01"></path></svg></div>
+              <div class="value-story-copy"><h3>AI chatbot lehetőség</h3><p>A gyakori kérdések egy részét egy, a vállalkozásodra felkészített chatbot kezelheti.</p></div>
+            </article>
+
+            <article class="value-story value-story-system" data-reveal>
+              <div class="value-story-meta"><span>05</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="12" r="3"></circle><circle cx="17" cy="7" r="3"></circle><circle cx="17" cy="17" r="3"></circle><path d="m10 11 4-3M10 13l4 3"></path></svg></div>
+              <div class="value-story-copy"><h3>Egy rendszerben gondolkodunk</h3><p>A landing oldal és az automatizáció nem különálló elemként, hanem egy rendszer részeként működik.</p></div>
             </article>
           </div>
-          <div class="automation-summary"><strong>A rutinfeladatokat intézi a rendszer. Te az ügyféllel foglalkozhatsz.</strong></div>
         </div>
       </section>
 
-      <section class="section solution-section" id="szolgaltatas">
-        <div class="container solution-shell">
-          <div class="solution-intro">
-            <div class="section-heading compact">
-              <p class="eyebrow">Így lesz a látogatóból érdeklődő</p>
-              <h2>Ne csak megnézzék az oldalad. Keressenek is meg.</h2>
-              <p>Az oldal folyamatosan fenntartja az érdeklődést, választ ad a legfontosabb kérdésekre, és lépésről lépésre közelebb viszi a látogatót a kapcsolatfelvételhez.</p>
-            </div>
-            <div class="solution-flow" aria-label="Az érdeklődő útja">
-              <div class="solution-step"><span class="solution-dot violet"></span><div><small>1. Érdeklődés</small><strong>Gyorsan megérti, mit kínálsz, és miért lehet ez neki érdekes.</strong></div></div><span class="solution-arrow" aria-hidden="true">→</span>
-              <div class="solution-step"><span class="solution-dot orange"></span><div><small>2. Bizalom</small><strong>Megkapja a döntéshez szükséges legfontosabb információkat és válaszokat.</strong></div></div><span class="solution-arrow" aria-hidden="true">→</span>
-              <div class="solution-step"><span class="solution-dot teal"></span><div><small>3. Ajánlatkérés</small><strong>Egyszerűen elküldi az adatait, a rendszer pedig automatikusan rögzíti őket.</strong></div></div>
-            </div>
+      <section class="section system-flow-section" aria-labelledby="system-flow-title">
+        <span class="system-flow-grid" aria-hidden="true"></span>
+        <span class="system-flow-index" aria-hidden="true">MG / 03</span>
+        <div class="container">
+          <div class="system-flow-heading" data-reveal>
+            <div><p class="eyebrow">A rendszer a gyakorlatban</p><h2 id="system-flow-title">Egy jól felépített rendszer <em>dolgozik helyetted.</em></h2></div>
+            <p>A látogató megérkezik az oldalra, elküldi az érdeklődését, a háttérben pedig automatikusan elindulnak a következő lépések. Így neked már nem az adatok másolásával és az első visszajelzéssel kell foglalkoznod.</p>
           </div>
-          <div class="solution-demo-wrap">
-            <div class="solution-demo-kicker"><span></span> Nézd meg működés közben</div>
-            <div class="chat-demo" data-chat-demo>
-              <div class="chat-demo-header"><div class="chat-brand-mark" aria-hidden="true">MG</div><div><strong>MG Web Solutions AI</strong><span><i></i> Online</span></div><button class="chat-demo-control" type="button" data-chat-control aria-label="Animáció megállítása">Szünet</button></div>
-              <div class="chat-demo-body" data-chat-stage aria-live="polite"></div>
-              <div class="chat-demo-progress" aria-hidden="true"><span data-chat-progress></span></div>
-            </div>
-            <p class="solution-demo-note">Vidd fölé az egeret vagy koppints a „Szünet” gombra, ha több időt szeretnél az olvasásra.</p>
+
+          <div class="flow-route-label" aria-label="Látogató, érdeklődő, automatizáció, ügyfél" data-reveal><span>Látogató</span><i>→</i><span>Érdeklődő</span><i>→</i><span class="is-accent">Automatizáció</span><i>→</i><span>Ügyfél</span></div>
+
+          <div class="customer-flow" data-reveal aria-label="A látogatótól az ügyfélig tartó folyamat">
+            <article class="flow-stage">
+              <div class="flow-stage-marker"><span>01</span></div>
+              <div class="flow-stage-body"><small>Látogató</small><h3>Megérkezik az oldalra</h3><p>A landing oldal egyértelműen megmutatja, mit kínál a vállalkozás, és merre tud továbbhaladni.</p></div>
+            </article>
+            <article class="flow-stage">
+              <div class="flow-stage-marker"><span>02</span></div>
+              <div class="flow-stage-body"><small>Érdeklődő</small><h3>Kitölti az űrlapot</h3><p>A látogatóból konkrét megkeresés lesz.</p></div>
+            </article>
+            <article class="flow-stage flow-stage-automation">
+              <div class="flow-stage-marker"><span>03</span></div>
+              <div class="flow-stage-body"><small>Automatizáció</small><h3>A háttérben elindul a folyamat</h3><p>Az adatok menthetők, értesítés érkezhet, az érdeklődő pedig automatikus visszaigazolást kaphat.</p>
+                <div class="flow-micro-ui" aria-label="Automatizált lépések">
+                  <div><span class="flow-micro-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"></path><path d="M8 9h8M8 13h5"></path></svg></span><strong>Új ajánlatkérés érkezett</strong><small>Automatikusan</small></div>
+                  <ul><li>Adatok mentve</li><li>Értesítés elküldve</li><li>Visszaigazolás elküldve</li></ul>
+                </div>
+              </div>
+            </article>
+            <article class="flow-stage">
+              <div class="flow-stage-marker"><span>04</span></div>
+              <div class="flow-stage-body"><small>Ügyfél</small><h3>Te már a valódi egyeztetésre koncentrálhatsz</h3><p>A cél az, hogy kevesebb manuális lépés maradjon közted és az új érdeklődő között.</p></div>
+            </article>
           </div>
         </div>
       </section>

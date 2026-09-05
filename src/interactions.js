@@ -37,6 +37,24 @@ const updateHeaderState = () => {
 updateHeaderState();
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 
+const revealTargets = document.querySelectorAll("[data-reveal]");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (revealTargets.length && "IntersectionObserver" in window && !reducedMotion.matches) {
+  document.documentElement.classList.add("reveal-enabled");
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8%" }
+  );
+  revealTargets.forEach((target) => revealObserver.observe(target));
+}
+
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
   const button = form.querySelector("button");
@@ -149,8 +167,7 @@ if (chatDemo && chatStage && chatProgress) {
     }, 140);
   }
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (reduceMotion.matches) {
+  if (reducedMotion.matches) {
     sceneIndex = scenes.length - 1;
     chatStage.innerHTML = scenes[sceneIndex].html;
     chatStage.classList.add("is-visible");
