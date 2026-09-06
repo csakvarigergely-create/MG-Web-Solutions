@@ -10073,3 +10073,724 @@ h2 {
     font-size: 0.96rem;
   }
 }
+
+
+/* Polish 2 — lower-page hierarchy, readability and conversion-surface refinements. */
+
+:root {
+  --editorial-line: rgba(23, 23, 19, 0.16);
+  --editorial-line-inverse: rgba(255, 253, 248, 0.16);
+}
+
+/* Project journey: make the sequence clear before the detailed explanation. */
+.process-section {
+  background:
+    linear-gradient(90deg, rgba(221, 214, 202, 0.18) 1px, transparent 1px) 0 0 / 12.5% 100%,
+    var(--color-canvas-soft);
+}
+
+.process-section::before {
+  height: clamp(2.5rem, 5vw, 5rem);
+  opacity: 0.84;
+}
+
+.process-heading {
+  margin-bottom: clamp(2.35rem, 4vw, 3.8rem);
+}
+
+.process-heading > p {
+  max-width: 35rem;
+  border-left-width: 1px;
+  padding-left: 1.15rem;
+  color: var(--color-muted);
+  font-size: clamp(1.02rem, 1.32vw, 1.14rem);
+  line-height: 1.66;
+}
+
+.project-journey {
+  gap: clamp(0.8rem, 1.25vw, 1.28rem);
+  padding-top: 1.7rem;
+}
+
+.journey-line {
+  top: 2.1rem;
+  background: var(--editorial-line);
+}
+
+.journey-step::before {
+  width: 0.62rem;
+  height: 0.62rem;
+  margin-bottom: 1.65rem;
+  border-width: 2px;
+}
+
+.journey-number {
+  margin-bottom: 1.2rem;
+  font-size: clamp(2.5rem, 3.7vw, 3.95rem);
+}
+
+.journey-copy small {
+  margin-bottom: 0.45rem;
+  color: var(--color-muted-light);
+}
+
+.journey-copy h3 {
+  min-height: 3.1em;
+  margin-bottom: 0.78rem;
+  font-size: clamp(1.1rem, 1.38vw, 1.3rem);
+  line-height: 1.16;
+}
+
+.journey-copy p {
+  max-width: 28ch;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.62;
+}
+
+.commercial-gate {
+  margin-top: -1.2rem;
+  border-color: rgba(242, 100, 25, 0.58);
+  border-radius: var(--radius-xs);
+  padding: 1.05rem 1rem 1rem;
+  box-shadow: 0 18px 38px rgba(177, 62, 5, 0.13);
+}
+
+.commercial-gate::before,
+.commercial-gate::after {
+  height: 1.2rem;
+}
+
+.gate-icon {
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-bottom: 0.9rem;
+}
+
+.gate-icon svg {
+  width: 1.08rem;
+}
+
+.commercial-gate > small {
+  margin-bottom: 0.32rem;
+  font-size: 0.59rem;
+}
+
+.commercial-gate > strong {
+  font-size: 0.96rem;
+  line-height: 1.18;
+}
+
+.commercial-gate p {
+  margin: 0.62rem 0 0.82rem;
+  color: rgba(23, 23, 19, 0.8);
+  font-size: 0.8rem;
+  line-height: 1.48;
+}
+
+.gate-status {
+  border-top-color: rgba(23, 23, 19, 0.18);
+  padding-top: 0.67rem;
+  font-size: 0.61rem;
+}
+
+/* Pricing: retain the panel comparison, but give the decision points more room. */
+.pricing-section {
+  background: linear-gradient(180deg, var(--color-surface), var(--color-canvas-soft));
+}
+
+.pricing-heading {
+  margin-bottom: clamp(2.7rem, 4.5vw, 4.2rem);
+}
+
+.pricing-heading > p {
+  max-width: 36rem;
+  color: var(--color-muted);
+}
+
+.pricing-panels {
+  border-color: var(--editorial-line);
+}
+
+.pricing-panels .pricing-panel {
+  border-right-color: var(--editorial-line);
+  padding: clamp(2.1rem, 3.25vw, 3.15rem);
+}
+
+.pricing-panels .pricing-panel.recommended {
+  background:
+    linear-gradient(135deg, rgba(242, 100, 25, 0.12), transparent 44%),
+    #20201c;
+  box-shadow: 0 23px 56px rgba(23, 23, 19, 0.16);
+}
+
+.package-head {
+  min-height: 13.25rem;
+  padding-bottom: 1.45rem;
+}
+
+.package-index {
+  margin-bottom: 1.8rem;
+  color: var(--color-muted-light);
+}
+
+.package-marker {
+  top: -0.12rem;
+  padding-bottom: 0.28rem;
+  font-size: 0.61rem;
+}
+
+.package-head h3 {
+  margin-bottom: 1.2rem;
+  font-size: clamp(1.5rem, 2vw, 1.95rem);
+  line-height: 1.08;
+}
+
+.pricing-panels .price {
+  gap: 0.45rem;
+}
+
+.pricing-panels .price strong {
+  font-size: clamp(1.95rem, 2.75vw, 2.7rem);
+  line-height: 0.98;
+}
+
+.pricing-panels .price span {
+  font-size: 0.84rem;
+}
+
+.pricing-panels .package-fit {
+  min-height: 7.1rem;
+  margin: 1.7rem 0;
+  font-size: 0.94rem;
+  line-height: 1.64;
+}
+
+.pricing-panels .package-content-label {
+  min-height: 2.7rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.68rem;
+  line-height: 1.34;
+}
+
+.pricing-panels .package-features {
+  gap: 0.9rem;
+  margin-bottom: 2.3rem;
+}
+
+.pricing-panels .package-features li {
+  padding-left: 1.42rem;
+  font-size: 0.9rem;
+  line-height: 1.48;
+}
+
+.pricing-panels .price-cta {
+  min-height: 3.45rem;
+}
+
+.pricing-notes {
+  border-bottom-color: var(--editorial-line);
+}
+
+.pricing-notes > div {
+  gap: 0.9rem;
+  border-right-color: var(--editorial-line);
+  padding: 1.45rem clamp(1.1rem, 2vw, 1.75rem);
+}
+
+.pricing-notes > div > span {
+  font-size: 0.95rem;
+}
+
+.pricing-notes p,
+.pricing-notes strong {
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.pricing-notes strong {
+  margin-bottom: 0.32rem;
+}
+
+/* Partner programme stays assertive without adding sales pressure. */
+.partner-section {
+  padding-top: clamp(1.75rem, 4vw, 3.4rem);
+  background: var(--color-canvas-soft);
+}
+
+.partner-panel {
+  min-height: 30rem;
+  border: 1px solid rgba(255, 253, 248, 0.09);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 24px 54px rgba(23, 23, 19, 0.15);
+}
+
+.partner-grid {
+  opacity: 0.78;
+}
+
+.partner-number strong {
+  font-size: clamp(7.25rem, 14vw, 12.75rem);
+}
+
+.partner-copy h2 {
+  margin-bottom: 1.35rem;
+}
+
+.partner-copy > p:not(.eyebrow) {
+  color: rgba(255, 253, 248, 0.74);
+  font-size: clamp(1rem, 1.23vw, 1.08rem);
+  line-height: 1.68;
+}
+
+.partner-cta {
+  min-height: 3.4rem;
+}
+
+/* FAQ: strengthen the list rather than turning it into card UI. */
+.faq-section {
+  background:
+    linear-gradient(90deg, rgba(23, 23, 19, 0.022) 1px, transparent 1px) 0 0 / 25% 100%,
+    var(--color-canvas-soft);
+}
+
+.faq-section::before {
+  height: 2px;
+}
+
+.faq-shell {
+  gap: clamp(3rem, 7vw, 7rem);
+}
+
+.faq-intro > p:not(.eyebrow) {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.68;
+}
+
+.faq-list {
+  border-top-color: var(--editorial-line);
+}
+
+.faq-list details {
+  border-bottom-color: var(--editorial-line);
+}
+
+.faq-list details[open] {
+  background: rgba(255, 253, 248, 0.32);
+}
+
+.faq-list summary {
+  min-height: 5.9rem;
+  padding-block: 1.42rem;
+  color: var(--color-ink);
+  font-size: clamp(1.08rem, 1.48vw, 1.3rem);
+}
+
+.faq-list summary > span {
+  color: var(--color-muted);
+  font-size: 0.68rem;
+}
+
+.faq-list summary::after {
+  border-color: var(--editorial-line);
+}
+
+.faq-list .faq-answer p {
+  max-width: 59ch;
+  padding-bottom: 1.9rem;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  line-height: 1.68;
+}
+
+/* Contact: visual comfort and contrast, without touching field mappings or submit logic. */
+.contact-section {
+  background:
+    radial-gradient(circle at 8% 92%, rgba(242, 100, 25, 0.14), transparent 29%),
+    linear-gradient(125deg, #171713, #20201c 70%, #292720);
+}
+
+.contact-grid-lines {
+  opacity: 0.72;
+}
+
+.contact-copy h2 {
+  margin-bottom: 1.45rem;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  max-width: 35rem;
+  margin-bottom: 2.55rem;
+  color: rgba(255, 253, 248, 0.74);
+  font-size: clamp(1.04rem, 1.32vw, 1.12rem);
+  line-height: 1.68;
+}
+
+.contact-practical {
+  border-top-color: var(--editorial-line-inverse);
+}
+
+.contact-practical > div {
+  border-bottom-color: rgba(255, 253, 248, 0.11);
+  padding: 1.08rem 0;
+}
+
+.contact-practical strong {
+  font-size: 0.88rem;
+}
+
+.contact-form {
+  border-left-color: var(--editorial-line-inverse);
+  gap: 1.35rem;
+}
+
+.form-heading {
+  gap: 0.5rem;
+  border-bottom-color: var(--editorial-line-inverse);
+  padding-bottom: 1.65rem;
+}
+
+.form-heading > small,
+.form-actions > small {
+  color: rgba(255, 253, 248, 0.64);
+  font-size: 0.74rem;
+}
+
+.contact-form label {
+  color: rgba(255, 253, 248, 0.82);
+  font-size: 0.76rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  min-height: 3.55rem;
+  border-color: rgba(255, 253, 248, 0.24);
+  padding: 0.95rem 1.05rem;
+  background: rgba(255, 253, 248, 0.085);
+  font-size: 0.98rem;
+}
+
+.contact-form textarea {
+  min-height: 10rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 253, 248, 0.58);
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  border-color: var(--color-accent);
+  background: rgba(255, 253, 248, 0.12);
+  box-shadow: 0 0 0 3px rgba(242, 100, 25, 0.2);
+}
+
+.form-actions {
+  margin-top: 0.6rem;
+}
+
+.form-actions .button {
+  min-height: 3.65rem;
+}
+
+.form-status {
+  border-left-width: 3px;
+  background: rgba(255, 253, 248, 0.11);
+  color: rgba(255, 253, 248, 0.9);
+  font-size: 0.88rem;
+}
+
+.form-status[data-state="success"] {
+  background: rgba(159, 214, 170, 0.12);
+}
+
+.form-status[data-state="error"] {
+  background: rgba(255, 154, 104, 0.13);
+}
+
+/* Closing and footer: a quieter final cadence with confident brand visibility. */
+.closing-statement {
+  padding: clamp(4.5rem, 8vw, 7.25rem) 0;
+}
+
+.closing-statement::before {
+  background: linear-gradient(90deg, rgba(23, 23, 19, 0.025) 1px, transparent 1px) 0 0 / 20% 100%;
+}
+
+.closing-index {
+  color: var(--color-muted);
+}
+
+.closing-statement p {
+  max-width: 12ch;
+  font-size: clamp(3.35rem, 7.7vw, 7.15rem);
+  line-height: 0.9;
+}
+
+.site-footer {
+  padding-top: clamp(3.75rem, 6.5vw, 5.5rem);
+  background: #181814;
+}
+
+.footer-top {
+  gap: clamp(2rem, 4.6vw, 4.6rem);
+  border-top-color: var(--editorial-line-inverse);
+  padding-top: 2.4rem;
+}
+
+.footer-positioning .footer-brand {
+  margin-bottom: 1.35rem;
+}
+
+.site-footer .brand-mark img {
+  width: 3.75rem;
+  height: auto;
+}
+
+.footer-positioning > p {
+  color: rgba(255, 253, 248, 0.62);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.footer-navigation,
+.footer-contact,
+.footer-legal {
+  gap: 0.78rem;
+}
+
+.footer-navigation > strong,
+.footer-contact > strong,
+.footer-legal > strong {
+  margin-bottom: 0.48rem;
+}
+
+.footer-navigation a,
+.footer-links a,
+.footer-links span,
+.footer-contact > span {
+  font-size: 0.82rem;
+}
+
+.footer-contact > small,
+.footer-legal > small {
+  color: rgba(255, 253, 248, 0.58);
+  font-size: 0.73rem;
+}
+
+.footer-bottom {
+  margin-top: clamp(2.75rem, 5.8vw, 5rem);
+  border-top-color: rgba(255, 253, 248, 0.11);
+}
+
+/* 2 + 1 keeps package comparison readable at small desktop / tablet widths. */
+@media (max-width: 1100px) {
+  .journey-copy p {
+    max-width: 52ch;
+  }
+
+  .commercial-gate {
+    margin-top: 0;
+    padding: 1.15rem 1.25rem;
+  }
+
+  .pricing-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid var(--editorial-line);
+  }
+
+  .pricing-panels .pricing-panel,
+  .pricing-panels .pricing-panel:last-child {
+    border-right: 1px solid var(--editorial-line);
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .pricing-panels .pricing-panel:nth-child(2) {
+    border-right: 0;
+  }
+
+  .pricing-panels .pricing-panel:last-child {
+    grid-column: 1 / -1;
+    border-bottom: 0;
+  }
+
+  .pricing-panels .pricing-panel:last-child .package-fit {
+    max-width: 48rem;
+  }
+
+  .pricing-panels .pricing-panel:last-child .package-features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pricing-notes {
+    border-color: var(--editorial-line);
+  }
+}
+
+@media (max-width: 900px) {
+  .faq-shell {
+    gap: 2.8rem;
+  }
+
+  .faq-intro > p:not(.eyebrow) {
+    max-width: 39rem;
+  }
+
+  .contact-grid {
+    gap: 2.8rem;
+  }
+
+  .contact-form {
+    border-top-color: var(--editorial-line-inverse);
+  }
+}
+
+@media (max-width: 780px) {
+  .project-journey {
+    padding-top: 0;
+  }
+
+  .journey-line {
+    background: var(--editorial-line);
+  }
+
+  .journey-copy p {
+    font-size: 0.9rem;
+  }
+
+  .commercial-gate {
+    padding: 1.05rem 1.1rem;
+  }
+
+  .pricing-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-panels .pricing-panel,
+  .pricing-panels .pricing-panel:nth-child(2),
+  .pricing-panels .pricing-panel:last-child {
+    grid-column: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .pricing-panels .pricing-panel:last-child {
+    border-bottom: 0;
+  }
+
+  .pricing-panels .pricing-panel:last-child .package-features {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-panels .package-fit,
+  .pricing-panels .package-content-label,
+  .package-head {
+    min-height: 0;
+  }
+
+  .partner-panel {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .process-section {
+    background: var(--color-canvas-soft);
+  }
+
+  .journey-copy p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .pricing-panels .pricing-panel {
+    padding: 1.75rem 1.3rem;
+  }
+
+  .package-head {
+    padding-bottom: 1.3rem;
+  }
+
+  .package-index {
+    margin-bottom: 1.45rem;
+  }
+
+  .pricing-panels .package-fit {
+    margin: 1.45rem 0;
+    font-size: 0.92rem;
+  }
+
+  .pricing-panels .package-features {
+    gap: 0.82rem;
+    margin-bottom: 1.9rem;
+  }
+
+  .pricing-panels .package-features li {
+    font-size: 0.88rem;
+  }
+
+  .pricing-notes > div {
+    padding: 1.18rem 1.1rem;
+  }
+
+  .partner-section {
+    padding-top: 1rem;
+  }
+
+  .partner-copy > p:not(.eyebrow),
+  .faq-intro > p:not(.eyebrow),
+  .contact-copy > p:not(.eyebrow) {
+    font-size: 0.98rem;
+  }
+
+  .faq-list summary {
+    min-height: 5.15rem;
+    font-size: 1.02rem;
+  }
+
+  .faq-list .faq-answer p {
+    padding-bottom: 1.6rem;
+    font-size: 0.92rem;
+  }
+
+  .contact-form {
+    gap: 1.2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    min-height: 3.45rem;
+    font-size: 1rem;
+  }
+
+  .contact-form textarea {
+    min-height: 9.25rem;
+  }
+
+  .form-actions .button {
+    min-height: 3.55rem;
+  }
+
+  .closing-statement {
+    padding: 4.25rem 0;
+  }
+
+  .footer-positioning > p {
+    font-size: 0.86rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-section *,
+  .pricing-section *,
+  .partner-section *,
+  .faq-section *,
+  .contact-section *,
+  .closing-statement *,
+  .site-footer * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
