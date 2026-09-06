@@ -9492,3 +9492,584 @@ h2 {
     transition: none !important;
   }
 }
+
+
+/* Polish 1: restrained visual refinement for the header through founder section. */
+
+:root {
+  --shadow-device: 0 34px 82px rgba(23, 23, 19, 0.18), 0 8px 18px rgba(23, 23, 19, 0.07);
+  --shadow-device-hover: 0 42px 96px rgba(23, 23, 19, 0.21), 0 9px 20px rgba(23, 23, 19, 0.08);
+  --line-editorial: rgba(23, 23, 19, 0.12);
+  --emblem-size: 0.42rem;
+}
+
+/* Compact header, with a slightly clearer brand anchor. */
+.nav {
+  min-height: 72px;
+}
+
+.site-header.is-scrolled .nav {
+  min-height: 66px;
+}
+
+.brand {
+  gap: 11px;
+}
+
+.brand-mark {
+  width: 54px;
+  height: 35px;
+}
+
+.brand-wordmark strong {
+  font-size: 0.91rem;
+}
+
+.nav-links {
+  gap: clamp(17px, 1.75vw, 27px);
+}
+
+/* A small geometric marker keeps the upper editorial labels in one family. */
+.hero .eyebrow,
+.value-proposition-heading .eyebrow,
+.system-flow-heading .eyebrow,
+.case-studies-heading .eyebrow,
+.automation-practice-copy > .eyebrow {
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.hero .eyebrow::after,
+.value-proposition-heading .eyebrow::after,
+.system-flow-heading .eyebrow::after,
+.case-studies-heading .eyebrow::after,
+.automation-practice-copy > .eyebrow::after {
+  width: var(--emblem-size);
+  height: var(--emblem-size);
+  flex: 0 0 var(--emblem-size);
+  border: 1px solid currentColor;
+  content: "";
+  opacity: 0.72;
+  transform: rotate(45deg);
+}
+
+/* The hero remains the same composition, but the work preview carries more weight. */
+.hero {
+  background:
+    radial-gradient(circle at 83% 18%, rgba(242, 100, 25, 0.15), transparent 28%),
+    linear-gradient(112deg, var(--color-surface) 0%, var(--color-surface) 46%, var(--color-canvas) 100%);
+}
+
+.hero-grid {
+  opacity: 0.27;
+}
+
+.hero-content {
+  grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+  gap: clamp(34px, 4.2vw, 68px);
+}
+
+.hero-copy {
+  max-width: 600px;
+}
+
+.hero-lead {
+  max-width: 548px;
+  color: #5f5b54;
+  font-size: clamp(1.05rem, 1.24vw, 1.17rem);
+  line-height: 1.62;
+}
+
+.hero-visual {
+  min-height: 556px;
+  isolation: isolate;
+}
+
+.hero-visual::before {
+  position: absolute;
+  top: 12%;
+  right: 4%;
+  bottom: 9%;
+  left: 8%;
+  z-index: 1;
+  border: 1px solid rgba(23, 23, 19, 0.08);
+  background: linear-gradient(145deg, rgba(255, 253, 248, 0.55), rgba(242, 100, 25, 0.045));
+  content: "";
+  transform: rotate(-2.1deg);
+}
+
+.hero-browser {
+  top: 56px;
+  width: 91%;
+  box-shadow: var(--shadow-device);
+  transform: perspective(1200px) rotateX(1.3deg) rotateY(-1.5deg) rotate(-1.25deg);
+}
+
+.hero-browser::after {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(255, 253, 248, 0.17);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-phone {
+  right: -3px;
+  bottom: 27px;
+  width: 162px;
+  height: 338px;
+  box-shadow: var(--shadow-device);
+  transform: perspective(1100px) rotateY(-4deg) rotate(2.1deg);
+}
+
+.hero-lead-card {
+  top: 6px;
+  right: 2px;
+  width: min(286px, 49%);
+  box-shadow: 0 20px 46px rgba(23, 23, 19, 0.15);
+}
+
+.automation-path {
+  bottom: 7px;
+  left: 13px;
+  width: calc(100% - 118px);
+  box-shadow: 0 20px 48px rgba(23, 23, 19, 0.24);
+}
+
+/* Benefit markers become a single restrained emblem family, not extra cards. */
+.value-strip-grid > div {
+  min-height: 96px;
+}
+
+.value-icon {
+  width: 38px;
+  height: 38px;
+  flex-basis: 38px;
+  border: 1px solid rgba(255, 253, 248, 0.2);
+  background: rgba(255, 253, 248, 0.025);
+}
+
+.value-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.value-strip strong {
+  font-size: clamp(0.82rem, 1.02vw, 0.95rem);
+}
+
+/* Quieter grids and firmer editorial dividers keep the content as the focus. */
+.value-proposition-section {
+  background:
+    linear-gradient(90deg, rgba(23, 23, 19, 0.028) 1px, transparent 1px) 0 0 / 25% 100%,
+    linear-gradient(180deg, var(--color-surface) 0%, var(--color-canvas-soft) 100%);
+}
+
+.value-proposition-heading {
+  gap: clamp(38px, 5.4vw, 76px);
+  margin-bottom: clamp(44px, 5.4vw, 72px);
+}
+
+.value-proposition-lead,
+.case-studies-heading > p {
+  font-size: clamp(1.04rem, 1.22vw, 1.15rem);
+  line-height: 1.64;
+}
+
+.value-editorial-grid {
+  border-color: var(--line-editorial);
+}
+
+.value-story {
+  gap: 34px;
+  padding: clamp(27px, 2.8vw, 39px);
+}
+
+.value-story-featured {
+  padding-left: 0;
+}
+
+.value-story-meta {
+  color: var(--color-focus);
+}
+
+.value-story-meta svg {
+  width: 28px;
+  height: 28px;
+}
+
+.value-story-copy p {
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.value-story-featured .value-story-copy p {
+  font-size: 1.04rem;
+  line-height: 1.62;
+}
+
+.system-flow-grid {
+  opacity: 0.36;
+}
+
+.system-flow-heading {
+  gap: clamp(42px, 5.5vw, 76px);
+}
+
+.system-flow-heading > p {
+  font-size: clamp(1.04rem, 1.2vw, 1.14rem);
+  line-height: 1.64;
+}
+
+.flow-route-label {
+  margin-bottom: 34px;
+}
+
+.customer-flow::before {
+  background: rgba(255, 253, 248, 0.2);
+}
+
+.flow-stage-body > p {
+  color: rgba(255, 253, 248, 0.73);
+  font-size: 0.9rem;
+  line-height: 1.58;
+}
+
+.flow-stage-automation {
+  box-shadow: inset 0 2px 0 rgba(242, 100, 25, 0.6), 0 18px 38px rgba(0, 0, 0, 0.08);
+}
+
+.flow-micro-ui {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Case studies retain their distinct client visuals, with one shared depth rule. */
+.demos-section {
+  background:
+    linear-gradient(90deg, rgba(23, 23, 19, 0.028) 1px, transparent 1px) 0 0 / 25% 100%,
+    linear-gradient(180deg, var(--color-surface) 0%, var(--color-canvas-soft) 100%);
+}
+
+.case-studies-heading {
+  gap: clamp(40px, 5.8vw, 82px);
+  margin-bottom: clamp(54px, 6.8vw, 90px);
+}
+
+.case-studies-heading h2 {
+  max-width: 790px;
+}
+
+.case-study {
+  border-color: var(--line-editorial);
+}
+
+.case-study-visual::before {
+  background:
+    linear-gradient(rgba(23, 23, 19, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 19, 0.032) 1px, transparent 1px),
+    var(--color-surface-muted);
+  background-size: 34px 34px;
+}
+
+.case-browser {
+  box-shadow: var(--shadow-device);
+}
+
+.case-study:hover .case-browser {
+  box-shadow: var(--shadow-device-hover);
+}
+
+.case-mobile {
+  box-shadow: 0 27px 58px rgba(23, 23, 19, 0.26), 0 7px 17px rgba(23, 23, 19, 0.11);
+}
+
+.case-study-copy > p {
+  font-size: 1.04rem;
+  line-height: 1.62;
+}
+
+.case-study-copy li {
+  padding-block: 11px;
+  font-size: 0.86rem;
+}
+
+/* The technical flow gets more breathing room without looking like product UI. */
+.automation-practice-section {
+  background: #eee8dd;
+}
+
+.automation-practice-grid {
+  opacity: 0.25;
+}
+
+.automation-practice-layout {
+  gap: clamp(44px, 6vw, 82px);
+}
+
+.automation-practice-lead {
+  font-size: clamp(1.04rem, 1.2vw, 1.14rem);
+  line-height: 1.64;
+}
+
+.automation-step-list li {
+  padding-block: 19px;
+}
+
+.automation-step-list p {
+  font-size: 0.86rem;
+  line-height: 1.56;
+}
+
+.automation-diagram {
+  border-color: rgba(23, 23, 19, 0.18);
+  box-shadow: var(--shadow-device);
+}
+
+.automation-node,
+.lead-capture-card {
+  box-shadow: 0 16px 34px rgba(23, 23, 19, 0.09);
+}
+
+/* The founder block reads as an integrated chapter rather than a detached card. */
+.founder-section {
+  position: relative;
+  padding-block: clamp(84px, 8vw, 118px);
+  background:
+    linear-gradient(90deg, rgba(23, 23, 19, 0.026) 1px, transparent 1px) 0 0 / 25% 100%,
+    radial-gradient(circle at 8% 20%, rgba(242, 100, 25, 0.085), transparent 26%),
+    linear-gradient(180deg, #ffffff, var(--bg));
+}
+
+.founder-section::before {
+  position: absolute;
+  top: 0;
+  left: max(1rem, calc((100% - var(--container)) / 2));
+  width: min(34%, 410px);
+  height: 3px;
+  background: var(--color-accent);
+  content: "";
+}
+
+.founder-card {
+  border-radius: 20px;
+  box-shadow: 0 34px 82px rgba(23, 23, 19, 0.2);
+}
+
+.founder-visual {
+  min-height: 542px;
+}
+
+.founder-content {
+  padding: clamp(42px, 4.5vw, 58px);
+}
+
+.founder-content p {
+  font-size: 1.02rem;
+  line-height: 1.64;
+}
+
+.founder-lead {
+  font-size: 1.12rem;
+}
+
+.founder-values > div {
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.founder-values span {
+  background: var(--color-accent);
+}
+
+.founder-values > div:nth-child(2) span,
+.founder-values > div:nth-child(3) span {
+  background: rgba(255, 253, 248, 0.34);
+}
+
+.status-dot {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 5px rgba(242, 100, 25, 0.13);
+}
+
+@media (max-width: 1120px) {
+  .hero-content {
+    grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
+  }
+
+  .hero-visual {
+    min-height: 510px;
+  }
+
+  .hero-phone {
+    width: 146px;
+    height: 306px;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-content {
+    grid-template-columns: minmax(0, 0.47fr) minmax(0, 0.53fr);
+  }
+
+  .hero-visual {
+    min-height: 462px;
+  }
+
+  .hero-browser {
+    width: 91%;
+  }
+
+  .hero-phone {
+    width: 128px;
+    height: 274px;
+  }
+
+  .case-study-copy > p {
+    font-size: 1rem;
+  }
+
+  .founder-section {
+    padding-block: 76px 88px;
+  }
+
+  .founder-visual {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 462px;
+  }
+
+  .hero-browser {
+    top: 52px;
+    width: 88%;
+  }
+
+  .hero-phone {
+    width: 136px;
+    height: 287px;
+  }
+
+  .value-icon {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .value-story-copy p,
+  .flow-stage-body > p,
+  .automation-step-list p {
+    font-size: 0.92rem;
+  }
+
+  .founder-section {
+    padding-block: 72px 80px;
+  }
+}
+
+@media (max-width: 620px) {
+  .brand-mark {
+    width: 47px;
+    height: 30px;
+  }
+
+  .hero .eyebrow,
+  .value-proposition-heading .eyebrow,
+  .system-flow-heading .eyebrow,
+  .case-studies-heading .eyebrow,
+  .automation-practice-copy > .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.105em;
+  }
+
+  .hero .eyebrow::after,
+  .value-proposition-heading .eyebrow::after,
+  .system-flow-heading .eyebrow::after,
+  .case-studies-heading .eyebrow::after,
+  .automation-practice-copy > .eyebrow::after {
+    display: none;
+  }
+
+  .hero-visual {
+    min-height: 405px;
+  }
+
+  .hero-browser {
+    top: 46px;
+    width: calc(100% - 34px);
+    transform: rotate(-0.7deg);
+  }
+
+  .hero-phone {
+    right: -2px;
+    bottom: 44px;
+    width: 101px;
+    height: 218px;
+    transform: rotate(2.2deg);
+  }
+
+  .hero-visual::before {
+    top: 16%;
+    right: 3%;
+    bottom: 10%;
+    left: 4%;
+  }
+
+  .hero-lead-card {
+    top: 1px;
+    right: 2px;
+    width: 206px;
+  }
+
+  .automation-path {
+    bottom: 4px;
+    left: 0;
+    width: calc(100% - 64px);
+  }
+
+  .value-icon {
+    width: 29px;
+    height: 32px;
+    flex-basis: 29px;
+  }
+
+  .value-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .value-proposition-lead,
+  .case-studies-heading > p,
+  .system-flow-heading > p,
+  .automation-practice-lead {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .value-story-copy p,
+  .value-story-featured .value-story-copy p,
+  .flow-stage-body > p,
+  .automation-step-list p,
+  .case-study-copy > p {
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
+  .founder-section {
+    padding-block: 64px 72px;
+  }
+
+  .founder-card {
+    border-radius: 16px;
+  }
+
+  .founder-content p {
+    font-size: 0.96rem;
+  }
+}
