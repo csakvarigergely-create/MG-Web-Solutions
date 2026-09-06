@@ -570,7 +570,7 @@
 }
 
 .case-study-meta > span {
-  color: var(--color-accent);
+  color: var(--color-focus);
   font-family: var(--font-heading);
   font-size: 0.68rem;
   font-weight: 800;
@@ -704,7 +704,7 @@
   position: absolute;
   right: 22px;
   bottom: 18px;
-  color: var(--color-muted-light);
+  color: var(--color-muted);
   font-size: 0.64rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -757,7 +757,7 @@
 
 .automation-step-list li > span {
   padding-top: 2px;
-  color: var(--color-accent);
+  color: var(--color-focus);
   font-family: var(--font-heading);
   font-size: 0.63rem;
   font-weight: 800;
@@ -1036,7 +1036,7 @@
 }
 
 .automation-expansion-copy > span {
-  color: var(--color-accent);
+  color: var(--color-focus);
   font-family: var(--font-heading);
   font-size: 0.65rem;
   font-weight: 800;

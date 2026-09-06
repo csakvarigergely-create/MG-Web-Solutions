@@ -303,7 +303,7 @@
 }
 
 .form-heading > small {
-  color: rgba(255, 253, 248, 0.48);
+  color: rgba(255, 253, 248, 0.56);
   font-size: 0.72rem;
 }
 
@@ -351,7 +351,7 @@
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(255, 253, 248, 0.34);
+  color: rgba(255, 253, 248, 0.52);
 }
 
 .contact-form input:hover,
@@ -388,7 +388,7 @@
 
 .form-actions > small {
   max-width: 23rem;
-  color: rgba(255, 253, 248, 0.43);
+  color: rgba(255, 253, 248, 0.56);
   font-size: 0.67rem;
   line-height: 1.45;
 }
@@ -558,7 +558,8 @@
 }
 
 .footer-navigation a,
-.footer-links a {
+.footer-links a,
+.footer-links span {
   font-size: 0.78rem;
   font-weight: 650;
   transition: color 180ms ease;
@@ -577,7 +578,7 @@
 .footer-contact > small,
 .footer-legal > small {
   max-width: 15rem;
-  color: rgba(255, 253, 248, 0.38);
+  color: rgba(255, 253, 248, 0.52);
   font-size: 0.68rem;
   line-height: 1.5;
 }
@@ -588,10 +589,10 @@
   gap: 0.7rem;
 }
 
-.footer-links a[aria-disabled="true"] {
-  color: rgba(255, 253, 248, 0.42);
+.footer-links [aria-disabled="true"] {
+  color: rgba(255, 253, 248, 0.52);
   opacity: 1;
-  cursor: not-allowed;
+  cursor: default;
 }
 
 .footer-bottom {
@@ -607,7 +608,7 @@
 .footer-bottom p,
 .footer-bottom span {
   margin: 0;
-  color: rgba(255, 253, 248, 0.34);
+  color: rgba(255, 253, 248, 0.48);
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.05em;

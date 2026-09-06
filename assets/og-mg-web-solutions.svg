@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">MG Web Solutions</title>
+  <desc id="description">Több ügyfél. Kevesebb admin. Valódi növekedés.</desc>
+  <rect width="1200" height="630" fill="#fffdf8"/>
+  <path d="M0 0h1200v8H0z" fill="#f26419"/>
+  <path d="M780 0h420v630H780z" fill="#171713"/>
+  <g opacity=".08" stroke="#fffdf8">
+    <path d="M780 105h420M780 210h420M780 315h420M780 420h420M780 525h420"/>
+    <path d="M885 0v630M990 0v630M1095 0v630"/>
+  </g>
+  <g transform="translate(72 70)">
+    <path fill="#171713" d="M2 41V7h9.2L21 20.1 30.8 7H40v34h-8.5V20.2L21 34 10.5 20.2V41H2Z"/>
+    <path fill="#171713" d="M59 6c6.5 0 11.6 2 15.5 5.9l-5.8 5.8A13.3 13.3 0 0 0 59 14c-7 0-11.8 5.2-11.8 10s4.8 10 11.8 10c2.8 0 5.1-.5 7-1.5v-4.2h-9.2v-7.2H74v15.6C69.7 40.2 64.7 42 59 42c-11.9 0-20.5-7.7-20.5-18S47.1 6 59 6Z"/>
+    <path fill="#f26419" d="M67 21.1h7v7.2h-7z"/>
+    <text x="94" y="25" fill="#171713" font-family="Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1.5">WEB SOLUTIONS</text>
+    <text x="94" y="47" fill="#66635c" font-family="Arial, sans-serif" font-size="13">LANDING OLDALAK · AUTOMATIZÁCIÓ · AI</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="-3">
+    <text x="72" y="255" fill="#171713">Több ügyfél.</text>
+    <text x="72" y="340" fill="#171713">Kevesebb admin.</text>
+    <text x="72" y="425" fill="#f26419">Valódi növekedés.</text>
+  </g>
+  <text x="74" y="500" fill="#66635c" font-family="Arial, sans-serif" font-size="24">Weboldal és automatizáció egy rendszerben.</text>
+  <g transform="translate(862 185)">
+    <rect width="255" height="166" rx="8" fill="#fffdf8"/>
+    <rect width="255" height="24" rx="8" fill="#eee8dd"/>
+    <circle cx="15" cy="12" r="3" fill="#f26419"/>
+    <circle cx="27" cy="12" r="3" fill="#bdb4a6"/>
+    <circle cx="39" cy="12" r="3" fill="#bdb4a6"/>
+    <path d="M18 50h108v14H18zM18 76h183v8H18zM18 92h155v8H18z" fill="#171713" opacity=".9"/>
+    <rect x="18" y="119" width="88" height="27" fill="#f26419"/>
+    <rect x="143" y="50" width="94" height="96" fill="#f7f3eb"/>
+  </g>
+  <g transform="translate(822 378)" font-family="Arial, sans-serif">
+    <rect width="322" height="84" rx="5" fill="#22221f" stroke="#f26419"/>
+    <circle cx="30" cy="42" r="11" fill="#f26419"/>
+    <text x="54" y="34" fill="#fffdf8" font-size="13" font-weight="700">Új érdeklődő</text>
+    <text x="54" y="55" fill="#bdb4a6" font-size="12">Adatok mentve · értesítés elküldve</text>
+  </g>
+</svg>

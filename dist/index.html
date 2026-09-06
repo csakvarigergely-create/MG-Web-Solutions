@@ -3,30 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MG Web Solutions | Ügyfélszerző landing oldalak automatizációval</title>
-    <meta name="description" content="Mobilbarát, ügyfélszerzésre épített landing oldalak magyar szolgáltatóknak, ajánlatkérő rendszerrel és automatizált érdeklődőkezeléssel.">
+    <title>MG Web Solutions | Landing oldalak és automatizációk</title>
+    <meta name="description" content="Ügyfélszerző landing oldalakat, automatizációkat és opcionális AI chatbot megoldásokat készítek magyar vállalkozásoknak.">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#f7f3eb">
-    <meta property="og:title" content="MG Web Solutions">
-    <meta property="og:description" content="Landing oldalak, amelyek érthetően bemutatják az ajánlatodat és megkönnyítik az érdeklődők kezelését.">
+    <link rel="canonical" href="https://mg-web-solutions.vercel.app/">
+    <meta property="og:title" content="MG Web Solutions | Landing oldalak és automatizációk">
+    <meta property="og:description" content="Ügyfélszerző landing oldalak, automatizációk és opcionális AI chatbot magyar vállalkozásoknak.">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MG Web Solutions">
+    <meta property="og:locale" content="hu_HU">
+    <meta property="og:url" content="https://mg-web-solutions.vercel.app/">
+    <meta property="og:image" content="https://mg-web-solutions.vercel.app/assets/og-mg-web-solutions.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MG Web Solutions – Több ügyfél. Kevesebb admin. Valódi növekedés.">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/mg-mark.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles.css">
-    <link rel="stylesheet" href="src/content-sections.css">
-    <link rel="stylesheet" href="src/mobile-polish.css">
-    <link rel="stylesheet" href="src/header-hero.css">
-    <link rel="stylesheet" href="src/round-three.css">
-    <link rel="stylesheet" href="src/round-four.css">
-    <link rel="stylesheet" href="src/round-five.css">
-    <link rel="stylesheet" href="src/round-six.css">
+    <link rel="stylesheet" href="src/site.css">
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Ugrás a tartalomhoz</a>
     <header class="site-header" id="top" data-site-header>
       <nav class="nav container" aria-label="Fő navigáció">
         <a class="brand" href="#top" aria-label="MG Web Solutions főoldal">
-          <span class="brand-mark" aria-hidden="true"><img src="assets/mg-mark.svg" alt=""></span>
+          <span class="brand-mark" aria-hidden="true"><img src="assets/mg-mark.svg" alt="" width="76" height="48"></span>
           <span class="brand-wordmark"><strong>WEB SOLUTIONS</strong><small>Modern web. Kevesebb admin.</small></span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="primary-navigation">
@@ -43,7 +47,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="hero" aria-label="MG Web Solutions bemutatkozó szakasz">
         <span class="hero-grid" aria-hidden="true"></span>
         <span class="hero-index" aria-hidden="true">MG / 01</span>
@@ -57,8 +61,8 @@
               <a class="button button-secondary hero-secondary" href="#demok">Megnézem a munkákat <span aria-hidden="true">↘</span></a>
             </div>
           </div>
-          <div class="hero-visual" aria-label="NovaDent és KlímaPont weboldal demók automatizált érdeklődőkezeléssel">
-            <div class="hero-browser" aria-label="NovaDent demo weboldal előnézete">
+          <div class="hero-visual" role="img" aria-label="NovaDent és KlímaPont weboldal demók automatizált érdeklődőkezeléssel">
+            <div class="hero-browser" aria-hidden="true">
               <div class="browser-chrome"><span></span><span></span><span></span><small>nova-dent-eight.vercel.app</small></div>
               <div class="browser-screen dental-screen">
                 <div class="preview-nav"><strong>NovaDent</strong><span>Szolgáltatások&nbsp;&nbsp; Árak&nbsp;&nbsp; Időpontkérés</span></div>
@@ -69,7 +73,7 @@
                 <div class="preview-services" aria-hidden="true"><span></span><span></span><span></span></div>
               </div>
             </div>
-            <div class="hero-phone" aria-label="KlímaPont Győr demo mobil előnézete">
+            <div class="hero-phone" aria-hidden="true">
               <div class="phone-speaker" aria-hidden="true"></div>
               <div class="phone-screen">
                 <div class="phone-brand"><strong>KP</strong><span>KLÍMAPONT GYŐR</span></div>
@@ -186,10 +190,10 @@
         </div>
       </section>
 
-      <section class="section demos-section" id="demok">
+      <section class="section demos-section" id="demok" aria-labelledby="case-studies-title">
         <div class="container">
           <div class="case-studies-heading" data-reveal>
-            <div><p class="eyebrow">Kiemelt munkák</p><h2>Nem csak megtervezem. <em>Működésre is építem.</em></h2></div>
+            <div><p class="eyebrow">Kiemelt munkák</p><h2 id="case-studies-title">Nem csak megtervezem. <em>Működésre is építem.</em></h2></div>
             <p>Két eltérő vállalkozás, két külön vizuális világ. A közös bennük, hogy mindkettő egy konkrét üzleti cél köré épül: több megkeresés, egyszerűbb kapcsolatfelvétel és átláthatóbb ügyfélút.</p>
           </div>
 
@@ -199,10 +203,10 @@
                 <div class="case-browser" aria-label="A NovaDent weboldal asztali előnézete">
                   <div class="case-browser-bar"><span></span><span></span><span></span><small>nova-dent-eight.vercel.app</small></div>
                   <div class="case-browser-screen nova-case-screen">
-                    <div class="nova-preview-nav"><strong><i>N</i> NovaDent</strong><span>Szolgáltatások&nbsp;&nbsp; Páciensélmény&nbsp;&nbsp; Árak&nbsp;&nbsp; Időpont</span><b>+36 1 234 5678</b></div>
+                    <div class="nova-preview-nav"><strong><i>N</i> NovaDent</strong><span>Szolgáltatások&nbsp;&nbsp; Páciensélmény&nbsp;&nbsp; Árak&nbsp;&nbsp; Időpont</span><b>Időpontkérés</b></div>
                     <div class="nova-preview-hero">
                       <div class="nova-preview-copy"><small>MODERN FOGÁSZAT BUDAPESTEN</small><strong>Fogászati ellátás, ahol a szakértelem és az odafigyelés együtt számít.</strong><p>Tapasztalt fogorvosokkal, korszerű háttérrel és figyelmes ellátással várjuk.</p><span>Időpontot kérek</span></div>
-                      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Világos, modern fogászati rendelő kezelőszékkel">
+                      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Világos, modern fogászati rendelő kezelőszékkel" width="1400" height="936" loading="lazy" decoding="async" fetchpriority="low">
                       <div class="nova-preview-form"><small>IDŐPONTKÉRÉS</small><strong>Kérjen időpontot egyszerűen</strong><i></i><i></i><i></i><span>Időpontot kérek</span></div>
                     </div>
                     <div class="nova-preview-strip" aria-hidden="true"><span>Kíméletes kezelések</span><span>Modern diagnosztika</span><span>Egyszerű időpontkérés</span></div>
@@ -215,7 +219,7 @@
                 <h3>NovaDent</h3>
                 <p>Bizalomépítő felépítés, kíméletes és szakmai kommunikáció, egyszerű időpontkérés.</p>
                 <ul><li>Mobilra optimalizált</li><li>Gyakori kérdések</li><li>Időpontkérés</li><li>Erős vizuális bizalomépítés</li></ul>
-                <a class="case-study-link" href="https://nova-dent-eight.vercel.app/" target="_blank" rel="noopener">Élő oldal megnyitása <span aria-hidden="true">↗</span></a>
+                <a class="case-study-link" href="https://nova-dent-eight.vercel.app/" target="_blank" rel="noopener noreferrer">Élő oldal megnyitása <span aria-hidden="true">↗</span></a>
               </div>
             </article>
 
@@ -227,7 +231,7 @@
                     <div class="climate-preview-nav"><strong><i>KP</i> KLÍMAPONT GYŐR</strong><span>Szolgáltatások&nbsp;&nbsp; Rólunk&nbsp;&nbsp; Árak&nbsp;&nbsp; Ajánlatkérés</span><b>Győr +30 km</b></div>
                     <div class="climate-preview-hero">
                       <div class="climate-preview-copy"><small>KLÍMAPONT GYŐR · 24 ÓRÁN BELÜLI KAPCSOLATFELVÉTEL</small><strong>Klímaszerelés Győrben, előre egyeztetett árral és garanciával.</strong><p>Telepítés, tisztítás és karbantartás Győrben és 30 km-es körzetében.</p><span>Ingyenes felmérést kérek</span></div>
-                      <img src="https://raw.githubusercontent.com/csakvarigergely-create/landing-demo/main/public/assets/klima-hero-real-hvac.png" alt="Klímaszerelők beltéri egységet szerelnek egy otthonban">
+                      <img src="https://raw.githubusercontent.com/csakvarigergely-create/landing-demo/main/public/assets/klima-hero-real-hvac.png" alt="Klímaszerelők beltéri egységet szerelnek egy otthonban" width="1536" height="1024" loading="lazy" decoding="async" fetchpriority="low">
                     </div>
                     <div class="climate-preview-strip" aria-hidden="true"><span>Helyszíni felmérés</span><span>Garanciás telepítés</span><span>Tiszta munkavégzés</span></div>
                   </div>
@@ -239,7 +243,7 @@
                 <h3>KlímaPont Győr</h3>
                 <p>Gyorsan átlátható szolgáltatások, egyértelmű árak és ajánlatkérésre optimalizált felépítés.</p>
                 <ul><li>Mobilra optimalizált</li><li>Helyi szolgáltatói kommunikáció</li><li>Ajánlatkérés</li><li>Automatizációra kész</li></ul>
-                <a class="case-study-link" href="https://landing-demo-omega.vercel.app/" target="_blank" rel="noopener">Élő oldal megnyitása <span aria-hidden="true">↗</span></a>
+                <a class="case-study-link" href="https://landing-demo-omega.vercel.app/" target="_blank" rel="noopener noreferrer">Élő oldal megnyitása <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>
@@ -264,7 +268,7 @@
             <a class="automation-practice-cta" href="#arak">Megnézem a csomagokat <span aria-hidden="true">↓</span></a>
           </div>
 
-          <div class="automation-diagram" data-reveal aria-label="Az ajánlatkérő űrlap után automatikusan elinduló folyamat">
+          <div class="automation-diagram" data-reveal role="img" aria-label="Az ajánlatkérő űrlap után automatikusan elinduló technikai folyamat">
             <div class="automation-map">
               <div class="lead-capture-card">
                 <div class="lead-capture-head"><span class="lead-capture-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5z"></path><path d="M8 9h8M8 13h5"></path></svg></span><div><small>ŰRLAP</small><strong>Új ajánlatkérés</strong></div><i>Most</i></div>
@@ -294,7 +298,7 @@
 
       <section class="section founder-section" aria-labelledby="founder-title">
         <div class="container"><div class="founder-card">
-          <div class="founder-visual"><div class="founder-portrait" role="img" aria-label="Az MG Web Solutions alapítójának portréja a végső frissítésben kerül ide"><span class="founder-monogram">MG</span><span class="founder-orbit orbit-one"></span><span class="founder-orbit orbit-two"></span></div><div class="founder-badge"><span class="status-dot"></span><strong>Személyes kapcsolattartás</strong></div></div>
+          <div class="founder-visual"><div class="founder-portrait" role="img" aria-label="MG Web Solutions geometrikus monogram"><span class="founder-monogram">MG</span><span class="founder-orbit orbit-one"></span><span class="founder-orbit orbit-two"></span></div><div class="founder-badge"><span class="status-dot"></span><strong>Személyes kapcsolattartás</strong></div></div>
           <div class="founder-content"><p class="eyebrow">Miért az MG Web Solutions?</p><h2 id="founder-title">Személyes együttműködés, modern megoldások — egy kézben.</h2><p class="founder-lead"><strong>Gergő vagyok, az MG Web Solutions alapítója.</strong> Velem dolgozol közvetlenül az első egyeztetéstől az átadásig.</p><p>Magyar szolgáltatóknak készítek ügyfélszerzésre épített landing oldalakat és hasznos automatizációkat. A célom egy olyan átlátható rendszer, amely érthetően bemutatja az ajánlatodat és megkönnyíti az érdeklődők kezelését.</p><div class="founder-values"><div><span aria-hidden="true"></span><strong>Személyes együttműködés</strong><small>Közvetlenül velem egyeztetsz, nincs felesleges kör vagy közvetítő.</small></div><div><span aria-hidden="true"></span><strong>Gyors, átlátható kivitelezés</strong><small>Mindig tudod, hol tart a projekt, és mi a következő lépés.</small></div><div><span aria-hidden="true"></span><strong>Weboldal és automatizáció egy kézben</strong><small>Az oldal és az érdeklődőkezelés összehangolt rendszerként készül el.</small></div></div><a class="button founder-cta" href="#kapcsolat">Kérek egy ingyenes konzultációt</a></div>
         </div></div>
       </section>
@@ -488,8 +492,8 @@
           <form class="contact-form" aria-label="Ajánlatkérő űrlap" data-reveal>
             <div class="form-heading"><span>MG / KAPCSOLAT</span><strong>Írj néhány mondatot a vállalkozásodról.</strong><small>A csillaggal jelölt mezők kitöltése szükséges.</small></div>
             <div class="form-row">
-              <div class="form-field"><label for="name">Név <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-required="true"></div>
-              <div class="form-field"><label for="email">E-mail <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-required="true"></div>
+              <div class="form-field"><label for="name">Név <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="form-status"></div>
+              <div class="form-field"><label for="email">E-mail <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="form-status"></div>
             </div>
             <div class="form-row">
               <div class="form-field"><label for="phone">Telefonszám</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
@@ -497,7 +501,7 @@
             </div>
             <div class="form-field"><label for="message">Miben segíthetek?</label><textarea id="message" name="message" rows="6" placeholder="Írd le röviden, mivel foglalkozol és mit szeretnél elérni."></textarea></div>
             <div class="form-actions"><button class="button" type="submit">Egyeztetést kérek <span aria-hidden="true">→</span></button><small>Az adataidat kizárólag a kapcsolatfelvételhez használom.</small></div>
-            <div class="form-status" data-form-status role="status" aria-live="polite" hidden></div>
+            <div class="form-status" id="form-status" data-form-status role="status" aria-live="polite" hidden></div>
           </form>
         </div>
       </section>
@@ -514,10 +518,10 @@
       <span class="footer-monogram" aria-hidden="true">MG</span>
       <div class="container footer-shell">
         <div class="footer-top">
-          <div class="footer-positioning"><a class="brand footer-brand" href="#top" aria-label="MG Web Solutions főoldal"><span class="brand-mark" aria-hidden="true"><img src="assets/mg-mark-inverse.svg" alt=""></span><span class="brand-wordmark"><strong>WEB SOLUTIONS</strong><small>Modern web. Kevesebb admin.</small></span></a><p>Landing oldalak és automatizációk magyar vállalkozásoknak.</p></div>
+          <div class="footer-positioning"><a class="brand footer-brand" href="#top" aria-label="MG Web Solutions főoldal"><span class="brand-mark" aria-hidden="true"><img src="assets/mg-mark-inverse.svg" alt="" width="76" height="48"></span><span class="brand-wordmark"><strong>WEB SOLUTIONS</strong><small>Modern web. Kevesebb admin.</small></span></a><p>Landing oldalak és automatizációk magyar vállalkozásoknak.</p></div>
           <nav class="footer-navigation" aria-label="Lábléc navigáció"><strong>Navigáció</strong><a href="#szolgaltatas">Szolgáltatás</a><a href="#demok">Mintaoldalak</a><a href="#folyamat">Folyamat</a><a href="#arak">Csomagok</a><a href="#gyik">GYIK</a><a href="#kapcsolat">Kapcsolat</a></nav>
           <div class="footer-contact"><strong>Kapcsolat</strong><span>Kapcsolati adatok hamarosan</span><small>Telefonos egyeztetés előzetes kapcsolatfelvétel után.</small></div>
-          <div class="footer-legal"><strong>Jogi információk</strong><div class="footer-links"><a href="#" aria-disabled="true" tabindex="-1">Adatkezelés</a><a href="#" aria-disabled="true" tabindex="-1">Impresszum</a></div><small>A végleges vállalkozói adatokkal kerülnek feltöltésre.</small></div>
+          <div class="footer-legal"><strong>Jogi információk</strong><div class="footer-links"><span aria-disabled="true">Adatkezelés</span><span aria-disabled="true">Impresszum</span></div><small>A végleges vállalkozói adatokkal kerülnek feltöltésre.</small></div>
         </div>
         <div class="footer-bottom"><p>© 2026 MG Web Solutions</p><span>MG / 2026</span></div>
       </div>

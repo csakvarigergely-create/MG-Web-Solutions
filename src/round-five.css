@@ -539,6 +539,10 @@
   color: var(--color-accent);
 }
 
+.partner-copy .eyebrow {
+  color: var(--color-accent);
+}
+
 .partner-copy > p:not(.eyebrow) {
   max-width: 43rem;
   margin-bottom: 2rem;
