@@ -242,6 +242,7 @@
   display: block;
   width: max-content;
   max-width: 100%;
+  word-spacing: 0.07em;
   white-space: nowrap;
 }
 
