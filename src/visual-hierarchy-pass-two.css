@@ -1,0 +1,80 @@
+/* Visual Hierarchy & Composition Pass 2
+   Scoped adjustments for references, the practical automation example,
+   and the project-process heading only. */
+
+/* Give the editorial case studies slightly more room on desktop. */
+@media (min-width: 981px) {
+  .demos-section > .container {
+    width: min(100% - 32px, 1288px);
+  }
+
+  .case-study {
+    grid-template-columns: minmax(0, 1.68fr) minmax(270px, 0.6fr);
+    gap: clamp(36px, 4.2vw, 64px);
+  }
+
+  .case-study-climate {
+    grid-template-columns: minmax(270px, 0.6fr) minmax(0, 1.68fr);
+  }
+
+  .case-study-visual {
+    min-height: clamp(455px, 47vw, 600px);
+  }
+
+  .case-browser {
+    width: calc(100% - 34px);
+  }
+}
+
+/* Restore balance between the copy and event sequence. */
+@media (min-width: 1121px) {
+  .automation-practice-layout {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: clamp(48px, 5vw, 64px);
+  }
+
+  .automation-practice-copy h2 {
+    max-width: none;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1120px) {
+  .automation-practice-layout {
+    grid-template-columns: minmax(350px, 0.82fr) minmax(0, 1.18fr);
+    gap: 36px;
+  }
+
+  .automation-practice-copy h2 {
+    max-width: none;
+  }
+}
+
+/* Timestamps remain typographic details, but now carry the speed message. */
+.lead-capture-head > time,
+.automation-event-time {
+  color: var(--color-focus);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Let the process headline use its intended XL width on desktop. */
+@media (min-width: 901px) {
+  .process-heading {
+    grid-template-columns: minmax(0, 1.52fr) minmax(270px, 0.48fr);
+    gap: clamp(2rem, 5vw, 4.5rem);
+  }
+
+  .process-heading h2 {
+    max-width: 18ch;
+  }
+}
+
+@media (max-width: 390px) {
+  .lead-capture-head > time,
+  .automation-event-time {
+    font-size: 0.65rem;
+  }
+}

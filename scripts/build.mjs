@@ -14,7 +14,8 @@ const stylesheets = [
   "src/round-six.css",
   "src/polish-one.css",
   "src/polish-two.css",
-  "src/structure-pass-one.css"
+  "src/structure-pass-one.css",
+  "src/visual-hierarchy-pass-two.css"
 ];
 const required = ["index.html", "src/main.js", "src/interactions.js", ...stylesheets];
 
