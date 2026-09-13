@@ -13,7 +13,8 @@ const stylesheets = [
   "src/round-five.css",
   "src/round-six.css",
   "src/polish-one.css",
-  "src/polish-two.css"
+  "src/polish-two.css",
+  "src/structure-pass-one.css"
 ];
 const required = ["index.html", "src/main.js", "src/interactions.js", ...stylesheets];
 
@@ -34,7 +35,9 @@ const productionHtml = sourceHtml.replace(stylesheetLinks, '    <link rel="style
 if (productionHtml === sourceHtml) {
   throw new Error("Could not replace source stylesheet links for the production build.");
 }
-const productionCss = (await Promise.all(stylesheets.map((file) => readFile(path.join(root, file), "utf8")))).join("\n\n");
+const productionCss = `${(await Promise.all(stylesheets.map((file) => readFile(path.join(root, file), "utf8"))))
+  .map((content) => content.trimEnd())
+  .join("\n\n")}\n`;
 
 await writeFile(path.join(dist, "index.html"), productionHtml);
 await mkdir(path.join(dist, "src"), { recursive: true });

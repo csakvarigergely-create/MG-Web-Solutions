@@ -107,7 +107,6 @@ document.querySelectorAll(".faq-list details").forEach((details) => {
 
 const mobileCta = document.querySelector(".mobile-cta");
 const contactSection = document.querySelector("#kapcsolat");
-const closingSection = document.querySelector(".closing-statement");
 const footerSection = document.querySelector(".site-footer");
 if (mobileCta && contactSection && "IntersectionObserver" in window) {
   const visibleFinalSections = new Set();
@@ -121,5 +120,5 @@ if (mobileCta && contactSection && "IntersectionObserver" in window) {
     },
     { threshold: 0.12 }
   );
-  [contactSection, closingSection, footerSection].filter(Boolean).forEach((section) => observer.observe(section));
+  [contactSection, footerSection].filter(Boolean).forEach((section) => observer.observe(section));
 }
