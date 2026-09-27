@@ -15,7 +15,10 @@ const stylesheets = [
   "src/polish-one.css",
   "src/polish-two.css",
   "src/structure-pass-one.css",
-  "src/visual-hierarchy-pass-two.css"
+  "src/visual-hierarchy-pass-two.css",
+  "src/why-mg-trust-pass.css",
+  "src/conversion-ux-pass-three.css",
+  "src/final-polish-pass-four.css"
 ];
 const required = ["index.html", "src/main.js", "src/interactions.js", ...stylesheets];
 

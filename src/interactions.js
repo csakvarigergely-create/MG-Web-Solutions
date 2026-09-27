@@ -3,6 +3,9 @@ const links = document.querySelector("[data-nav-links]");
 const header = document.querySelector("[data-site-header]");
 const form = document.querySelector(".contact-form");
 const formStatus = document.querySelector("[data-form-status]");
+const contactInterest = document.querySelector("[data-contact-interest]");
+const formContext = document.querySelector("[data-form-context]");
+const formContextValue = document.querySelector("[data-form-context-value]");
 const mobileNavigation = window.matchMedia("(max-width: 980px)");
 
 const setMenuOpen = (isOpen) => {
@@ -31,6 +34,13 @@ document.addEventListener("keydown", (event) => {
 
 mobileNavigation.addEventListener("change", () => setMenuOpen(false));
 
+document.addEventListener("pointerdown", (event) => {
+  if (toggle?.getAttribute("aria-expanded") !== "true") return;
+  if (!(event.target instanceof Node)) return;
+  if (toggle.contains(event.target) || links?.contains(event.target)) return;
+  setMenuOpen(false);
+});
+
 const updateHeaderState = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 18);
 };
@@ -56,21 +66,38 @@ if (revealTargets.length && "IntersectionObserver" in window && !reducedMotion.m
   revealTargets.forEach((target) => revealObserver.observe(target));
 }
 
+const validationMessageFor = (field) => {
+  if (field.name === "name" && field.validity.valueMissing) return "Kérlek, add meg a neved.";
+  if (field.name === "email" && field.validity.valueMissing) return "Kérlek, add meg az e-mail-címed.";
+  if (field.name === "email" && field.validity.typeMismatch) return "Kérlek, érvényes e-mail-címet adj meg.";
+  return "Kérlek, ellenőrizd ezt a mezőt.";
+};
+
+const updateFieldError = (field, showError) => {
+  const error = form?.querySelector(`[data-field-error="${field.name}"]`);
+  if (!(error instanceof HTMLElement)) return;
+  error.hidden = !showError;
+  error.textContent = showError ? validationMessageFor(field) : "";
+  if (showError) field.setAttribute("aria-invalid", "true");
+  else field.removeAttribute("aria-invalid");
+};
+
 form?.addEventListener("invalid", (event) => {
   const field = event.target;
   if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return;
-  field.setAttribute("aria-invalid", "true");
+  updateFieldError(field, true);
   if (formStatus) {
     formStatus.hidden = false;
     formStatus.dataset.state = "error";
-    formStatus.textContent = "Kérlek, ellenőrizd a csillaggal jelölt mezőket.";
+    formStatus.textContent = "Kérlek, javítsd a jelzett mezőket.";
   }
 }, true);
 
 form?.addEventListener("input", (event) => {
   const field = event.target;
   if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return;
-  if (field.validity.valid) field.removeAttribute("aria-invalid");
+  if (field.validity.valid) updateFieldError(field, false);
+  else if (field.hasAttribute("aria-invalid")) updateFieldError(field, true);
   if (formStatus?.dataset.state === "error" && !form.querySelector('[aria-invalid="true"]')) {
     formStatus.hidden = true;
     delete formStatus.dataset.state;
@@ -78,14 +105,35 @@ form?.addEventListener("input", (event) => {
   }
 });
 
+document.querySelectorAll("[data-contact-context]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const context = link.getAttribute("data-contact-context")?.trim();
+    if (!context) return;
+    if (contactInterest instanceof HTMLInputElement) contactInterest.value = context;
+    if (formContextValue) formContextValue.textContent = context;
+    if (formContext instanceof HTMLElement) formContext.hidden = false;
+  });
+});
+
+document.querySelectorAll('a[href="#kapcsolat"]:not([data-contact-context])').forEach((link) => {
+  link.addEventListener("click", () => {
+    if (contactInterest instanceof HTMLInputElement) contactInterest.value = "";
+    if (formContextValue) formContextValue.textContent = "";
+    if (formContext instanceof HTMLElement) formContext.hidden = true;
+  });
+});
+
+let formIsProcessing = false;
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
+  if (formIsProcessing) return;
   const button = form.querySelector("button");
   if (!button) return;
 
+  formIsProcessing = true;
   const originalContent = button.innerHTML;
   button.textContent = "Ellenőrzés folyamatban…";
-  button.disabled = true;
+  button.setAttribute("aria-disabled", "true");
   if (formStatus) {
     formStatus.hidden = false;
     formStatus.dataset.state = "info";
@@ -93,7 +141,8 @@ form?.addEventListener("submit", (event) => {
   }
   window.setTimeout(() => {
     button.innerHTML = originalContent;
-    button.disabled = false;
+    button.removeAttribute("aria-disabled");
+    formIsProcessing = false;
   }, 2600);
 });
 

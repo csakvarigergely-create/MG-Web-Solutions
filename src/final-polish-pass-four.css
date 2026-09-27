@@ -1,0 +1,44 @@
+/* Final Polish Pass 4
+   Only verified micro-adjustments; structure, copy and interaction stay unchanged. */
+
+/* The trust-card label already sits in a grid gap, so avoid doubling its spacing. */
+.founder-values span,
+.founder-values > div:nth-child(2) span,
+.founder-values > div:nth-child(3) span {
+  margin-bottom: 2px;
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+
+.founder-values small {
+  color: rgba(255, 253, 248, 0.66);
+}
+
+/* Keep the commercial checkpoint's smallest type legible beside the timeline. */
+.commercial-gate > small {
+  font-size: 0.62rem;
+}
+
+.gate-status {
+  font-size: 0.64rem;
+}
+
+@media (max-width: 680px) {
+  /* Preserve the geometry while letting content lead on narrow screens. */
+  .partner-grid,
+  .contact-grid-lines {
+    opacity: 0.56;
+  }
+
+  .faq-list summary > span {
+    font-size: 0.64rem;
+  }
+}
+
+@media (max-width: 390px) {
+  /* The footer-bottom already supplies the final divider. */
+  .footer-legal {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
