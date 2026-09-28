@@ -20,7 +20,14 @@ const stylesheets = [
   "src/conversion-ux-pass-three.css",
   "src/final-polish-pass-four.css"
 ];
-const required = ["index.html", "src/main.js", "src/interactions.js", ...stylesheets];
+const required = [
+  "index.html",
+  "impresszum/index.html",
+  "impresszum/styles.css",
+  "src/main.js",
+  "src/interactions.js",
+  ...stylesheets
+];
 
 for (const file of required) {
   if (!existsSync(path.join(root, file))) {
@@ -49,5 +56,6 @@ await writeFile(path.join(dist, "src/site.css"), productionCss);
 await cp(path.join(root, "src/main.js"), path.join(dist, "src/main.js"));
 await cp(path.join(root, "src/interactions.js"), path.join(dist, "src/interactions.js"));
 await cp(path.join(root, "assets"), path.join(dist, "assets"), { recursive: true });
+await cp(path.join(root, "impresszum"), path.join(dist, "impresszum"), { recursive: true });
 
 console.log("Build completed: dist/");

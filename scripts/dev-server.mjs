@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { createReadStream, existsSync } from "node:fs";
+import { createReadStream, existsSync, statSync } from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
@@ -10,15 +10,26 @@ const types = {
   ".js": "text/javascript; charset=utf-8",
   ".png": "image/png",
   ".jpg": "image/jpeg",
-  ".svg": "image/svg+xml"
+  ".svg": "image/svg+xml",
+  ".woff2": "font/woff2"
 };
 
 createServer((req, res) => {
   const url = new URL(req.url || "/", `http://localhost:${port}`);
   const cleanPath = decodeURIComponent(url.pathname === "/" ? "/index.html" : url.pathname);
-  const filePath = path.normalize(path.join(root, cleanPath));
+  let filePath = path.normalize(path.join(root, cleanPath));
 
-  if (!filePath.startsWith(root) || !existsSync(filePath)) {
+  if (!filePath.startsWith(root)) {
+    res.writeHead(404);
+    res.end("Not found");
+    return;
+  }
+
+  if (existsSync(filePath) && statSync(filePath).isDirectory()) {
+    filePath = path.join(filePath, "index.html");
+  }
+
+  if (!existsSync(filePath)) {
     res.writeHead(404);
     res.end("Not found");
     return;
