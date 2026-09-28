@@ -1,0 +1,61 @@
+/* Conversion & UX Pass 3
+   Targeted interaction, form feedback and anchor corrections only. */
+
+.case-study-link:focus-visible,
+.automation-practice-cta:focus-visible,
+.footer-navigation a:focus-visible,
+.mobile-cta:focus-visible {
+  border-radius: var(--radius-xs);
+  outline: 3px solid rgba(242, 100, 25, 0.38);
+  outline-offset: 5px;
+}
+
+.form-context {
+  border-left: 2px solid var(--color-accent);
+  padding: 0.58rem 0.75rem;
+  background: rgba(255, 253, 248, 0.07);
+  color: rgba(255, 253, 248, 0.7);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.form-context[hidden] {
+  display: none;
+}
+
+.form-context strong {
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.field-error {
+  display: block;
+  color: #ffc0a0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.field-error::before {
+  content: "! ";
+  color: #ff9a68;
+  font-weight: 800;
+}
+
+.field-error[hidden] {
+  display: none;
+}
+
+.contact-form button[aria-disabled="true"] {
+  cursor: wait;
+}
+
+@media (max-width: 680px) {
+  .faq-list summary,
+  .case-study-link,
+  .automation-practice-cta,
+  .faq-contact-link,
+  .footer-navigation a {
+    min-height: 44px;
+  }
+}

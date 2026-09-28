@@ -13,9 +13,21 @@ const stylesheets = [
   "src/round-five.css",
   "src/round-six.css",
   "src/polish-one.css",
-  "src/polish-two.css"
+  "src/polish-two.css",
+  "src/structure-pass-one.css",
+  "src/visual-hierarchy-pass-two.css",
+  "src/why-mg-trust-pass.css",
+  "src/conversion-ux-pass-three.css",
+  "src/final-polish-pass-four.css"
 ];
-const required = ["index.html", "src/main.js", "src/interactions.js", ...stylesheets];
+const required = [
+  "index.html",
+  "impresszum/index.html",
+  "impresszum/styles.css",
+  "src/main.js",
+  "src/interactions.js",
+  ...stylesheets
+];
 
 for (const file of required) {
   if (!existsSync(path.join(root, file))) {
@@ -34,7 +46,9 @@ const productionHtml = sourceHtml.replace(stylesheetLinks, '    <link rel="style
 if (productionHtml === sourceHtml) {
   throw new Error("Could not replace source stylesheet links for the production build.");
 }
-const productionCss = (await Promise.all(stylesheets.map((file) => readFile(path.join(root, file), "utf8")))).join("\n\n");
+const productionCss = `${(await Promise.all(stylesheets.map((file) => readFile(path.join(root, file), "utf8"))))
+  .map((content) => content.trimEnd())
+  .join("\n\n")}\n`;
 
 await writeFile(path.join(dist, "index.html"), productionHtml);
 await mkdir(path.join(dist, "src"), { recursive: true });
@@ -42,5 +56,6 @@ await writeFile(path.join(dist, "src/site.css"), productionCss);
 await cp(path.join(root, "src/main.js"), path.join(dist, "src/main.js"));
 await cp(path.join(root, "src/interactions.js"), path.join(dist, "src/interactions.js"));
 await cp(path.join(root, "assets"), path.join(dist, "assets"), { recursive: true });
+await cp(path.join(root, "impresszum"), path.join(dist, "impresszum"), { recursive: true });
 
 console.log("Build completed: dist/");
