@@ -9391,6 +9391,15 @@ h2 {
   line-height: 1.45;
 }
 
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .form-status {
   position: relative;
   border-left: 3px solid var(--color-accent);

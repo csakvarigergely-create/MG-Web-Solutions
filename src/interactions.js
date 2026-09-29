@@ -124,26 +124,61 @@ document.querySelectorAll('a[href="#kapcsolat"]:not([data-contact-context])').fo
 });
 
 let formIsProcessing = false;
-form?.addEventListener("submit", (event) => {
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (formIsProcessing) return;
-  const button = form.querySelector("button");
+  const button = form.querySelector('button[type="submit"]');
   if (!button) return;
 
   formIsProcessing = true;
-  const originalContent = button.innerHTML;
-  button.textContent = "Ellenőrzés folyamatban…";
-  button.setAttribute("aria-disabled", "true");
+  const originalContent = button.textContent;
+  button.disabled = true;
+  button.textContent = "Üzenet küldése…";
   if (formStatus) {
     formStatus.hidden = false;
     formStatus.dataset.state = "info";
-    formStatus.textContent = "Az űrlap technikai bekötése még folyamatban van, ezért az üzenet most nem került elküldésre. A kitöltött adatok megmaradtak.";
+    formStatus.textContent = "Üzenet küldése folyamatban…";
   }
-  window.setTimeout(() => {
-    button.innerHTML = originalContent;
-    button.removeAttribute("aria-disabled");
+
+  const fields = new FormData(form);
+  const payload = Object.fromEntries(
+    ["name", "email", "phone", "businessType", "message", "interest", "website"]
+      .map((key) => [key, fields.get(key) ?? ""])
+  );
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (!response.ok) throw new Error("Contact request failed");
+
+    form.reset();
+    if (contactInterest instanceof HTMLInputElement) contactInterest.value = "";
+    if (formContextValue) formContextValue.textContent = "";
+    if (formContext instanceof HTMLElement) formContext.hidden = true;
+    form.querySelectorAll('[aria-invalid="true"]').forEach((field) => field.removeAttribute("aria-invalid"));
+    form.querySelectorAll("[data-field-error]").forEach((error) => {
+      error.hidden = true;
+      error.textContent = "";
+    });
+    if (formStatus) {
+      formStatus.hidden = false;
+      formStatus.dataset.state = "success";
+      formStatus.textContent = "Köszönöm! Az üzeneted megérkezett, hamarosan felveszem veled a kapcsolatot.";
+    }
+  } catch {
+    if (formStatus) {
+      formStatus.hidden = false;
+      formStatus.dataset.state = "error";
+      formStatus.textContent = "Az üzenetet most nem sikerült elküldeni. Kérlek, próbáld újra néhány perc múlva.";
+    }
+  } finally {
+    button.textContent = originalContent;
+    button.disabled = false;
     formIsProcessing = false;
-  }, 2600);
+  }
 });
 
 document.querySelectorAll(".faq-list details").forEach((details) => {
