@@ -1,0 +1,38 @@
+h1 {
+  max-width: 12ch;
+  overflow-wrap: anywhere;
+  font-size: clamp(2.6rem, 4.7vw, 4.25rem);
+}
+
+.legal-section div {
+  min-width: 0;
+}
+
+.legal-section ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.3rem;
+}
+
+.legal-section li + li {
+  margin-top: 0.55rem;
+}
+
+.legal-section address {
+  margin-top: 0.55rem;
+}
+
+.legal-section a {
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+.legal-section a:hover {
+  color: var(--accent-hover);
+}
+
+.legal-section code {
+  overflow-wrap: anywhere;
+  font-size: 0.9em;
+}

@@ -9391,6 +9391,17 @@ h2 {
   line-height: 1.45;
 }
 
+.form-actions > small a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.18em;
+}
+
+.form-actions > small a:hover {
+  color: var(--color-white);
+}
+
 .contact-honeypot {
   position: absolute;
   width: 1px;
