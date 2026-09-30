@@ -388,9 +388,9 @@
 
 .form-actions > small {
   max-width: 23rem;
-  color: rgba(255, 253, 248, 0.72);
-  font-size: 0.8rem;
-  line-height: 1.5;
+  color: rgba(255, 253, 248, 0.56);
+  font-size: 0.67rem;
+  line-height: 1.45;
 }
 
 .form-actions > small a {
