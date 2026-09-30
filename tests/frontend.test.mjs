@@ -5,6 +5,10 @@ import vm from "node:vm";
 
 const script = await readFile(new URL("../src/interactions.js", import.meta.url), "utf8");
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const contactFormHtml = html.match(/<form\b[^>]*class="contact-form"[^>]*>[\s\S]*?<\/form>/)?.[0];
+assert.ok(contactFormHtml, "The real contact form must exist in index.html");
+const formFieldNames = [...contactFormHtml.matchAll(/<(?:input|textarea)\b[^>]*\bname="([^"]+)"/g)]
+  .map((match) => match[1]);
 
 function setup(fetchImpl) {
   class Element {
@@ -24,7 +28,10 @@ function setup(fetchImpl) {
   button.textContent = "Egyeztetést kérek →";
   button.disabled = false;
   const form = new Element();
-  form.values = { name: " Teszt Elek ", email: "test@example.com", phone: "", businessType: "", message: "Szia", website: "" };
+  form.values = Object.fromEntries(formFieldNames.map((name) => [name, ""]));
+  for (const [name, value] of Object.entries({ name: " Teszt Elek ", email: "test@example.com", message: "Szia" })) {
+    if (Object.hasOwn(form.values, name)) form.values[name] = value;
+  }
   form.querySelector = (selector) => selector === 'button[type="submit"]' ? button : null;
   form.querySelectorAll = () => [];
   form.reset = () => { Object.keys(form.values).forEach((key) => { form.values[key] = ""; }); interest.value = ""; };
@@ -70,6 +77,32 @@ test("all package and partner links pass interest, general CTA clears it", () =>
   ui.general.handlers.click();
   assert.equal(ui.interest.value, "");
   assert.equal(ui.context.hidden, true);
+});
+
+test("real HTML contact fields reach the POST payload with their exact names", async () => {
+  for (const name of ["name", "email", "phone", "businessType", "message", "interest"]) {
+    assert.ok(formFieldNames.includes(name), `Missing real HTML form field: ${name}`);
+  }
+  let request;
+  const ui = setup(async (url, options) => {
+    request = { url, options };
+    return { ok: true };
+  });
+  for (const [name, value] of Object.entries({
+    name: " Teszt Elek ", email: "test@example.com", phone: "+4912345678",
+    businessType: "Klímaszerelés QA", message: "Teszt megkeresés"
+  })) {
+    if (Object.hasOwn(ui.form.values, name)) ui.form.values[name] = value;
+  }
+  ui.contextual[1].link.handlers.click();
+  await ui.submit();
+  assert.equal(request.url, "/api/contact");
+  assert.equal(request.options.method, "POST");
+  assert.deepEqual(JSON.parse(request.options.body), {
+    name: " Teszt Elek ", email: "test@example.com", phone: "+4912345678",
+    businessType: "Klímaszerelés QA", message: "Teszt megkeresés",
+    interest: "Landing + Automatizáció", website: ""
+  });
 });
 
 test("pending submit disables button and blocks double submit; success resets form", async () => {
