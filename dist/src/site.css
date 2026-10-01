@@ -5187,6 +5187,41 @@ h2 {
   height: auto;
   /* The notch removes a clipped word from the edge of the supplied image. */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 58%, 9% 58%, 9% 46%, 0 46%);
+  /* Feather only the asset's outer background; retain the devices and card. */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 6%, #000 94%, transparent),
+    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent);
+  mask-image:
+    linear-gradient(to right, transparent, #000 6%, #000 94%, transparent),
+    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.hero-actions .button {
+  border-radius: 7px;
+  gap: 20px;
+  padding-inline: 22px;
+}
+
+.hero-secondary:hover span { transform: translateX(3px); }
+
+@media (min-width: 1121px) {
+  .hero-visual.hero-visual--reference {
+    width: 110%;
+    margin-left: -5%;
+    margin-right: 0;
+    top: 16px;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1120px) {
+  .hero-visual.hero-visual--reference {
+    width: 108%;
+    margin-left: -4%;
+    margin-right: 0;
+    top: 10px;
+  }
 }
 
 /* Round 3: value proposition and the visitor-to-customer system flow. */
