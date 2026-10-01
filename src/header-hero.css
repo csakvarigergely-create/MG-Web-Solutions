@@ -1444,15 +1444,15 @@
   display: block;
   width: 100%;
   height: auto;
-  /* The notch removes a clipped word from the edge of the supplied image. */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 58%, 9% 58%, 9% 46%, 0 46%);
-  /* Feather only the asset's outer background; retain the devices and card. */
+  /* Fade the outer background and the stray cropped lettering at the left edge. */
   -webkit-mask-image:
     linear-gradient(to right, transparent, #000 6%, #000 94%, transparent),
-    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent);
+    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent),
+    radial-gradient(ellipse 12% 12% at 0 52%, transparent 73%, #000 100%);
   mask-image:
     linear-gradient(to right, transparent, #000 6%, #000 94%, transparent),
-    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent);
+    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent),
+    radial-gradient(ellipse 12% 12% at 0 52%, transparent 73%, #000 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }
