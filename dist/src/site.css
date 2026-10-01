@@ -5186,7 +5186,7 @@ h2 {
   width: 100%;
   height: auto;
   /* The notch removes a clipped word from the edge of the supplied image. */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 74%, 8% 74%, 8% 61%, 0 61%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 58%, 9% 58%, 9% 46%, 0 46%);
 }
 
 /* Round 3: value proposition and the visitor-to-customer system flow. */
