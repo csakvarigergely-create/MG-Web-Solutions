@@ -1425,3 +1425,25 @@
     transition: none;
   }
 }
+
+/* The supplied composition replaces only the hero's former device mockups. */
+.hero-visual.hero-visual--reference {
+  width: min(100%, 740px);
+  min-height: 0;
+  aspect-ratio: 740 / 518;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.hero-visual--reference::before,
+.hero-visual--reference::after {
+  content: none;
+}
+
+.hero-visual--reference img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* The notch removes a clipped word from the edge of the supplied image. */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 74%, 8% 74%, 8% 61%, 0 61%);
+}
