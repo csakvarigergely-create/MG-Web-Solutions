@@ -393,6 +393,26 @@
   line-height: 1.45;
 }
 
+.form-actions > small a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.18em;
+}
+
+.form-actions > small a:hover {
+  color: var(--color-white);
+}
+
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .form-status {
   position: relative;
   border-left: 3px solid var(--color-accent);

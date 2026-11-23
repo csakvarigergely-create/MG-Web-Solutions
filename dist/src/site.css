@@ -5167,6 +5167,63 @@ h2 {
   }
 }
 
+/* The supplied composition replaces only the hero's former device mockups. */
+.hero-visual.hero-visual--reference {
+  width: min(100%, 740px);
+  min-height: 0;
+  aspect-ratio: 740 / 518;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.hero-visual--reference::before,
+.hero-visual--reference::after {
+  content: none;
+}
+
+.hero-visual--reference img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Fade the outer background and the stray cropped lettering at the left edge. */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 6%, #000 94%, transparent),
+    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent),
+    radial-gradient(ellipse 12% 12% at 0 52%, transparent 73%, #000 100%);
+  mask-image:
+    linear-gradient(to right, transparent, #000 6%, #000 94%, transparent),
+    linear-gradient(to bottom, transparent, #000 5%, #000 97%, transparent),
+    radial-gradient(ellipse 12% 12% at 0 52%, transparent 73%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.hero-actions .button {
+  border-radius: 7px;
+  gap: 20px;
+  padding-inline: 22px;
+}
+
+.hero-secondary:hover span { transform: translateX(3px); }
+
+@media (min-width: 1121px) {
+  .hero-visual.hero-visual--reference {
+    width: 110%;
+    margin-left: -5%;
+    margin-right: 0;
+    top: 16px;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1120px) {
+  .hero-visual.hero-visual--reference {
+    width: 108%;
+    margin-left: -4%;
+    margin-right: 0;
+    top: 10px;
+  }
+}
+
 /* Round 3: value proposition and the visitor-to-customer system flow. */
 
 .value-proposition-section {
@@ -9391,6 +9448,26 @@ h2 {
   line-height: 1.45;
 }
 
+.form-actions > small a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.18em;
+}
+
+.form-actions > small a:hover {
+  color: var(--color-white);
+}
+
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .form-status {
   position: relative;
   border-left: 3px solid var(--color-accent);
@@ -10546,6 +10623,12 @@ h2 {
 .form-actions > small {
   color: rgba(255, 253, 248, 0.64);
   font-size: 0.74rem;
+}
+
+.form-actions > small {
+  color: rgba(255, 253, 248, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .contact-form label {

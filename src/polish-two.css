@@ -380,6 +380,12 @@
   font-size: 0.74rem;
 }
 
+.form-actions > small {
+  color: rgba(255, 253, 248, 0.72);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
 .contact-form label {
   color: rgba(255, 253, 248, 0.82);
   font-size: 0.76rem;

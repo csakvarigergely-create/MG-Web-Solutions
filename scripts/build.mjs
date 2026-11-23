@@ -24,6 +24,8 @@ const required = [
   "index.html",
   "impresszum/index.html",
   "impresszum/styles.css",
+  "adatkezeles/index.html",
+  "adatkezeles/styles.css",
   "src/main.js",
   "src/interactions.js",
   ...stylesheets
@@ -57,5 +59,6 @@ await cp(path.join(root, "src/main.js"), path.join(dist, "src/main.js"));
 await cp(path.join(root, "src/interactions.js"), path.join(dist, "src/interactions.js"));
 await cp(path.join(root, "assets"), path.join(dist, "assets"), { recursive: true });
 await cp(path.join(root, "impresszum"), path.join(dist, "impresszum"), { recursive: true });
+await cp(path.join(root, "adatkezeles"), path.join(dist, "adatkezeles"), { recursive: true });
 
 console.log("Build completed: dist/");

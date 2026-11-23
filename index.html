@@ -68,46 +68,12 @@
             <p class="hero-lead">Ügyfélszerző landing oldalakat és automatizációkat készítek magyar vállalkozásoknak, hogy több megkeresés érkezzen, miközben kevesebb idő megy el a kézi adminisztrációra.</p>
             <div class="hero-actions" aria-label="Fő műveletek">
               <a class="button hero-primary" href="#kapcsolat">Egyeztessünk <span aria-hidden="true">→</span></a>
-              <a class="button button-secondary hero-secondary" href="#demok">Megnézem a munkákat <span aria-hidden="true">↘</span></a>
+              <a class="button button-secondary hero-secondary" href="#demok">Megnézem a munkákat <span aria-hidden="true">→</span></a>
             </div>
             <p class="hero-proof"><span aria-hidden="true"></span>7–10 munkanap · átlátható kivitelezés</p>
           </div>
-          <div class="hero-visual" role="img" aria-label="NovaDent és KlímaPont weboldal demók automatizált érdeklődőkezeléssel">
-            <div class="hero-visual-label" aria-hidden="true"><span>MG / RENDSZER</span><strong>Landing + automatizáció</strong></div>
-            <div class="hero-browser" aria-hidden="true">
-              <div class="browser-chrome"><span></span><span></span><span></span><small>nova-dent-eight.vercel.app</small></div>
-              <div class="browser-screen dental-screen">
-                <div class="preview-nav"><strong>NovaDent</strong><span>Szolgáltatások&nbsp;&nbsp; Árak&nbsp;&nbsp; Időpontkérés</span></div>
-                <div class="preview-hero">
-                  <div><small>MODERN FOGÁSZATI RENDELŐ</small><strong>Fogászati ellátás, ahol az odafigyelés is számít.</strong><span>Időpontot kérek&nbsp; →</span></div>
-                  <div class="preview-photo" aria-hidden="true"><i></i><i></i><i></i></div>
-                </div>
-                <div class="preview-services" aria-hidden="true"><span></span><span></span><span></span></div>
-              </div>
-            </div>
-            <span class="hero-browser-base" aria-hidden="true"></span>
-            <div class="hero-phone" aria-hidden="true">
-              <div class="phone-speaker" aria-hidden="true"></div>
-              <div class="phone-screen">
-                <div class="phone-brand"><strong>KP</strong><span>KLÍMAPONT GYŐR</span></div>
-                <small>KLÍMASZERELÉS GYŐRBEN</small>
-                <strong>Előre egyeztetett ár. Garanciás munka.</strong>
-                <span>Felmérést kérek&nbsp; →</span>
-                <div class="phone-air" aria-hidden="true"><i></i></div>
-              </div>
-            </div>
-            <div class="hero-lead-card">
-              <span class="lead-status-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h5"/></svg></span>
-              <div><small>Új érdeklődő</small><strong>Ajánlatkérés érkezett</strong></div>
-              <span class="lead-card-state">MOST</span>
-            </div>
-            <div class="automation-path" aria-label="Automatizált folyamat: új érdeklődő, adatok mentve, automatikus válasz">
-              <div><span>01</span><strong>Új érdeklődő</strong></div>
-              <i aria-hidden="true"></i>
-              <div><span>02</span><strong>Adatok mentve</strong></div>
-              <i aria-hidden="true"></i>
-              <div><span>03</span><strong>Automatikus válasz</strong></div>
-            </div>
+          <div class="hero-visual hero-visual--reference" role="img" aria-label="NovaDent laptop és KlímaPont Győr telefon mockup, új érdeklődő értesítéssel">
+            <img src="assets/hero-device-composition.png" alt="" width="740" height="560" fetchpriority="high" decoding="async">
           </div>
         </div>
       </section>
@@ -513,16 +479,17 @@
             <div class="form-heading"><span>MG / KAPCSOLAT</span><strong>Írj néhány mondatot a vállalkozásodról.</strong><small>A csillaggal jelölt mezők kitöltése szükséges.</small></div>
             <div class="form-context" data-form-context aria-live="polite" hidden>Kiválasztott érdeklődés: <strong data-form-context-value></strong></div>
             <input type="hidden" name="interest" value="" data-contact-interest>
+            <div class="contact-honeypot" aria-hidden="true"><label for="website">Weboldal</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
             <div class="form-row">
               <div class="form-field"><label for="name">Név <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="name-error"><span class="field-error" id="name-error" data-field-error="name" aria-live="polite" hidden></span></div>
               <div class="form-field"><label for="email">E-mail <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="email-error"><span class="field-error" id="email-error" data-field-error="email" aria-live="polite" hidden></span></div>
             </div>
             <div class="form-row">
               <div class="form-field"><label for="phone">Telefonszám</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"></div>
-              <div class="form-field"><label for="business">Vállalkozás típusa</label><input id="business" name="business" type="text" placeholder="például fogászat, klímás cég, szalon"></div>
+              <div class="form-field"><label for="business">Vállalkozás típusa</label><input id="business" name="businessType" type="text" placeholder="például fogászat, klímás cég, szalon"></div>
             </div>
             <div class="form-field"><label for="message">Miben segíthetek?</label><textarea id="message" name="message" rows="6" placeholder="Írd le röviden, mivel foglalkozol és mit szeretnél elérni."></textarea></div>
-            <div class="form-actions"><button class="button" type="submit">Egyeztetést kérek <span aria-hidden="true">→</span></button><small>Az adataidat kizárólag a kapcsolatfelvételhez használom.</small></div>
+            <div class="form-actions"><button class="button" type="submit">Egyeztetést kérek <span aria-hidden="true">→</span></button><small>Az űrlapon megadott adatokat a megkeresésed megválaszolásához kezeljük. Részletek az <a href="/adatkezeles/">Adatkezelési tájékoztatóban</a>.</small></div>
             <div class="form-status" id="form-status" data-form-status role="status" aria-live="polite" hidden></div>
           </form>
         </div>
@@ -537,7 +504,7 @@
           <div class="footer-positioning"><a class="brand footer-brand" href="#top" aria-label="MG Web Solutions főoldal"><span class="brand-mark" aria-hidden="true"><img src="assets/mg-mark-inverse.svg" alt="" width="76" height="48"></span><span class="brand-wordmark"><strong>WEB SOLUTIONS</strong><small>Modern web. Kevesebb admin.</small></span></a><p>Landing oldalak és automatizációk magyar vállalkozásoknak.</p></div>
           <nav class="footer-navigation" aria-label="Lábléc navigáció"><strong>Navigáció</strong><a href="#szolgaltatas">Szolgáltatás</a><a href="#demok">Mintaoldalak</a><a href="#folyamat">Folyamat</a><a href="#arak">Csomagok</a><a href="#gyik">GYIK</a><a href="#kapcsolat">Kapcsolat</a></nav>
           <div class="footer-contact"><strong>Kapcsolat</strong><span>Kapcsolati adatok hamarosan</span><small>Telefonos egyeztetés előzetes kapcsolatfelvétel után.</small></div>
-          <div class="footer-legal"><strong>Jogi információk</strong><div class="footer-links"><span aria-disabled="true">Adatkezelés</span><a href="/impresszum/">Impresszum</a></div><small>A végleges vállalkozói adatokkal kerülnek feltöltésre.</small></div>
+          <div class="footer-legal"><strong>Jogi információk</strong><div class="footer-links"><a href="/adatkezeles/">Adatkezelés</a><a href="/impresszum/">Impresszum</a></div><small>A szolgáltató adatai az Impresszumban olvashatók.</small></div>
         </div>
         <div class="footer-bottom"><p>© 2026 MG Web Solutions</p><span>MG / 2026</span></div>
       </div>
