@@ -459,7 +459,7 @@
 }
 
 .site-footer {
-  padding-top: clamp(3.75rem, 6.5vw, 5.5rem);
+  padding-top: clamp(3rem, 4.4vw, 3.75rem);
   background: #181814;
 }
 
@@ -510,7 +510,7 @@
 }
 
 .footer-bottom {
-  margin-top: clamp(2.75rem, 5.8vw, 5rem);
+  margin-top: clamp(2rem, 2.6vw, 2.5rem);
   border-top-color: rgba(255, 253, 248, 0.11);
 }
 
